@@ -3,6 +3,7 @@ Welcome to Rebase.
 Simform 
 Github
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 Android
 Helloooo
@@ -11,3 +12,6 @@ Helloooo
 Welcome to the rebase example.
 Welcome Welcome
 >>>>>>> origin/feature1
+=======
+welcome
+>>>>>>> origin/develop
