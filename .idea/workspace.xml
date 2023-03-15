@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e8ab8845-291e-4c95-b2b4-223684aaa788" name="Changes" comment="TE7-T686 Java Practice">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/demo/kotlinpractice/interfacepractice/FuncInterface.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/demo/practice/Practice.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/demo/kotlinpractice/NullSafety.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/demo/kotlinpractice/NullSafety.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/demo/kotlinpractice/OperatorOverloading.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/demo/kotlinpractice/OperatorOverloading.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/demo/kotlinpractice/collections/Operations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/demo/kotlinpractice/collections/Operations.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/demo/kotlinpractice/functions/MainFunction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/demo/kotlinpractice/functions/MainFunction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/demo/kotlinpractice/genericpractice/GenericClass.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/demo/kotlinpractice/genericpractice/GenericClass.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/demo/kotlinpractice/interfacepractice/MainInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/demo/kotlinpractice/interfacepractice/MainInterface.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="2" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="My Application" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="My Application" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="My Application" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="My Application" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Kotlin Enum" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/java_practice" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2MwmQGzv8dn1mG4ymY4YA4b7aiQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "memory.settings.postsync.last.time.stamp": "1680235427581",
+    "project.structure.last.edited": "Suggestions",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "Errors"
+  }
+}]]></component>
+  <component name="PsdUISettings">
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.demo.kotlin_practice" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.Demo.kotlin_practice.genericPractice" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Kotlin.OperationsKt">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="My_Application.app.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainFunctionKt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.kotlinpractice.functions.MainFunctionKt" />
+      <module name="My_Application.app.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainInterfaceKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.kotlinpractice.interfacepractice.MainInterfaceKt" />
+      <module name="My_Application.app.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OperationsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.kotlinpractice.collections.OperationsKt" />
+      <module name="My_Application.app.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PracticeKt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.PracticeKt" />
+      <module name="My_Application.app.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PracticeKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.kotlinpractice.PracticeKt" />
+      <module name="My_Application.app.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.OperationsKt" />
+        <item itemvalue="Kotlin.PracticeKt (1)" />
+        <item itemvalue="Kotlin.MainInterfaceKt" />
+        <item itemvalue="Kotlin.MainFunctionKt (1)" />
+        <item itemvalue="Kotlin.PracticeKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e8ab8845-291e-4c95-b2b4-223684aaa788" name="Changes" comment="" />
+      <created>1678687001289</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678687001289</updated>
+    </task>
+    <task id="LOCAL-00001" summary="fix">
+      <created>1678863556957</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678863556957</updated>
+    </task>
+    <task id="LOCAL-00002" summary="TE7-T686 Class, Properties Completed.">
+      <created>1679058955387</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679058955387</updated>
+    </task>
+    <task id="LOCAL-00003" summary="TE7-T686 Exception Handling, Sealed Classes Completed.">
+      <created>1679317606229</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679317606229</updated>
+    </task>
+    <task id="LOCAL-00004" summary="TE7-T686 Generic and collections">
+      <created>1679404646909</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679404646909</updated>
+    </task>
+    <task id="LOCAL-00005" summary="TE7-T686 Collections">
+      <created>1679491456873</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679491456873</updated>
+    </task>
+    <task id="LOCAL-00006" summary="TE7-T686 kotlin completed">
+      <created>1679545646180</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679545646180</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="feature/kotlin_practice" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix" />
+    <MESSAGE value="TE7-T686 Class, Properties Completed." />
+    <MESSAGE value="TE7-T686 Exception Handling, Sealed Classes Completed." />
+    <MESSAGE value="TE7-T686 Generic and collections" />
+    <MESSAGE value="TE7-T686 Collections" />
+    <MESSAGE value="TE7-T686 kotlin completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="TE7-T686 kotlin completed" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/My_Application$CompileTime.ic" NAME="CompileTime Coverage Results" MODIFIED="1678698539981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$InterfaceAbstract.ic" NAME="InterfaceAbstract Coverage Results" MODIFIED="1678788155401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$MainOf.ic" NAME="MainOf Coverage Results" MODIFIED="1678771996568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$ControlFlow.ic" NAME="ControlFlow Coverage Results" MODIFIED="1678768153590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$Suzuki.ic" NAME="Suzuki Coverage Results" MODIFIED="1678696767027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$Test.ic" NAME="Test Coverage Results" MODIFIED="1678701632711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$DemoIf.ic" NAME="DemoIf Coverage Results" MODIFIED="1678703789421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$OperationsKt.ic" NAME="OperationsKt Coverage Results" MODIFIED="1679975789738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/My_Application$Hero.ic" NAME="Hero Coverage Results" MODIFIED="1678696298095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$OperatorOverload.ic" NAME="OperatorOverload Coverage Results" MODIFIED="1678698848461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$EnumDemo.ic" NAME="EnumDemo Coverage Results" MODIFIED="1678792837106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$SubAbstract.ic" NAME="SubAbstract Coverage Results" MODIFIED="1678700549997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$Lambdas.ic" NAME="Lambdas Coverage Results" MODIFIED="1678790663150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$JavaExamples.ic" NAME="JavaExamples Coverage Results" MODIFIED="1678690695961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$UseCustom.ic" NAME="UseCustom Coverage Results" MODIFIED="1678772859614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$Demo.ic" NAME="Demo Coverage Results" MODIFIED="1678695762964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$DaysEnum.ic" NAME="DaysEnum Coverage Results" MODIFIED="1678862188889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$HashExamp.ic" NAME="HashExamp Coverage Results" MODIFIED="1678781529289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$DemoKt.ic" NAME="DemoKt Coverage Results" MODIFIED="1678874305746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/My_Application$C.ic" NAME="C Coverage Results" MODIFIED="1678692136107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$DemoArray.ic" NAME="DemoArray Coverage Results" MODIFIED="1678776081898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$A7.ic" NAME="A7 Coverage Results" MODIFIED="1678788267993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$NewStudent.ic" NAME="NewStudent Coverage Results" MODIFIED="1678792098313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$SubInheritance.ic" NAME="SubInheritance Coverage Results" MODIFIED="1678691911661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+  </component>
+</project>
