@@ -10,14 +10,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8ab8845-291e-4c95-b2b4-223684aaa788" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/Demo/java_practice/CollectionType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/Demo/java_practice/ControlFlow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/Demo/java_practice/EnumDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/Demo/java_practice/ErrorHandling.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/Demo/java_practice/InterfaceAbstract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/Demo/java_practice/Lambdas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/demo/ButtonDemo.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/demo/ToastDemo.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/demo/ToggleButtonDemo.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/baseline_add_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_button_demo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_toast_demo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_toggle_button_demo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/Demo/java_practice/InheritanceDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/Demo/java_practice/InheritanceDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/example/Demo/ExampleInstrumentedTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/example/demo/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/Demo/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/demo/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/Demo/ExampleUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/example/demo/ExampleUnitTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +38,7 @@
   <component name="CoverageOptionsProvider">
     <option name="myAddOrReplace" value="2" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/vidhi/.android/avd/Pixel_6_API_30.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -74,6 +86,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="layoutResourceFile" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -88,27 +103,36 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2MwmQGzv8dn1mG4ymY4YA4b7aiQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;memory.settings.postsync.last.time.stamp&quot;: &quot;1678687060676&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Suggestions&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "memory.settings.postsync.last.time.stamp": "1684386979972",
+    "project.structure.last.edited": "Suggestions",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "emulator"
   }
-}</component>
+}]]></component>
   <component name="PsdUISettings">
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
-  <component name="RunManager" selected="Application.DaysEnum">
+  <component name="RecentsManager">
+    <key name="android.template.24742478">
+      <recent name="com.example.Demo" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Android App.app">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="My_Application.app.main" />
       <option name="DEPLOY" value="true" />
@@ -276,34 +300,11 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/Demo/MainActivity.kt</url>
-          <line>10</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/My_Application$CompileTime.ic" NAME="CompileTime Coverage Results" MODIFIED="1678698539981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.Demo.java_practice.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/My_Application$InterfaceAbstract.ic" NAME="InterfaceAbstract Coverage Results" MODIFIED="1678788155401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.Demo.java_practice.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/My_Application$MainOf.ic" NAME="MainOf Coverage Results" MODIFIED="1678771996568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.Demo.java_practice.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/My_Application$ControlFlow.ic" NAME="ControlFlow Coverage Results" MODIFIED="1678768153590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.Demo.java_practice.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/My_Application$Suzuki.ic" NAME="Suzuki Coverage Results" MODIFIED="1678696767027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.Demo.java_practice.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/My_Application$Test.ic" NAME="Test Coverage Results" MODIFIED="1678701632711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/My_Application$HashExamp.ic" NAME="HashExamp Coverage Results" MODIFIED="1678781529289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.Demo.java_practice.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/My_Application$DemoIf.ic" NAME="DemoIf Coverage Results" MODIFIED="1678703789421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -312,46 +313,59 @@
     <SUITE FILE_PATH="coverage/My_Application$Hero.ic" NAME="Hero Coverage Results" MODIFIED="1678696298095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.Demo.java_practice.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/My_Application$OperatorOverload.ic" NAME="OperatorOverload Coverage Results" MODIFIED="1678698848461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.Demo.java_practice.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/My_Application$EnumDemo.ic" NAME="EnumDemo Coverage Results" MODIFIED="1678792837106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.Demo.java_practice.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/My_Application$SubAbstract.ic" NAME="SubAbstract Coverage Results" MODIFIED="1678700549997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.Demo.java_practice.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/My_Application$Lambdas.ic" NAME="Lambdas Coverage Results" MODIFIED="1678790663150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.Demo.java_practice.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/My_Application$JavaExamples.ic" NAME="JavaExamples Coverage Results" MODIFIED="1678690695961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.Demo.java_practice.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/My_Application$UseCustom.ic" NAME="UseCustom Coverage Results" MODIFIED="1678772859614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.Demo.java_practice.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/My_Application$Demo.ic" NAME="Demo Coverage Results" MODIFIED="1678695762964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/My_Application$DemoArray.ic" NAME="DemoArray Coverage Results" MODIFIED="1678776081898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.Demo.java_practice.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/My_Application$DaysEnum.ic" NAME="DaysEnum Coverage Results" MODIFIED="1678793148698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/My_Application$DaysEnum.ic" NAME="DaysEnum Coverage Results" MODIFIED="1678862188889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.Demo.java_practice.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/My_Application$HashExamp.ic" NAME="HashExamp Coverage Results" MODIFIED="1678781529289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/My_Application$ControlFlow.ic" NAME="ControlFlow Coverage Results" MODIFIED="1678768153590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$Suzuki.ic" NAME="Suzuki Coverage Results" MODIFIED="1678696767027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$OperatorOverload.ic" NAME="OperatorOverload Coverage Results" MODIFIED="1678698848461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.Demo.java_practice.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/My_Application$C.ic" NAME="C Coverage Results" MODIFIED="1678692136107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.Demo.java_practice.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/My_Application$DemoArray.ic" NAME="DemoArray Coverage Results" MODIFIED="1678776081898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/My_Application$Lambdas.ic" NAME="Lambdas Coverage Results" MODIFIED="1678790663150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$SubAbstract.ic" NAME="SubAbstract Coverage Results" MODIFIED="1678700549997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$Test.ic" NAME="Test Coverage Results" MODIFIED="1678701632711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$JavaExamples.ic" NAME="JavaExamples Coverage Results" MODIFIED="1678690695961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.Demo.java_practice.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/My_Application$A7.ic" NAME="A7 Coverage Results" MODIFIED="1678788267993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.Demo.java_practice.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/My_Application$NewStudent.ic" NAME="NewStudent Coverage Results" MODIFIED="1678792098313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/My_Application$DemoKt.ic" NAME="DemoKt Coverage Results" MODIFIED="1678874305746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/My_Application$InterfaceAbstract.ic" NAME="InterfaceAbstract Coverage Results" MODIFIED="1678788155401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$Demo.ic" NAME="Demo Coverage Results" MODIFIED="1678695762964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.Demo.java_practice.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/My_Application$SubInheritance.ic" NAME="SubInheritance Coverage Results" MODIFIED="1678691911661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$MainOf.ic" NAME="MainOf Coverage Results" MODIFIED="1678771996568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.Demo.java_practice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/My_Application$NewStudent.ic" NAME="NewStudent Coverage Results" MODIFIED="1678792098313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.Demo.java_practice.*</FILTER>
     </SUITE>
   </component>

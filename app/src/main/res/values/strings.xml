@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="textButton">Button Demo</string>
+    <string name="button1">Contained Button</string>
+    <string name="button2">Outlined Button</string>
+    <string name="button3">Text Button</string>
+    <string name="button4">Tap me</string>
+    <string name="textview1">Toast Demo</string>
+    <string name="editexthint">Enter name</string>
+    <string name="toast">Tap for toast</string>
+    <string name="customToast">Tap for custom toast</string>
+    <string name="toggleButton">Toggle Button</string>
 </resources>
