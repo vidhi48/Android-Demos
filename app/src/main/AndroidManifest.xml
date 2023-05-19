@@ -12,10 +12,19 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name="com.example.demo.ToggleButtonDemo"
+            android:name="com.example.demo.tabLayout.MovieTabLayout"
             android:exported="false" />
         <activity
-            android:name="com.example.demo.ToastDemo"
+            android:name="com.example.demo.tabLayout.SportsTabLayout"
+            android:exported="false" />
+        <activity
+            android:name="com.example.demo.tabLayout.HomeTabLayout"
+            android:exported="false" />
+        <activity
+            android:name="com.example.demo.tabLayout.TabLayoutDemo"
+            android:exported="false" />
+        <activity
+            android:name="com.example.demo.SnackBarDemo"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,11 +33,23 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.example.demo.RadioButtonDemo"
+            android:exported="true" />
+        <activity
+            android:name="com.example.demo.CheckboxDemo"
+            android:exported="true" />
+        <activity
+            android:name="com.example.demo.ToggleButtonDemo"
+            android:exported="true" />
+        <activity
+            android:name="com.example.demo.ToastDemo"
+            android:exported="true" />
+        <activity
             android:name="com.example.demo.ButtonDemo"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name="com.example.demo.MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

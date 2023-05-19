@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.demo.CheckboxDemo">
+
+    <TextView
+        android:id="@+id/button_demo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkbox"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/titleCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkboxTitle"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_below="@id/button_demo"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        />
+
+    <CheckBox
+        android:id="@+id/checkbox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkbox1"
+        android:layout_below="@id/titleCheckbox"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <CheckBox
+        android:id="@+id/checkbox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkbox2"
+        android:layout_below="@id/checkbox1"
+        android:layout_marginStart="130dp"
+        />
+
+    <CheckBox
+        android:id="@+id/checkbox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkbox3"
+        android:layout_below="@id/checkbox2"
+        android:layout_marginStart="130dp"
+        />
+
+    <CheckBox
+        android:id="@+id/checkbox4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkbox4"
+        android:layout_below="@id/checkbox3"
+        android:layout_marginStart="130dp"
+        />
+
+    <Button
+        android:id="@+id/selectedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submitButton"
+        android:layout_below="@id/checkbox4"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/green"
+        />
+
+</RelativeLayout>

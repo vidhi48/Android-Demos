@@ -16,16 +16,20 @@ class ToastDemo : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_toast_demo)
         toastDemo()
+        customToast()
     }
 
     private fun toastDemo() {
         val button1 = findViewById<Button>(R.id.toastButton)
-        val edittext1 = findViewById<EditText>(R.id.editname)
-        button1.setOnClickListener() {
+        val edittext1 = findViewById<EditText>(R.id.editName)
+        button1.setOnClickListener {
             lifecycleScope.launch {
                 delay(1000)
                 Toast.makeText(this@ToastDemo, "Welcome: " + edittext1.text.toString(), Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    private fun customToast() {
     }
 }

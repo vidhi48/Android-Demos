@@ -7,7 +7,7 @@
     tools:context="com.example.demo.ToggleButtonDemo">
 
     <TextView
-        android:id="@+id/toggleButton"
+        android:id="@+id/buttonDemo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/toggleButton"
@@ -16,6 +16,46 @@
         android:textColor="@color/black"
         android:layout_marginTop="40dp"
         android:layout_centerHorizontal="true"
+        />
+
+    <ToggleButton
+        android:id="@+id/toggleButtonDemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonDemo"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/lightBlue"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:textOn="@string/toggleButton1"
+        android:textOff="@string/toggleButton2"
+        android:textSize="15sp"
+        />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switchDemo"
+        app:switchPadding="20dp"
+        app:thumbTint="@color/green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/switchDemo"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        android:layout_below="@id/toggleButtonDemo"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ImageButton
+        android:id="@+id/imgButtonDemo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/switchDemo"
+        android:layout_marginTop="50dp"
+        android:background="@color/lightBlue"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/baseline_add_24"
+        android:contentDescription="@string/imageBtn"
         />
 
 </RelativeLayout>
