@@ -13,24 +13,22 @@ class SnackBarDemo : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_snack_bar_demo)
-        snackBarAction()
-        floatingButtonAction()
+        buttonActions()
     }
 
-    private fun snackBarAction() {
+    private fun buttonActions() {
         val snackButton = findViewById<Button>(R.id.snackButton)
+        val floatingButton = findViewById<FloatingActionButton>(R.id.floatingButton)
+
         snackButton.setOnClickListener{
             val snackBar = Snackbar.make(it, "This is a Simple SnackBar", Snackbar.LENGTH_SHORT)
+            snackBar.anchorView = floatingButton
             snackBar.setAction("DISMISS"){
                 Toast.makeText(this, "SnackBar Dismissed", Toast.LENGTH_SHORT).show()
             }
             snackBar.show()
         }
 
-    }
-
-    private fun floatingButtonAction() {
-        val floatingButton = findViewById<FloatingActionButton>(R.id.floatingButton)
         floatingButton.setOnClickListener{
             Toast.makeText(this, "Floating action button Tapped", Toast.LENGTH_SHORT).show()
         }

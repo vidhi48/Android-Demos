@@ -29,4 +29,15 @@
     <string name="snackButton">Open SnackBar</string>
     <string name="personButton">Add Person</string>
     <string name="toastText">Custom Toast</string>
+
+    <string name="homeTab">Home Screen</string>
+    <string name="sportsTab">Sports Screen</string>
+    <string name="moviesTab">Movies Screen</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="actionTitle">Home Page</string>
+    <string name="searchApp">Search</string>
+    <string name="refreshApp">Refresh</string>
+    <string name="copyApp">Copy</string>
+    <string name="pasteApp">Paste</string>
 </resources>

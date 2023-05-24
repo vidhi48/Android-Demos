@@ -12,25 +12,22 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name="com.example.demo.tabLayout.MovieTabLayout"
-            android:exported="false" />
-        <activity
-            android:name="com.example.demo.tabLayout.SportsTabLayout"
-            android:exported="false" />
-        <activity
-            android:name="com.example.demo.tabLayout.HomeTabLayout"
-            android:exported="false" />
-        <activity
-            android:name="com.example.demo.tabLayout.TabLayoutDemo"
-            android:exported="false" />
-        <activity
-            android:name="com.example.demo.SnackBarDemo"
+            android:name="com.example.demo.AppBarDemo"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.demo.tabLayout.TabLayout"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name="com.example.demo.SnackBarDemo"
+            android:exported="true">
+
         </activity>
         <activity
             android:name="com.example.demo.RadioButtonDemo"

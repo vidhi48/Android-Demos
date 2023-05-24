@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/search"
+        android:title="@string/searchApp"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/baseline_search_24"/>
+
+    <item
+        android:id="@+id/refresh"
+        android:title="@string/refreshApp"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/baseline_refresh_24"/>
+
+    <item
+        android:id="@+id/more"
+        app:showAsAction="never"
+        android:icon="@drawable/baseline_more_vert_24"
+        android:title="@string/copyApp" />
+
+    <item
+        android:id="@+id/more2"
+        app:showAsAction="never"
+        android:icon="@drawable/baseline_more_vert_24"
+        android:title="@string/pasteApp" />
+</menu>
