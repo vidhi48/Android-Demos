@@ -12,7 +12,10 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name="com.example.demo.AppBarDemo"
+            android:name="com.example.demo.ConstraintDemo"
+            android:exported="false" />
+        <activity
+            android:name="com.example.demo.CoordinatorLayoutDemo"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,14 +24,38 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.example.demo.GridLayoutDemo"
+            android:exported="true"></activity>
+        <activity
+            android:name="com.example.demo.ConstraintLayoutDemo"
+            android:exported="true" />
+        <activity
+            android:name="com.example.demo.FrameLayoutDemo"
+            android:exported="true" />
+        <activity
+            android:name="com.example.demo.TableLayoutDemo"
+            android:exported="true" />
+        <activity
+            android:name="com.example.demo.TextInputLayoutDemo"
+            android:exported="true" />
+        <activity
+            android:name="com.example.demo.RelativeLayoutDemo"
+            android:exported="true" />
+        <activity
+            android:name="com.example.demo.LinearLayoutDemo"
+            android:exported="true" />
+        <activity
+            android:name="com.example.demo.DatePickerDemo"
+            android:exported="true" />
+        <activity
+            android:name="com.example.demo.AppBarDemo"
+            android:exported="true" />
+        <activity
             android:name="com.example.demo.tabLayout.TabLayout"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name="com.example.demo.SnackBarDemo"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name="com.example.demo.RadioButtonDemo"
             android:exported="true" />

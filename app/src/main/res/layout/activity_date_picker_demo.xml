@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.demo.DatePickerDemo">
+
+    <TextView
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/datePicker"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        />
+
+    <TextView
+        android:id="@+id/selectedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selectedDate"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:layout_below="@id/datePicker"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="90dp"
+        />
+
+    <Button
+        android:id="@+id/dateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dateButton"
+        android:backgroundTint="@color/green"
+        android:layout_below="@id/datePicker"
+        android:layout_toEndOf="@id/selectedDate"
+        android:layout_marginTop="87dp"
+        android:layout_marginStart="80dp"
+        />
+
+    <TextView
+        android:id="@+id/selectedTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selectedTime"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:layout_below="@id/selectedDate"
+        android:layout_marginTop="115dp"
+        android:layout_marginStart="90dp"
+        />
+
+
+    <Button
+        android:id="@+id/timeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/timeButton"
+        android:backgroundTint="@color/green"
+        android:layout_below="@id/dateButton"
+        android:layout_toEndOf="@id/selectedDate"
+        android:layout_marginTop="87dp"
+        android:layout_marginStart="80dp"
+        />
+
+</RelativeLayout>

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="textButton">Button Demo</string>
+    <string name="textDemo">TextInputLayout Demo</string>
     <string name="button1">Contained Button</string>
     <string name="button2">Outlined Button</string>
     <string name="button3">Text Button</string>
@@ -40,4 +41,29 @@
     <string name="refreshApp">Refresh</string>
     <string name="copyApp">Copy</string>
     <string name="pasteApp">Paste</string>
+
+    <string name="datePicker">DatePicker Demo</string>
+    <string name="selectedDate">Date</string>
+    <string name="dateButton">Pick a date</string>
+    <string name="selectedTime">Time</string>
+    <string name="timeButton">Pick a Time</string>
+
+    <string name="email">Email</string>
+    <string name="emailHint">Enter your email</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="passwordHint">Enter your password</string>
+    <string name="loginButton">Login</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="birthdate">Birthday</string>
+
+    <string name="frameText">Frame Layout</string>
+    <string name="constraints">Welcome back</string>
+    <string name="subtitle">Welcome back! Please enter your details.</string>
+
+    <string name="checkboxLogin">Remember for 30 days</string>
+    <string name="forgotPass">Forgot password</string>
+    <string name="googleBtn">Sign in with Google</string>
+
+    <string name="scrollableText">Scrollable Text</string>
 </resources>
