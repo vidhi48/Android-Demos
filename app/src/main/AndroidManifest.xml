@@ -12,10 +12,7 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name="com.example.demo.ConstraintDemo"
-            android:exported="false" />
-        <activity
-            android:name="com.example.demo.CoordinatorLayoutDemo"
+            android:name="com.example.demo.SplashScreenDemo"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,8 +21,19 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.example.demo.LiveDataDemoActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.demo.SeriesDemoActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name="com.example.demo.CoordinatorLayoutDemo"
+            android:exported="true" />
+        <activity
             android:name="com.example.demo.GridLayoutDemo"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name="com.example.demo.ConstraintLayoutDemo"
             android:exported="true" />
@@ -74,6 +82,7 @@
         <activity
             android:name="com.example.demo.MainActivity"
             android:exported="true" />
+        <activity android:name="com.example.demo.ConstraintDemo" />
     </application>
 
 </manifest>

@@ -64,6 +64,10 @@
     <string name="checkboxLogin">Remember for 30 days</string>
     <string name="forgotPass">Forgot password</string>
     <string name="googleBtn">Sign in with Google</string>
-
     <string name="scrollableText">Scrollable Text</string>
+
+    <string name="seriesTitle">Series Information</string>
+    <string name="seriesName">Series Name:</string>
+    <string name="seriesCreator">Series Creator:</string>
+    <string name="seriesRatings">Series Ratings:</string>
 </resources>

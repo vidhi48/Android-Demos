@@ -6,12 +6,19 @@
     android:layout_height="match_parent"
     tools:context="com.example.demo.FrameLayoutDemo">
 
+    <include
+        android:id="@+id/actionDemo"
+        layout="@layout/activity_coordinator_layout_demo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/loginButton"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="150dp"
         android:layout_marginStart="50dp"
         />
 
@@ -20,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/loginButton"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="150dp"
         android:layout_marginStart="170dp"
         />
 
@@ -29,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/loginButton"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="150dp"
         android:layout_marginStart="280dp"
         />
 

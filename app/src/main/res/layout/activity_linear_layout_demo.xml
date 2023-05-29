@@ -1,63 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.demo.LinearLayoutDemo">
 
-    <ImageView
-        android:id="@+id/loginImage"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/login"
-        android:contentDescription="@string/app_name" />
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/editUsername"
+    <data>
+        <variable
+            name="updateText"
+            type="com.example.demo.model.Person" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginRight="45dp"
-        android:hint="@string/username">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.demo.LinearLayoutDemo">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editName"
+        <ImageView
+            android:id="@+id/loginImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/login" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="45dp"
+            android:hint="@string/username">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/editPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginRight="45dp"
-        android:hint="@string/password">
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editPass"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            />
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="45dp"
+            android:hint="@string/password">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
 
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_gravity="center"
-        android:text="@string/loginButton"
-        />
+        </com.google.android.material.textfield.TextInputLayout>
 
-</LinearLayout>
+        <include
+            android:id="@+id/customLayout"
+            layout="@layout/custom_layout"
+            app:updateText="@{updateText}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</layout>

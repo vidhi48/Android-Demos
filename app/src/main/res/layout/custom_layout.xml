@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <data>
+        <variable
+            name="updateText"
+            type="com.example.demo.model.Person" />
+    </data>
+
+    <merge xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:text="@string/loginButton"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/googleButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/googleBtn"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/textModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{updateText.component1()}"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            />
+
+    </merge>
+</layout>
