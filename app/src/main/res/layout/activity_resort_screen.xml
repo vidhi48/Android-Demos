@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.demo.ResortScreen">
+
+    <ImageView
+        android:id="@+id/backImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/gray" />
+
+    <ImageView
+        android:id="@+id/bookmarkImage"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/baseline_bookmark_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/purple_700" />
+
+    <TextView
+        android:id="@+id/resortName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="@string/resortName"
+        android:textColor="@color/gray"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/backImage"
+        app:layout_constraintTop_toBottomOf="@id/backImage" />
+
+    <ImageView
+        android:id="@+id/starImage"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="7dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/baseline_star_24"
+        app:layout_constraintStart_toStartOf="@id/resortName"
+        app:layout_constraintTop_toBottomOf="@id/resortName"
+        app:tint="@color/yellow" />
+
+    <TextView
+        android:id="@+id/ratings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="7dp"
+        android:text="@string/ratings"
+        android:textStyle="bold"
+        android:textColor="@color/gray"
+        android:textSize="17sp"
+        app:layout_constraintStart_toEndOf="@id/starImage"
+        app:layout_constraintTop_toBottomOf="@id/resortName" />
+
+    <TextView
+        android:id="@+id/reviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:text="@string/reviews"
+        android:textColor="@color/lightGray"
+        android:textSize="17sp"
+        app:layout_constraintStart_toEndOf="@id/ratings"
+        app:layout_constraintTop_toTopOf="@id/ratings" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScroll"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/starImage">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/resortImage1"
+                android:layout_width="330dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/resort"
+                app:shapeAppearance="@style/ShapeAppearanceOverlay.ResortImage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/resortImage2"
+                android:layout_width="330dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/resort_image"
+                app:shapeAppearance="@style/ShapeAppearanceOverlay.ResortImage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/resortImage3"
+                android:layout_width="330dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/resort_image2"
+                app:shapeAppearance="@style/ShapeAppearanceOverlay.ResortImage" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/imageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/rounded_text"
+        android:padding="5dp"
+        android:text="@string/imageNumber"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/horizontalScroll"
+        app:layout_constraintStart_toStartOf="@id/horizontalScroll" />
+
+    <ImageView
+        android:id="@+id/locationImage"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/baseline_location_on_24"
+        app:layout_constraintStart_toStartOf="@id/starImage"
+        app:layout_constraintTop_toBottomOf="@id/horizontalScroll"
+        app:tint="@color/yellow" />
+
+    <TextView
+        android:id="@+id/locationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/location"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/locationImage"
+        app:layout_constraintTop_toTopOf="@id/locationImage" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/locationCircle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/location"
+        app:layout_constraintEnd_toEndOf="@id/bookmarkImage"
+        app:layout_constraintTop_toTopOf="@id/locationImage"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.CircleImage" />
+
+    <TextView
+        android:id="@+id/featureText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/feature"
+        android:textColor="@color/gray"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/locationImage"
+        app:layout_constraintTop_toBottomOf="@id/locationImage" />
+
+    <HorizontalScrollView
+        android:id="@+id/featureButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/featureText"
+        app:layout_constraintTop_toBottomOf="@id/featureText">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn1"
+                style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/purple_700"
+                android:text="@string/bedroomBtn"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:icon="@drawable/baseline_bed_24"
+                app:iconTint="@color/white"
+                app:iconPadding="7dp"
+                app:strokeColor="@color/purple_700"
+                android:layout_marginStart="20dp"/>
+
+            <Button
+                android:id="@+id/btn2"
+                style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/skyBlue"
+                android:text="@string/poolBtn"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:icon="@drawable/baseline_pool_24"
+                app:iconTint="@color/white"
+                app:iconPadding="10dp"
+                app:strokeColor="@color/skyBlue"
+                android:layout_marginStart="10dp"/>
+
+            <Button
+                android:id="@+id/btn3"
+                style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkOrange"
+                android:text="@string/tubBtn"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:icon="@drawable/baseline_bathtub_24"
+                app:iconTint="@color/white"
+                app:iconPadding="10dp"
+                app:strokeColor="@color/darkOrange"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/villaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/villaText"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/gray"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/featureText"
+        app:layout_constraintTop_toBottomOf="@id/featureButtons"
+        />
+
+    <TextView
+        android:id="@+id/villaInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/villaInfo"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@id/villaText"
+        app:layout_constraintTop_toBottomOf="@id/villaText"
+        app:layout_constraintEnd_toEndOf="@id/locationCircle"
+        />
+
+    <Button
+        android:id="@+id/bookBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bookBtn"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:padding="15dp"
+        android:backgroundTint="@color/yellow"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,8 +9,7 @@
             type="com.example.demo.model.SeriesViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -18,56 +17,82 @@
             android:id="@+id/seriesTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/seriesTitle"
-            android:textSize="20sp"
-            android:textColor="@color/black"
             android:layout_marginTop="50dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/seriesTitle"
+            android:textColor="@color/black"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/serName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/seriesName"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@id/seriesName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/seriesTitle" />
 
         <TextView
             android:id="@+id/seriesName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{seriesData.data.component1()}"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="50dp"
+            android:text="@{seriesData.data.seriesName}"
             android:textColor="@color/black"
             android:textSize="15sp"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="50dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/seriesTitle"
-            app:layout_constraintEnd_toStartOf="@id/seriesCreator"
-            />
+            app:layout_constraintStart_toEndOf="@id/serName"
+            app:layout_constraintTop_toBottomOf="@id/seriesTitle" />
 
+        <TextView
+            android:id="@+id/serCreator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/seriesCreator"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/serName"
+            app:layout_constraintTop_toBottomOf="@id/serName" />
 
         <TextView
             android:id="@+id/seriesCreator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{seriesData.data.component2()}"
-            android:textSize="15sp"
+            android:layout_marginTop="30dp"
+            android:text="@{seriesData.data.creatorName}"
             android:textColor="@color/black"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="50dp"
-            app:layout_constraintStart_toEndOf="@id/seriesName"
-            app:layout_constraintTop_toBottomOf="@id/seriesTitle"
-            app:layout_constraintEnd_toStartOf="@id/seriesRatings"
-            />
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/seriesName"
+            app:layout_constraintTop_toBottomOf="@id/seriesName" />
+
+        <TextView
+            android:id="@+id/serRatings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/seriesRatings"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/serCreator"
+            app:layout_constraintTop_toBottomOf="@id/serCreator" />
 
         <TextView
             android:id="@+id/seriesRatings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{seriesData.data.component3()}"
-            android:textSize="15sp"
+            android:layout_marginTop="30dp"
+            android:text="@{seriesData.data.seriesRating}"
             android:textColor="@color/black"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="50dp"
-            app:layout_constraintStart_toEndOf="@id/seriesCreator"
-            app:layout_constraintTop_toBottomOf="@id/seriesTitle"
-            />
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/seriesCreator"
+            app:layout_constraintTop_toBottomOf="@id/seriesCreator" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
