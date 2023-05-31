@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grayBack"
     tools:context="com.example.demo.ResortScreen">
 
     <ImageView
@@ -28,7 +29,7 @@
         android:src="@drawable/baseline_bookmark_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/purple_700" />
+        app:tint="@color/blueColor" />
 
     <TextView
         android:id="@+id/resortName"
@@ -36,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
         android:text="@string/resortName"
-        android:textColor="@color/gray"
+        android:textColor="@color/lightBlack"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/backImage"
@@ -163,6 +164,8 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/location"
+        app:strokeWidth="5dp"
+        app:strokeColor="@color/lightWhite"
         app:layout_constraintEnd_toEndOf="@id/bookmarkImage"
         app:layout_constraintTop_toTopOf="@id/locationImage"
         app:shapeAppearance="@style/ShapeAppearanceOverlay.CircleImage" />
@@ -199,14 +202,14 @@
                 style="@style/Widget.Material3.Button.OutlinedButton.Icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/purple_700"
+                android:backgroundTint="@color/blueColor"
                 android:text="@string/bedroomBtn"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 app:icon="@drawable/baseline_bed_24"
                 app:iconTint="@color/white"
                 app:iconPadding="7dp"
-                app:strokeColor="@color/purple_700"
+                app:strokeColor="@color/blueColor"
                 android:layout_marginStart="20dp"/>
 
             <Button
@@ -267,7 +270,7 @@
         app:layout_constraintEnd_toEndOf="@id/locationCircle"
         />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bookBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -276,7 +279,7 @@
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:padding="15dp"
-        android:backgroundTint="@color/yellow"
+        android:background="@drawable/button_corners"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="20dp"

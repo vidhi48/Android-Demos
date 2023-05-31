@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/villaImage"
+        android:layout_width="180dp"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/resort"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Villa"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/ratingsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="@string/ratings"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:background="@drawable/ratings_corner"
+        app:layout_constraintEnd_toEndOf="@id/villaImage"
+        app:layout_constraintTop_toTopOf="@id/villaImage"/>
+
+    <TextView
+        android:id="@+id/villaName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/villaImage"
+        />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/villaName"
+        />
+
+    <TextView
+        android:id="@+id/subtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/price"
+        app:layout_constraintTop_toBottomOf="@id/price"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

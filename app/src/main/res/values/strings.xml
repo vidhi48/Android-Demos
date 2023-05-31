@@ -89,12 +89,30 @@
     <string name="community">Community</string>
     <string name="bookmarks">Bookmarks</string>
     <string name="settings">Settings</string>
-    
+
     <string name="resortTitle">Applications</string>
     <string name="currentTxt">Current</string>
     <string name="executedTxt">Executed</string>
     <string name="allTxt">All</string>
-    
+
     <string name="villaLocation">Villa for 16 guests in Ubud</string>
     <string name="duration">Nov 20, 2020 - Dec 4, 2020</string>
+    <string name="offer">3 offers</string>
+    <string name="guestChip">16 guests</string>
+    <string name="bedroomChip">5 bedrooms</string>
+    <string name="priceChip">$1400 - $1800</string>
+    <string name="poolChip">Open pool</string>
+    <string name="kitchenChip">Kitchen</string>
+    <string name="wifiChip">Wi-Fi</string>
+    <string name="popular">Popular stays</string>
+
+    <string name="newText">New application</string>
+    <string name="subtext">Create an application for the hosts indicating all\nthe necessary living conditions.</string>
+    <string name="destination">Destination</string>
+    <string name="date">Date</string>
+    <string name="night">Nights</string>
+    <string name="guest">Guests</string>
+    <string name="bedroom">Bedrooms</string>
+    <string name="type">Type</string>
+    <string name="price">Price per night</string>
 </resources>
