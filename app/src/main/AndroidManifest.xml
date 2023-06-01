@@ -12,26 +12,28 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name="com.example.demo.ResortNewApplication"
+            android:name="com.example.demo.DemoMerge"
             android:exported="false" />
+        <activity
+            android:name="com.example.demo.ResortNewApplication"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
             android:name="com.example.demo.ResortApplicationScreen"
             android:exported="true">
+
+        </activity>
+        <activity
+            android:name="com.example.demo.SplashScreenDemo"
+            android:exported="true" />
+        <activity
+            android:name="com.example.demo.ResortScreen"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.demo.SplashScreenDemo"
-            android:exported="true">
-
-        </activity>
-        <activity
-            android:name="com.example.demo.ResortScreen"
-            android:exported="true" >
-
         </activity>
         <activity
             android:name="com.example.demo.LiveDataDemoActivity"
@@ -62,7 +64,9 @@
             android:exported="true" />
         <activity
             android:name="com.example.demo.LinearLayoutDemo"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name="com.example.demo.DatePickerDemo"
             android:exported="true" />
