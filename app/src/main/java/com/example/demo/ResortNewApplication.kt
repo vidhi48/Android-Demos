@@ -1,32 +1,45 @@
 package com.example.demo
 
+import android.annotation.SuppressLint
+import android.app.Activity
 import android.app.DatePickerDialog
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.get
+import com.example.demo.model.ResortApplication
 import com.example.myapplication.databinding.ActivityResortNewApplicationBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import java.text.NumberFormat
 import java.util.Calendar
 import java.util.Currency
 
-
-class ResortNewApplication(context: Context) : BottomSheetDialog(context) {
+class ResortNewApplication(private val activity: AppCompatActivity) : BottomSheetDialog(activity) {
 
     private lateinit var binding: ActivityResortNewApplicationBinding
+    private var viewModel: ResortApplication = ViewModelProvider(activity)[ResortApplication::class.java]
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityResortNewApplicationBinding.inflate(layoutInflater)
+        binding.appData = viewModel
+        binding.lifecycleOwner = activity
         setContentView(binding.root)
         setupViews()
         closeKeyboard()
+
+//        viewModel.userData.observe(activity) {
+//            Log.e("new",it.destination)
+//        }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun setupViews() {
         binding.dateText.setOnClickListener {
             val calender = Calendar.getInstance()
@@ -72,7 +85,6 @@ class ResortNewApplication(context: Context) : BottomSheetDialog(context) {
             override fun onNothingSelected(p0: AdapterView<*>?) {
             }
         }
-
     }
 
     private fun closeKeyboard() {
@@ -82,5 +94,4 @@ class ResortNewApplication(context: Context) : BottomSheetDialog(context) {
             keyboard.hideSoftInputFromWindow(view.windowToken, 0)
         }
     }
-
 }

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <variable
+            name="villaInfo"
+            type="com.example.demo.model.ResortInfo" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.demo.ResortCardInfo">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/villaImage"
+            android:layout_width="180dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:src="@{villaInfo.villaImage}"
+            app:shapeAppearance="@style/ShapeAppearanceOverlay.Villa"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/ratingsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ratings_corner"
+            android:padding="8dp"
+            android:text="@{villaInfo.ratings}"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/villaImage"
+            app:layout_constraintTop_toTopOf="@id/villaImage" />
+
+        <TextView
+            android:id="@+id/villaName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:text="@{villaInfo.villaName}"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintEnd_toStartOf="@id/ratingsText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/villaImage" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="@{villaInfo.price}"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/villaName"
+            app:layout_constraintTop_toBottomOf="@id/villaName" />
+
+        <TextView
+            android:id="@+id/subtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nightData"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/price"
+            app:layout_constraintTop_toBottomOf="@id/price" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

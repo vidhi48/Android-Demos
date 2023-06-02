@@ -81,7 +81,10 @@
     <string name="poolBtn">Open pool</string>
     <string name="tubBtn">3 bathtubs</string>
     <string name="villaText">About villa</string>
-    <string name="villaInfo">A destination resort is a resort that itself contains the necessary guest attraction capabilities so it does not need to be near a destination (town, historic site, theme park, or other) to attract its patrons.</string>
+    <string name="villaInfo">A destination resort is a resort that itself contains the necessary guest attraction capabilities so it does not need to be near a destination (town, historic site, theme park, or other) to attract its patrons.
+                            A destination resort is a resort that itself contains the necessary guest attraction capabilities so it does not need to be near a destination (town, historic site, theme park, or other) to attract its patrons.
+                            A destination resort is a resort that itself contains the necessary guest attraction capabilities so it does not need to be near a destination (town, historic site, theme park, or other) to attract its patrons.
+    </string>
     <string name="bookBtn">Book it for $1400</string>
 
     <string name="applications">Applications</string>
@@ -119,11 +122,5 @@
     <string name="start">$0</string>
     <string name="end">$8000+</string>
     <string name="createApp">Create Application</string>
-
-    <string-array name="resorts">
-        <item>Adventure Resorts</item>
-        <item>Beach Resorts</item>
-        <item>Golf Resorts</item>
-        <item>Luxury Resorts</item>
-    </string-array>
+    <string name="nightData">per night</string>
 </resources>
