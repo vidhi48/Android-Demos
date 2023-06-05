@@ -1,9 +1,7 @@
-package com.example.demo
+package com.example.demo.screens
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.demo.model.ResortInfo
-import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityResortCardInfoBinding
 
 class ResortCardInfo : AppCompatActivity() {

@@ -1,14 +1,14 @@
-package com.example.demo
+package com.example.demo.screens
 
 import android.annotation.SuppressLint
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.demo.model.ResortInfo
+import com.example.demo.screens.ResortNewApplication
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityResortApplicationScreenBinding
+import com.example.myapplication.databinding.ActivityResortNewApplicationBinding
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class ResortApplicationScreen : AppCompatActivity() {
 
@@ -38,5 +38,10 @@ class ResortApplicationScreen : AppCompatActivity() {
         val dialog = ResortNewApplication(this)
         dialog.behavior.peekHeight = 1950
         dialog.show()
+
+//        val dialog = BottomSheetDialog(this)
+//        val view = layoutInflater.inflate(R.layout.activity_resort_new_application, null)
+//        dialog.setContentView(view)
+//        dialog.show()
     }
 }

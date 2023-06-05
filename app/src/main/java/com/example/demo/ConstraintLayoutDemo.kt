@@ -6,7 +6,7 @@ import android.widget.Toast
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityConstraintLayoutDemoBinding
 
-class ConstraintLayoutDemo : AppCompatActivity() {
+open class ConstraintLayoutDemo : AppCompatActivity() {
 
     private lateinit var binding: ActivityConstraintLayoutDemoBinding
 

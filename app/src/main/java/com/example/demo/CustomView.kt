@@ -1,4 +1,4 @@
-package com.example.demo.model
+package com.example.demo
 
 import android.content.Context
 import android.graphics.Canvas
@@ -8,17 +8,42 @@ import android.graphics.Path
 import android.graphics.RectF
 import android.util.AttributeSet
 import android.view.View
+import com.example.myapplication.R
 
-class CustomView(context: Context, attrs: AttributeSet): View(context, attrs) {
+class CustomView(context: Context, attrs: AttributeSet) : View(context, attrs) {
 
-    private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
-    private val faceColor = Color.CYAN
-    private val eyesColor = Color.BLACK
-    private val mouthColor = Color.BLACK
-    private val borderColor = Color.LTGRAY
-    private val borderWidth = 5.0f
-    private var faceSize = 320
+    companion object {
+        private const val DEFAULT_FACE_COLOR = Color.CYAN
+        private const val DEFAULT_EYES_COLOR = Color.BLACK
+        private const val DEFAULT_MOUTH_COLOR = Color.BLACK
+        private const val DEFAULT_BORDER_COLOR = Color.LTGRAY
+        private const val DEFAULT_BORDER_WIDTH = 2.0f
+    }
+
+    private var faceColor = DEFAULT_FACE_COLOR
+    private var eyesColor = DEFAULT_EYES_COLOR
+    private var mouthColor = DEFAULT_MOUTH_COLOR
+    private var borderColor = DEFAULT_BORDER_COLOR
+    private var borderWidth = DEFAULT_BORDER_WIDTH
+
+    private val paint = Paint()
     private val mouthPath = Path()
+    private var faceSize = 0
+
+    init {
+        paint.isAntiAlias = true
+        setupAttributes(attrs)
+    }
+
+    private fun setupAttributes(attrs: AttributeSet) {
+        val typedArray = context.theme.obtainStyledAttributes(attrs, R.styleable.CustomView, 0, 0)
+        faceColor = typedArray.getColor(R.styleable.CustomView_faceColor, DEFAULT_FACE_COLOR)
+        eyesColor = typedArray.getColor(R.styleable.CustomView_eyesColor, DEFAULT_EYES_COLOR)
+        mouthColor = typedArray.getColor(R.styleable.CustomView_mouthColor, DEFAULT_MOUTH_COLOR)
+        borderColor = typedArray.getColor(R.styleable.CustomView_borderColor, DEFAULT_BORDER_COLOR)
+        borderWidth =
+            typedArray.getDimension(R.styleable.CustomView_borderWidth, DEFAULT_BORDER_WIDTH)
+    }
 
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
@@ -51,10 +76,12 @@ class CustomView(context: Context, attrs: AttributeSet): View(context, attrs) {
         paint.color = eyesColor
         paint.style = Paint.Style.FILL
 
-        val leftEyeRect = RectF(faceSize * 0.32f, faceSize * 0.23f, faceSize * 0.43f, faceSize * 0.50f)
+        val leftEyeRect =
+            RectF(faceSize * 0.32f, faceSize * 0.23f, faceSize * 0.43f, faceSize * 0.50f)
         canvas?.drawOval(leftEyeRect, paint)
 
-        val rightEyeRect = RectF(faceSize * 0.57f, faceSize * 0.23f, faceSize * 0.68f, faceSize * 0.50f)
+        val rightEyeRect =
+            RectF(faceSize * 0.57f, faceSize * 0.23f, faceSize * 0.68f, faceSize * 0.50f)
         canvas?.drawOval(rightEyeRect, paint)
     }
 

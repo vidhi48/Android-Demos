@@ -7,19 +7,19 @@
     <data>
 
         <variable
-            name="appData"
-            type="com.example.demo.model.ResortApplication" />
+            name="newApplication"
+            type="com.example.demo.model.NewApplicationViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.example.demo.ResortNewApplication">
+        tools:context="com.example.demo.screens.ResortNewApplication">
 
         <com.google.android.material.bottomsheet.BottomSheetDragHandleView
             android:id="@+id/drag_handle"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="@dimen/dp_30"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -27,7 +27,7 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="60dp"
+            android:paddingBottom="@dimen/dp_50"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -48,7 +48,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    app:layout_constraintGuide_percent="0.93" />
+                    app:layout_constraintGuide_percent="0.95" />
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guideline3"
@@ -61,11 +61,9 @@
                     android:id="@+id/newText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="@dimen/dp_20"
                     android:text="@string/newText"
-                    android:textColor="@color/lightBlack"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
+                    style="@style/ResortTitle"
                     app:layout_constraintStart_toStartOf="@id/guideline"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -73,7 +71,7 @@
                     android:id="@+id/subtext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="@dimen/dp_5"
                     android:text="@string/subtext"
                     android:textColor="@color/lightGray"
                     android:textSize="15sp"
@@ -84,18 +82,17 @@
                     android:id="@+id/destination"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="@dimen/dp_15"
                     android:text="@string/destination"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
+                    style="@style/NewApplicationTitles"
                     app:layout_constraintStart_toStartOf="@id/guideline"
                     app:layout_constraintTop_toBottomOf="@id/subtext" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/destEdit"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_60"
                     app:boxStrokeColor="@color/gray"
                     app:endIconMode="clear_text"
                     app:layout_constraintEnd_toEndOf="@id/guideline2"
@@ -107,26 +104,25 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="text"
-                        android:text="@={appData.userData}" />
+                        android:text="@={newApplication.data.destination}" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
                     android:id="@+id/date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="@dimen/dp_15"
                     android:text="@string/date"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
+                    style="@style/NewApplicationTitles"
                     app:layout_constraintStart_toStartOf="@id/guideline"
                     app:layout_constraintTop_toBottomOf="@id/destEdit" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/dateEdit"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"
-                    android:layout_marginEnd="10dp"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_60"
+                    android:layout_marginEnd="@dimen/dp_10"
                     app:boxStrokeColor="@color/gray"
                     app:endIconDrawable="@drawable/baseline_calendar_month_24"
                     app:endIconMode="custom"
@@ -145,18 +141,17 @@
                     android:id="@+id/night"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="@dimen/dp_10"
                     android:text="@string/night"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
+                    style="@style/NewApplicationTitles"
                     app:layout_constraintStart_toStartOf="@id/guideline3"
                     app:layout_constraintTop_toTopOf="@id/date" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/nightsEdit"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_60"
                     app:boxStrokeColor="@color/gray"
                     app:endIconMode="clear_text"
                     app:layout_constraintEnd_toEndOf="@id/guideline2"
@@ -173,19 +168,18 @@
                     android:id="@+id/guest"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="@dimen/dp_15"
                     android:text="@string/guest"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
+                    style="@style/NewApplicationTitles"
                     app:layout_constraintStart_toStartOf="@id/guideline"
                     app:layout_constraintTop_toBottomOf="@id/dateEdit" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/guestEdit"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"
-                    android:layout_marginEnd="10dp"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_60"
+                    android:layout_marginEnd="@dimen/dp_10"
                     app:boxStrokeColor="@color/gray"
                     app:endIconMode="clear_text"
                     app:layout_constraintEnd_toEndOf="@id/guideline3"
@@ -202,19 +196,18 @@
                     android:id="@+id/bedroom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="@dimen/dp_10"
                     android:text="@string/bedroom"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
+                    style="@style/NewApplicationTitles"
                     app:layout_constraintStart_toStartOf="@id/guideline3"
                     app:layout_constraintTop_toTopOf="@id/guest" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/bedroomEdit"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="10dp"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_60"
+                    android:layout_marginStart="@dimen/dp_10"
                     app:boxStrokeColor="@color/gray"
                     app:endIconMode="clear_text"
                     app:layout_constraintEnd_toEndOf="@id/guideline2"
@@ -231,18 +224,17 @@
                     android:id="@+id/type"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="@dimen/dp_15"
                     android:text="@string/type"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
+                    style="@style/NewApplicationTitles"
                     app:layout_constraintStart_toStartOf="@id/guideline"
                     app:layout_constraintTop_toBottomOf="@id/guestEdit" />
 
                 <androidx.appcompat.widget.AppCompatSpinner
                     android:id="@+id/typeSpinner"
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_60"
+                    android:layout_marginTop="@dimen/dp_5"
                     android:background="@drawable/spinner_corner"
                     app:layout_constraintEnd_toEndOf="@id/guideline2"
                     app:layout_constraintHorizontal_bias="1.0"
@@ -253,10 +245,9 @@
                     android:id="@+id/priceText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="@dimen/dp_15"
                     android:text="@string/price"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
+                    style="@style/NewApplicationTitles"
                     app:layout_constraintStart_toStartOf="@id/guideline"
                     app:layout_constraintTop_toBottomOf="@id/typeSpinner" />
 
@@ -272,11 +263,11 @@
 
                 <com.google.android.material.slider.RangeSlider
                     android:id="@+id/rangeSlider"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/dp_0"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_7"
                     android:valueFrom="0.0"
                     android:valueTo="8000.0"
                     app:labelBehavior="gone"
@@ -286,15 +277,15 @@
                     app:thumbColor="@color/white"
                     app:thumbRadius="13dp"
                     app:thumbStrokeColor="@color/blueColor"
-                    app:thumbStrokeWidth="5dp"
-                    app:trackHeight="5dp"
+                    app:thumbStrokeWidth="@dimen/dp_5"
+                    app:trackHeight="@dimen/dp_5"
                     app:values="@array/sliderValues" />
 
                 <TextView
                     android:id="@+id/startRange"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="@dimen/dp_40"
                     android:text="@string/start"
                     android:textColor="@color/gray"
                     app:layout_constraintStart_toStartOf="@id/guideline"
@@ -313,10 +304,9 @@
                     android:id="@+id/feature"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="@dimen/dp_10"
                     android:text="@string/feature"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
+                    style="@style/NewApplicationTitles"
                     app:layout_constraintStart_toStartOf="@id/guideline"
                     app:layout_constraintTop_toBottomOf="@id/startRange" />
 
@@ -324,8 +314,8 @@
                     android:id="@+id/chipGroup"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="50dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_50"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="@id/guideline"
                     app:layout_constraintTop_toBottomOf="@id/feature">
@@ -365,17 +355,16 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bookBtn"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dp_0"
             android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginEnd="@dimen/dp_25"
+            android:layout_marginBottom="@dimen/dp_20"
             android:background="@drawable/button_corners"
-            android:padding="15dp"
+            android:padding="@dimen/dp_15"
             android:text="@string/createApp"
             android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textSize="15sp"
+            style="@style/NewApplicationTitles"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

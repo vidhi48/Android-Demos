@@ -1,7 +1,6 @@
-package com.example.demo
+package com.example.demo.screens
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.app.DatePickerDialog
 import android.content.Context
 import android.os.Bundle
@@ -12,8 +11,8 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.get
-import com.example.demo.model.ResortApplication
+import com.example.demo.model.NewApplicationModel
+import com.example.demo.model.NewApplicationViewModel
 import com.example.myapplication.databinding.ActivityResortNewApplicationBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import java.text.NumberFormat
@@ -23,20 +22,21 @@ import java.util.Currency
 class ResortNewApplication(private val activity: AppCompatActivity) : BottomSheetDialog(activity) {
 
     private lateinit var binding: ActivityResortNewApplicationBinding
-    private var viewModel: ResortApplication = ViewModelProvider(activity)[ResortApplication::class.java]
+    private var viewModel: NewApplicationViewModel = ViewModelProvider(activity)[NewApplicationViewModel::class.java]
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityResortNewApplicationBinding.inflate(layoutInflater)
-        binding.appData = viewModel
+        binding.newApplication = viewModel
         binding.lifecycleOwner = activity
         setContentView(binding.root)
+
         setupViews()
         closeKeyboard()
 
-//        viewModel.userData.observe(activity) {
-//            Log.e("new",it.destination)
-//        }
+        viewModel.data.observe(activity){
+            Log.e("Application", it.destination)
+        }
     }
 
     @SuppressLint("SetTextI18n")
