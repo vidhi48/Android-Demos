@@ -3,6 +3,7 @@ package com.example.demo.screens
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.content.Context
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -27,16 +28,12 @@ class ResortNewApplication(private val activity: AppCompatActivity) : BottomShee
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityResortNewApplicationBinding.inflate(layoutInflater)
-        binding.newApplication = viewModel
         binding.lifecycleOwner = activity
+        binding.newApplicationViewModel = viewModel
         setContentView(binding.root)
 
         setupViews()
         closeKeyboard()
-
-        viewModel.data.observe(activity){
-            Log.e("Application", it.destination)
-        }
     }
 
     @SuppressLint("SetTextI18n")

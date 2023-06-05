@@ -38,10 +38,5 @@ class ResortApplicationScreen : AppCompatActivity() {
         val dialog = ResortNewApplication(this)
         dialog.behavior.peekHeight = 1950
         dialog.show()
-
-//        val dialog = BottomSheetDialog(this)
-//        val view = layoutInflater.inflate(R.layout.activity_resort_new_application, null)
-//        dialog.setContentView(view)
-//        dialog.show()
     }
 }

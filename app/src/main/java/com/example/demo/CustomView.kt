@@ -45,7 +45,7 @@ class CustomView(context: Context, attrs: AttributeSet) : View(context, attrs) {
             typedArray.getDimension(R.styleable.CustomView_borderWidth, DEFAULT_BORDER_WIDTH)
     }
 
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         drawFace(canvas)
         drawEyes(canvas)

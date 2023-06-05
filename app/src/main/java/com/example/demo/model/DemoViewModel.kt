@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NewApplicationViewModel: ViewModel() {
-    val userData = MutableLiveData<String>("")
+class DemoViewModel: ViewModel() {
+    val userData = MutableLiveData<DemoModel>(DemoModel())
+    val data: LiveData<DemoModel> = userData
 }
