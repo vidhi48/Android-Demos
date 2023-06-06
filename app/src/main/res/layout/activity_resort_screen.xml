@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -15,15 +17,9 @@
         <variable
             name="chipData3"
             type="com.example.demo.model.ResortChipModel" />
-
-        <variable
-            name="chipData4"
-            type="com.example.demo.model.ResortChipModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/grayBack"
@@ -120,6 +116,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dp_300"
                     android:layout_marginTop="@dimen/dp_20"
+                    android:contentDescription="@string/actionTitle"
                     android:scrollbars="none"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -244,9 +241,9 @@
                             android:text="@{chipData1.title}"
                             android:textColor="@color/white"
                             android:textSize="15sp"
-                            app:icon="@drawable/baseline_bed_24"
+                            tools:text="@string/bedroom"
+                            app:iconDrawable="@{chipData1.iconImage}"
                             app:iconPadding="@dimen/dp_7"
-                            app:iconTint="@color/white"
                             app:strokeColor="@color/blueColor" />
 
                         <Button
@@ -259,7 +256,8 @@
                             android:text="@{chipData2.title}"
                             android:textColor="@color/white"
                             android:textSize="15sp"
-                            app:icon="@drawable/baseline_pool_24"
+                            tools:text="@string/poolChip"
+                            app:iconDrawable="@{chipData2.iconImage}"
                             app:iconPadding="@dimen/dp_10"
                             app:iconTint="@color/white"
                             app:strokeColor="@color/skyBlue" />
@@ -275,23 +273,8 @@
                             android:text="@{chipData3.title}"
                             android:textColor="@color/white"
                             android:textSize="15sp"
-                            app:icon="@drawable/baseline_bathtub_24"
-                            app:iconPadding="@dimen/dp_10"
-                            app:iconTint="@color/white"
-                            app:strokeColor="@color/darkOrange" />
-
-                        <Button
-                            android:id="@+id/btn4"
-                            style="@style/Widget.Material3.Button.OutlinedButton.Icon"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/dp_10"
-                            android:layout_marginEnd="@dimen/dp_20"
-                            android:backgroundTint="@color/green"
-                            android:text="@{chipData1.title}"
-                            android:textColor="@color/white"
-                            android:textSize="15sp"
-                            app:icon="@drawable/baseline_pool_24"
+                            tools:text="@string/kitchenChip"
+                            app:iconDrawable="@{chipData3.iconImage}"
                             app:iconPadding="@dimen/dp_10"
                             app:iconTint="@color/white"
                             app:strokeColor="@color/darkOrange" />

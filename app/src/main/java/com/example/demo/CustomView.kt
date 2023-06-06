@@ -41,8 +41,7 @@ class CustomView(context: Context, attrs: AttributeSet) : View(context, attrs) {
         eyesColor = typedArray.getColor(R.styleable.CustomView_eyesColor, DEFAULT_EYES_COLOR)
         mouthColor = typedArray.getColor(R.styleable.CustomView_mouthColor, DEFAULT_MOUTH_COLOR)
         borderColor = typedArray.getColor(R.styleable.CustomView_borderColor, DEFAULT_BORDER_COLOR)
-        borderWidth =
-            typedArray.getDimension(R.styleable.CustomView_borderWidth, DEFAULT_BORDER_WIDTH)
+        borderWidth = typedArray.getDimension(R.styleable.CustomView_borderWidth, DEFAULT_BORDER_WIDTH)
     }
 
     override fun onDraw(canvas: Canvas) {

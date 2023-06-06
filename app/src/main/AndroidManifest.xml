@@ -12,10 +12,12 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name="com.example.demo.DataBindingDemo"
+            android:name="com.example.demo.CustomLayoutDemo"
             android:exported="true" >
-
         </activity>
+        <activity
+            android:name="com.example.demo.DataBindingDemo"
+            android:exported="true"></activity>
         <activity
             android:name="com.example.demo.screens.ResortCardInfo"
             android:exported="false" />
@@ -29,16 +31,16 @@
         <activity
             android:name="com.example.demo.screens.ResortApplicationScreen"
             android:exported="true">
+
+        </activity>
+        <activity
+            android:name="com.example.demo.screens.ResortScreen"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.demo.screens.ResortScreen"
-            android:exported="true" >
-
         </activity>
         <activity
             android:name="com.example.demo.SplashScreenDemo"

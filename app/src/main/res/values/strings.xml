@@ -30,6 +30,7 @@
     <string name="snackButton">Open SnackBar</string>
     <string name="personButton">Add Person</string>
     <string name="toastText">Custom Toast</string>
+    <string name="customLayout">Custom Layout</string>
 
     <string name="homeTab">Home Screen</string>
     <string name="sportsTab">Sports Screen</string>
@@ -123,4 +124,8 @@
     <string name="end">$8000+</string>
     <string name="createApp">Create Application</string>
     <string name="nightData">per night</string>
+
+    <string name="bmi">BMI Calculator</string>
+    <string name="height">enter height</string>
+    <string name="weight">enter weight</string>
 </resources>
