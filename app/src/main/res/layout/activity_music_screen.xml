@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="castingBtn"
+            type="com.example.demo.models.ButtonImageModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiteApp"
+        tools:context="com.example.demo.MusicScreen">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/actionBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:outlineSpotShadowColor="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UnusedAttribute">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                style="@style/actionBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/whiteApp"
+                app:menu="@menu/action_bar_menu"
+                app:navigationIcon="@drawable/baseline_arrow_back_24"
+                app:navigationIconTint="@color/black"
+                app:subtitle="@string/subtitle"
+                app:title="@string/speaker" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLine1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLine2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/spotifyBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/button_corner"
+            android:backgroundTint="@color/green"
+            android:drawableStart="@drawable/spotify"
+            android:drawableEnd="@drawable/baseline_navigate_next_24"
+            android:drawablePadding="@dimen/dp_10"
+            android:drawableTint="@color/white"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_10"
+            android:text="@string/spotify"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/actionBar" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profileImg"
+            android:layout_width="@dimen/dp_260"
+            android:layout_height="@dimen/dp_270"
+            android:layout_marginTop="@dimen/dp_20"
+            android:scaleType="fitXY"
+            android:src="@drawable/profile"
+            app:layout_constraintStart_toStartOf="@id/guideLine1"
+            app:layout_constraintTop_toBottomOf="@id/spotifyBtn"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.profile"
+            app:strokeColor="@color/lightGray"
+            app:strokeWidth="@dimen/dp_10" />
+
+        <TextView
+            android:id="@+id/musicTitle"
+            style="@style/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/musicTitle"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/guideLine1"
+            app:layout_constraintTop_toBottomOf="@id/profileImg" />
+
+        <TextView
+            android:id="@+id/musicSub"
+            style="@style/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_3"
+            android:text="@string/musicSubtitle"
+            android:textColor="@color/gray"
+            app:layout_constraintStart_toStartOf="@id/guideLine1"
+            app:layout_constraintTop_toBottomOf="@id/musicTitle" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/musicSeek"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_13"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginEnd="7dp"
+            android:progressTint="@color/blue"
+            android:thumb="@drawable/seekbar"
+            android:thumbTint="@color/blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/musicSub" />
+
+        <TextView
+            android:id="@+id/startText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/startRange"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/guideLine1"
+            app:layout_constraintTop_toBottomOf="@id/musicSeek" />
+
+        <TextView
+            android:id="@+id/endText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/endRange"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/guideLine2"
+            app:layout_constraintTop_toBottomOf="@id/musicSeek" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/starBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/baseline_star_24"
+            app:borderWidth="@dimen/dp_0"
+            app:layout_constraintEnd_toStartOf="@id/musicControlCard"
+            app:layout_constraintStart_toStartOf="@id/guideLine1"
+            app:layout_constraintTop_toBottomOf="@id/startText"
+            app:tint="@color/yellow" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/musicControlCard"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginStart="@dimen/dp_23"
+            android:backgroundTint="@color/lightGray"
+            app:cardCornerRadius="@dimen/dp_20"
+            app:layout_constraintStart_toEndOf="@id/starBtn"
+            app:layout_constraintTop_toTopOf="@id/starBtn">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/backward"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="@dimen/dp_25"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:backgroundTint="@color/lightGray"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/back"
+                    app:layout_constraintEnd_toStartOf="@id/pause"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/gray" />
+
+                <ImageButton
+                    android:id="@+id/pause"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:backgroundTint="@color/lightGray"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/pause"
+                    app:layout_constraintStart_toEndOf="@id/backward"
+                    app:layout_constraintTop_toTopOf="@id/backward"
+                    app:tint="@color/black" />
+
+                <ImageButton
+                    android:id="@+id/forward"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_25"
+                    android:backgroundTint="@color/lightGray"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/next"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/pause"
+                    app:layout_constraintTop_toTopOf="@id/backward"
+                    app:tint="@color/gray" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/configureBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/playlist"
+            app:borderWidth="@dimen/dp_0"
+            app:layout_constraintEnd_toEndOf="@id/guideLine2"
+            app:layout_constraintTop_toTopOf="@id/musicControlCard" />
+
+        <include
+            android:id="@+id/castingBtn"
+            layout="@layout/activity_button_images"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:buttonImages="@{castingBtn}"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginStart="@dimen/dp_25"
+            app:layout_constraintStart_toStartOf="@id/guideLine1"
+            app:layout_constraintTop_toBottomOf="@id/starBtn"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

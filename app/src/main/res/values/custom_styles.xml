@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <style name="title">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="subtitle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    
+    <style name="actionBar">
+        <item name="titleCentered">true</item>
+        <item name="subtitleCentered">true</item>
+        <item name="titleTextColor">@color/black</item>
+        <item name="subtitleTextColor">@color/gray</item>
+        <item name="titleTextAppearance">@style/title</item>
+        <item name="subtitleTextAppearance">@style/subtitle</item>
+    </style>
+</resources>
