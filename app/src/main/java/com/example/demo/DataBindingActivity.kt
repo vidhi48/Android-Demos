@@ -1,14 +1,12 @@
 package com.example.demo
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModel
 import com.example.demo.model.ViewModelDemo
 import com.example.myapplication.databinding.ActivityDataBindingBinding
 
-class DataBindingActivity: AppCompatActivity() {
+class DataBindingActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDataBindingBinding
     private val viewModel: ViewModelDemo by viewModels()

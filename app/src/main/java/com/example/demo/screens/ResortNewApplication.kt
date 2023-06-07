@@ -31,10 +31,11 @@ class ResortNewApplication(private val activity: AppCompatActivity) : BottomShee
         binding.newApplicationViewModel = viewModel
         setContentView(binding.root)
 
+        setupPicker()
         setupViews()
     }
 
-    private fun setupViews() {
+    private fun setupPicker() {
 
         binding.dateText.setOnClickListener {
             val calender = Calendar.getInstance()
@@ -50,19 +51,6 @@ class ResortNewApplication(private val activity: AppCompatActivity) : BottomShee
                 }, year, month, date
             )
             datePickerDialog.show()
-        }
-
-        binding.rangeSlider.setLabelFormatter { value: Float ->
-            val format = NumberFormat.getCurrencyInstance()
-            format.maximumFractionDigits = 0
-            format.currency = Currency.getInstance("USD")
-            format.format(value.toDouble())
-        }
-
-        var price = ""
-        binding.rangeSlider.addOnChangeListener { slider, _, _ ->
-            price = "$${slider.values[0]} - $${slider.values[1]}"
-            binding.priceData.text = price
         }
 
         val resorts = listOf(
@@ -81,6 +69,21 @@ class ResortNewApplication(private val activity: AppCompatActivity) : BottomShee
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
             }
+        }
+    }
+
+    private fun setupViews() {
+        binding.rangeSlider.setLabelFormatter { value: Float ->
+            val format = NumberFormat.getCurrencyInstance()
+            format.maximumFractionDigits = 0
+            format.currency = Currency.getInstance("USD")
+            format.format(value.toDouble())
+        }
+
+        var price = ""
+        binding.rangeSlider.addOnChangeListener { slider, _, _ ->
+            price = "$${slider.values[0]} - $${slider.values[1]}"
+            binding.priceData.text = price
         }
 
         val selectedList = mutableListOf<String>()

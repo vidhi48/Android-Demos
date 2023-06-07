@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -228,8 +228,7 @@
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_height="wrap_content">
 
                         <Button
                             android:id="@+id/btn1"
@@ -241,10 +240,11 @@
                             android:text="@{chipData1.title}"
                             android:textColor="@color/white"
                             android:textSize="15sp"
-                            tools:text="@string/bedroom"
-                            app:iconDrawable="@{chipData1.iconImage}"
                             app:iconPadding="@dimen/dp_7"
-                            app:strokeColor="@color/blueColor" />
+                            app:startIconColor="@{android.R.color.white}"
+                            app:startIconDrawable="@{chipData1.iconImage}"
+                            app:strokeColor="@color/blueColor"
+                            tools:text="@string/bedroom" />
 
                         <Button
                             android:id="@+id/btn2"
@@ -256,11 +256,11 @@
                             android:text="@{chipData2.title}"
                             android:textColor="@color/white"
                             android:textSize="15sp"
-                            tools:text="@string/poolChip"
-                            app:iconDrawable="@{chipData2.iconImage}"
                             app:iconPadding="@dimen/dp_10"
-                            app:iconTint="@color/white"
-                            app:strokeColor="@color/skyBlue" />
+                            app:startIconColor="@{android.R.color.white}"
+                            app:startIconDrawable="@{chipData2.iconImage}"
+                            app:strokeColor="@color/skyBlue"
+                            tools:text="@string/poolChip" />
 
                         <Button
                             android:id="@+id/btn3"
@@ -273,11 +273,11 @@
                             android:text="@{chipData3.title}"
                             android:textColor="@color/white"
                             android:textSize="15sp"
-                            tools:text="@string/kitchenChip"
-                            app:iconDrawable="@{chipData3.iconImage}"
                             app:iconPadding="@dimen/dp_10"
-                            app:iconTint="@color/white"
-                            app:strokeColor="@color/darkOrange" />
+                            app:startIconColor="@{android.R.color.white}"
+                            app:startIconDrawable="@{chipData3.iconImage}"
+                            app:strokeColor="@color/darkOrange"
+                            tools:text="@string/kitchenChip" />
 
                     </LinearLayout>
                 </HorizontalScrollView>

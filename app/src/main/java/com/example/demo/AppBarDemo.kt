@@ -2,12 +2,9 @@ package com.example.demo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import android.widget.Toolbar
 import com.example.myapplication.R
-import com.google.android.material.appbar.MaterialToolbar
 
 class AppBarDemo : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

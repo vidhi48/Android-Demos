@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:columnCount="2"
-    tools:context="com.example.demo.GridLayoutDemo">
+    tools:context="com.example.demo.layouts.GridLayoutDemo">
 
     <ImageView
         android:id="@+id/image1"

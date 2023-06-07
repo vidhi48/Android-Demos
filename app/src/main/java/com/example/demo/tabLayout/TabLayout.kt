@@ -2,7 +2,6 @@ package com.example.demo.tabLayout
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import com.example.myapplication.R
 import com.google.android.material.tabs.TabLayout

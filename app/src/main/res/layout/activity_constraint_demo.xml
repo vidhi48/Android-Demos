@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.demo.ConstraintDemo">
+    tools:context="com.example.demo.layouts.ConstraintDemo">
 
     <Button
         android:id="@+id/constraintBtn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/submitButton"
         android:layout_marginTop="50dp"
+        android:text="@string/submitButton"
         app:layout_constraintEnd_toStartOf="@+id/constraintBtn2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,8 +21,8 @@
         android:id="@+id/constraintBtn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/submitButton"
         android:layout_marginTop="50dp"
+        android:text="@string/submitButton"
         app:layout_constraintEnd_toStartOf="@+id/constraintBtn3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/constraintBtn1"
@@ -32,8 +32,8 @@
         android:id="@+id/constraintBtn3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/submitButton"
         android:layout_marginTop="50dp"
+        android:text="@string/submitButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/constraintBtn2"
@@ -43,41 +43,38 @@
         android:id="@+id/btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/submitButton"
         android:layout_marginTop="50dp"
-        app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintTop_toBottomOf="@id/constraintBtn2"
+        android:text="@string/submitButton"
         app:layout_constraintBottom_toTopOf="@id/btn2"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-       />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintBtn2"
+        app:layout_constraintVertical_bias="0.5" />
 
     <Button
         android:id="@+id/btn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/submitButton"
         android:layout_marginTop="20dp"
-        app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintTop_toBottomOf="@id/btn1"
+        android:text="@string/submitButton"
         app:layout_constraintBottom_toTopOf="@id/btn3"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn1"
+        app:layout_constraintVertical_bias="0.5" />
 
 
     <Button
         android:id="@+id/btn3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/submitButton"
         android:layout_marginTop="20dp"
-        app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintTop_toBottomOf="@id/btn2"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/submitButton"
         app:layout_constraintEnd_toEndOf="parent"
-        />
-    
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn2"
+        app:layout_constraintVertical_bias="0.5" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideDemo"
         android:layout_width="wrap_content"
@@ -89,68 +86,61 @@
         android:id="@+id/btnA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/submitButton"
         android:layout_marginTop="50dp"
+        android:text="@string/submitButton"
         app:layout_constraintStart_toStartOf="@id/guideDemo"
-        app:layout_constraintTop_toBottomOf="@id/btn3"
-        />
+        app:layout_constraintTop_toBottomOf="@id/btn3" />
 
     <Button
         android:id="@+id/btnB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/submitButton"
         android:layout_marginTop="20dp"
+        android:text="@string/submitButton"
         app:layout_constraintStart_toStartOf="@id/guideDemo"
-        app:layout_constraintTop_toBottomOf="@id/btnA"
-        />
+        app:layout_constraintTop_toBottomOf="@id/btnA" />
 
     <Button
         android:id="@+id/btnC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/submitButton"
         android:layout_marginTop="20dp"
+        android:text="@string/submitButton"
         app:layout_constraintStart_toStartOf="@id/guideDemo"
-        app:layout_constraintTop_toBottomOf="@id/btnB"
-        />
+        app:layout_constraintTop_toBottomOf="@id/btnB" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideDemo2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.84"
-        />
+        app:layout_constraintGuide_percent="0.84" />
 
     <Button
         android:id="@+id/btnGuide1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/submitButton"
         android:layout_marginStart="50dp"
-        app:layout_constraintTop_toTopOf="@id/guideDemo2"
+        android:text="@string/submitButton"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="@id/guideDemo2" />
 
     <Button
         android:id="@+id/btnGuide2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/submitButton"
         android:layout_marginStart="20dp"
-        app:layout_constraintTop_toTopOf="@id/guideDemo2"
+        android:text="@string/submitButton"
         app:layout_constraintStart_toEndOf="@id/btnGuide1"
-        />
+        app:layout_constraintTop_toTopOf="@id/guideDemo2" />
 
     <Button
         android:id="@+id/btnGuide3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/submitButton"
         android:layout_marginStart="20dp"
-        app:layout_constraintTop_toTopOf="@id/guideDemo2"
+        android:text="@string/submitButton"
         app:layout_constraintStart_toEndOf="@id/btnGuide2"
-        />
+        app:layout_constraintTop_toTopOf="@id/guideDemo2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

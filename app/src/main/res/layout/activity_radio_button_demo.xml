@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,26 +9,24 @@
         android:id="@+id/radio_demo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/radioButton"
-        android:textSize="20sp"
-        android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
+        android:text="@string/radioButton"
         android:textColor="@color/black"
-        />
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/gender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/gender"
-        android:textSize="15sp"
-        android:textStyle="bold"
         android:layout_below="@+id/radio_demo"
         android:layout_marginStart="80dp"
         android:layout_marginTop="30dp"
+        android:text="@string/gender"
         android:textColor="@color/black"
-        />
+        android:textSize="15sp"
+        android:textStyle="bold" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -43,40 +40,25 @@
             android:id="@+id/radioButton1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/radioButton1"
-            android:textSize="13sp"
             android:checked="false"
-            />
+            android:text="@string/radioButton1"
+            android:textSize="13sp" />
 
         <RadioButton
             android:id="@+id/radioButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/radioButton2"
-            android:textSize="13sp"
             android:checked="false"
-            />
+            android:text="@string/radioButton2"
+            android:textSize="13sp" />
 
         <RadioButton
             android:id="@+id/radioButton3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/radioButton3"
-            android:textSize="13sp"
             android:checked="false"
-            />
+            android:text="@string/radioButton3"
+            android:textSize="13sp" />
     </RadioGroup>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/idFABSettings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/purple_200"
-        android:layout_margin="16dp"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/baseline_add_24"
-        app:backgroundTint="@color/purple_200"
-        app:tint="@color/white"
-        />
 
 </RelativeLayout>

@@ -17,14 +17,17 @@ class ResortScreen : AppCompatActivity() {
 
         binding = ActivityResortScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setupChips()
+        setupViews()
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")
-    private fun setupChips() {
-        val info1 = ResortChipModel(DrawableResource.Drawable(R.drawable.baseline_bed_24), "7 bedrooms")
-        val info2 = ResortChipModel(DrawableResource.Drawable(R.drawable.baseline_pool_24), "Open pull")
-        val info3 = ResortChipModel(DrawableResource.Drawable(R.drawable.baseline_bathtub_24), "3 bathtubs")
+    private fun setupViews() {
+        val info1 =
+            ResortChipModel(DrawableResource.Drawable(R.drawable.baseline_bed_24), "7 bedrooms")
+        val info2 =
+            ResortChipModel(DrawableResource.Drawable(R.drawable.baseline_pool_24), "Open pull")
+        val info3 =
+            ResortChipModel(DrawableResource.Drawable(R.drawable.baseline_bathtub_24), "3 bathtubs")
         binding.chipData1 = info1
         binding.chipData2 = info2
         binding.chipData3 = info3

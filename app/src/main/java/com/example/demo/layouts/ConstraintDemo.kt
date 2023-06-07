@@ -1,12 +1,12 @@
-package com.example.demo
+package com.example.demo.layouts
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.myapplication.R
 
-class CoordinatorLayoutDemo : AppCompatActivity() {
+class ConstraintDemo : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_coordinator_layout_demo)
+        setContentView(R.layout.activity_constraint_demo)
     }
 }

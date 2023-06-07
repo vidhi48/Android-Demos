@@ -5,13 +5,21 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.databinding.BindingAdapter
 import com.example.demo.model.DrawableResource
 
-@BindingAdapter("iconDrawable")
-fun Button.setIcon(imageUrl: DrawableResource) {
+@BindingAdapter("startIconDrawable", "startIconColor", requireAll = false)
+fun Button.setIcon(imageUrl: DrawableResource, colorId: Int?) {
     when (imageUrl) {
         is DrawableResource.Bitmap -> return
-        is DrawableResource.Drawable -> setCompoundDrawablesRelativeWithIntrinsicBounds(AppCompatResources.getDrawable(context, imageUrl.id), null, null, null)
+        is DrawableResource.Drawable -> setCompoundDrawablesRelativeWithIntrinsicBounds(
+            AppCompatResources.getDrawable(context, imageUrl.id),
+            null,
+            null,
+            null
+        )
     }
-    compoundDrawablesRelative.filterNotNull().forEach { drawable ->
-        drawable.mutate().setTint(resources.getColor(android.R.color.white, context.theme))
+
+    if (colorId != null) {
+        compoundDrawablesRelative.filterNotNull().forEach { drawable ->
+            drawable.mutate().setTint(context.resources.getColor(colorId, context.theme))
+        }
     }
 }

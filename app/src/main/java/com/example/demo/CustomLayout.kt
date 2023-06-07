@@ -1,44 +1,43 @@
 package com.example.demo
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.util.AttributeSet
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.myapplication.R
+import com.example.myapplication.databinding.ActivityCustomLayoutDemoBinding
 
-class CustomLayout(context: Context, attrs: AttributeSet): ConstraintLayout(context, attrs) {
+class CustomLayout(context: Context, attrs: AttributeSet) : ConstraintLayout(context, attrs) {
+
+    lateinit var binding: ActivityCustomLayoutDemoBinding
 
     init {
         setupCalculator()
     }
 
     private fun setupCalculator() {
-        val layout = inflate(context, R.layout.activity_custom_layout_demo, this)
-        val heightEdit = findViewById<EditText>(R.id.heightEdit)
-        val weightEdit = findViewById<EditText>(R.id.weightEdit)
-        val calculateBtn = findViewById<Button>(R.id.calculateBtn)
-        val resultText = findViewById<TextView>(R.id.result)
+        inflate(context, R.layout.activity_custom_layout_demo, this)
+        val heightEdit = binding.heightEdit
+        val weightEdit = binding.weightEdit
+        val calculateBtn = binding.calculateBtn
+        val resultText = binding.result
 
         calculateBtn.setOnClickListener {
 
-            if (heightEdit.text.isNotEmpty() && weightEdit.text.isNotEmpty()) {
+            if (heightEdit.text?.isNotEmpty() == true && weightEdit.text?.isNotEmpty() == true) {
                 val height = heightEdit.text.toString().toInt()
                 val weight = weightEdit.text.toString().toInt()
 
-                val BMI = calculateBMI(height, weight)
+                val bmiCalculate = calculateBMI(height, weight)
 
-                if (BMI < 16) {
-                    resultText.text = "Underweight"
-                } else if (BMI >= 16 && BMI < 25) {
-                    resultText.text = "Normal"
-                } else if (BMI >= 25 && BMI < 30) {
-                    resultText.text = "Overweight"
-                } else if (BMI >= 30) {
-                    resultText.text = "Suffering from obesity"
+                if (bmiCalculate < 16) {
+                    "Underweight".also { resultText.text = it }
+                } else if (bmiCalculate >= 16 && bmiCalculate < 25) {
+                    "Normal".also { resultText.text = it }
+                } else if (bmiCalculate >= 25 && bmiCalculate < 30) {
+                    "Overweight".also { resultText.text = it }
+                } else if (bmiCalculate >= 30) {
+                    "Suffering from obesity".also { resultText.text = it }
                 }
             } else {
                 Toast.makeText(context, "enter height and weight", Toast.LENGTH_SHORT).show()
@@ -46,8 +45,8 @@ class CustomLayout(context: Context, attrs: AttributeSet): ConstraintLayout(cont
         }
     }
 
-    private fun calculateBMI(height: Int, weight: Int): Float {
-        val height = height.toFloat() / 100
-        return weight.toFloat() / (height * height)
+    private fun calculateBMI(_height: Int, _weight: Int): Float {
+        val height = _height.toFloat() / 100
+        return _weight.toFloat() / (height * height)
     }
 }

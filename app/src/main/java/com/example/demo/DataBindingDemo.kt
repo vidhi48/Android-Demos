@@ -2,10 +2,8 @@ package com.example.demo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.viewModels
 import com.example.demo.model.DemoViewModel
-import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityDataBindingDemoBinding
 
 class DataBindingDemo : AppCompatActivity() {

@@ -13,17 +13,7 @@
         tools:targetApi="31">
         <activity
             android:name="com.example.demo.CustomLayoutDemo"
-            android:exported="true" >
-        </activity>
-        <activity
-            android:name="com.example.demo.DataBindingDemo"
-            android:exported="true"></activity>
-        <activity
-            android:name="com.example.demo.screens.ResortCardInfo"
-            android:exported="false" />
-        <activity
-            android:name="com.example.demo.DemoMerge"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name="com.example.demo.screens.ResortNewApplication"
             android:exported="false"
@@ -31,7 +21,6 @@
         <activity
             android:name="com.example.demo.screens.ResortApplicationScreen"
             android:exported="true">
-
         </activity>
         <activity
             android:name="com.example.demo.screens.ResortScreen"
@@ -43,6 +32,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.example.demo.screens.ResortCardInfo"
+            android:exported="true" />
+        <activity
+            android:name="com.example.demo.DataBindingDemo"
+            android:exported="true"/>
+        <activity
+            android:name="com.example.demo.DemoMerge"
+            android:exported="false" />
+        <activity
             android:name="com.example.demo.SplashScreenDemo"
             android:exported="true" />
         <activity
@@ -52,28 +50,28 @@
             android:name="com.example.demo.SeriesDemoActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.demo.CoordinatorLayoutDemo"
+            android:name="com.example.demo.layouts.CoordinatorLayoutDemo"
             android:exported="true" />
         <activity
-            android:name="com.example.demo.GridLayoutDemo"
+            android:name="com.example.demo.layouts.GridLayoutDemo"
             android:exported="true" />
         <activity
-            android:name="com.example.demo.ConstraintLayoutDemo"
+            android:name="com.example.demo.layouts.ConstraintLayoutDemo"
             android:exported="true" />
         <activity
-            android:name="com.example.demo.FrameLayoutDemo"
+            android:name="com.example.demo.layouts.FrameLayoutDemo"
             android:exported="true" />
         <activity
-            android:name="com.example.demo.TableLayoutDemo"
+            android:name="com.example.demo.layouts.TableLayoutDemo"
             android:exported="true" />
         <activity
             android:name="com.example.demo.TextInputLayoutDemo"
             android:exported="true" />
         <activity
-            android:name="com.example.demo.RelativeLayoutDemo"
+            android:name="com.example.demo.layouts.RelativeLayoutDemo"
             android:exported="true" />
         <activity
-            android:name="com.example.demo.LinearLayoutDemo"
+            android:name="com.example.demo.layouts.LinearLayoutDemo"
             android:exported="true" />
         <activity
             android:name="com.example.demo.DatePickerDemo"
@@ -105,7 +103,7 @@
         <activity
             android:name="com.example.demo.MainActivity"
             android:exported="true" />
-        <activity android:name="com.example.demo.ConstraintDemo" />
+        <activity android:name="com.example.demo.layouts.ConstraintDemo" />
     </application>
 
 </manifest>

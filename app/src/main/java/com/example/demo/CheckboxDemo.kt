@@ -21,7 +21,7 @@ class CheckboxDemo : AppCompatActivity() {
         val checkboxCooking = findViewById<CheckBox>(R.id.checkbox4)
         val button1 = findViewById<Button>(R.id.selectedButton)
 
-        button1.setOnClickListener{
+        button1.setOnClickListener {
             var message = " "
             if (checkboxPainting.isChecked) {
                 message += checkboxPainting.text.toString()

@@ -7,7 +7,6 @@ import android.os.Looper
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.myapplication.R
 
 class SplashScreenDemo : AppCompatActivity() {
