@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <variable
+            name="buttons"
+            type="com.example.demo.models.ButtonModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:background="@drawable/button_corner"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/app_name"
+            android:paddingStart="@dimen/dp_30"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_30"
+            android:paddingBottom="@dimen/dp_10"
+            android:src="@{buttons.buttonImage}"
+            app:tint="@color/black"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{buttons.title}"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/center"
+            app:layout_constraintStart_toStartOf="@id/center"
+            app:layout_constraintTop_toBottomOf="@id/center" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

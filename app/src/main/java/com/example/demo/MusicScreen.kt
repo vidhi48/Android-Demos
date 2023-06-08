@@ -5,7 +5,9 @@ import android.os.Bundle
 import androidx.appcompat.content.res.AppCompatResources
 import com.example.androidproject.R
 import com.example.androidproject.databinding.ActivityMusicScreenBinding
+import com.example.demo.models.AppBarModel
 import com.example.demo.models.ButtonImageModel
+import com.example.demo.models.MusicControlModel
 
 class MusicScreen : AppCompatActivity() {
 
@@ -16,12 +18,26 @@ class MusicScreen : AppCompatActivity() {
 
         binding = ActivityMusicScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        setupView()
     }
 
     private fun setupView() {
-        var button1 = ButtonImageModel(
-            AppCompatResources.getDrawable(this, R.drawable.baseline_cast_24)!!, AppCompatResources.getDrawable(this, R.drawable.baseline_navigate_next_24)!!
+
+        val appBarData = AppBarModel("Speaker", "Apple HomePod")
+        binding.actionBar = appBarData
+
+        val musicControl = MusicControlModel(
+            AppCompatResources.getDrawable(this, R.drawable.back),
+            AppCompatResources.getDrawable(this, R.drawable.pause),
+            AppCompatResources.getDrawable(this, R.drawable.next)
         )
+        binding.musicControlCard = musicControl
+
+        val castingButton = ButtonImageModel(
+            AppCompatResources.getDrawable(this, R.drawable.baseline_cast_24),
+            AppCompatResources.getDrawable(this, R.drawable.baseline_navigate_next_24),
+            "Casting"
+        )
+        binding.castingBtn = castingButton
     }
 }

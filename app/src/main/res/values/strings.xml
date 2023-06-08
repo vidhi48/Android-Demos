@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">AndroidProject</string>
+    <string name="demo">demo</string>
+    <string name="speakerScreen">Speaker Screen</string>
+    <string name="tvScreen">Television Screen</string>
+    <string name="acScreen">Air Conditioner Screen</string>
+
     <string name="speaker">Speaker</string>
     <string name="subtitle">Apple HomePod</string>
     <string name="refresh">Refresh</string>
@@ -9,4 +14,19 @@
     <string name="musicSubtitle">Kelly Lee Owens - Inner Song</string>
     <string name="startRange">1:37</string>
     <string name="endRange">-3:08</string>
+    <string name="onText">On</string>
+    <string name="offText">Off</string>
+    <string name="lock">Locked</string>
+    <string name="minutes">27 mins</string>
+    <string name="settings">Settings</string>
+    
+    <string name="airplay">AirPlay</string>
+    <string name="back">back</string>
+    <string name="home">home</string>
+    <string name="exit">exit</string>
+    <string name="unlock">Unlocked</string>
+
+    <string name="volt">1.2 kwh</string>
+    <string name="timer">7 hours Off</string>
+    <string name="scene">Scenes</string>
 </resources>
