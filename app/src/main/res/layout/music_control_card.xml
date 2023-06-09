@@ -30,7 +30,8 @@
             android:src="@drawable/baseline_star_24"
             app:borderWidth="@dimen/dp_0"
             app:tint="@color/yellow"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            app:layout_constraintEnd_toStartOf="@id/musicControlCard"/>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/musicControlCard"
@@ -40,6 +41,7 @@
             app:cardCornerRadius="@dimen/dp_20"
             android:layout_marginStart="@dimen/dp_15"
             app:layout_constraintStart_toEndOf="@id/starBtn"
+
             tools:ignore="MissingConstraints">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -121,6 +123,7 @@
             android:layout_marginStart="@dimen/dp_25"
             android:layout_marginTop="@dimen/dp_20"
             app:layout_constraintStart_toStartOf="@id/starBtn"
+            app:layout_constraintStart_toEndOf="@id/power"
             app:layout_constraintTop_toBottomOf="@id/starBtn"/>
 
         <TextView
@@ -150,6 +153,7 @@
             app:tint="@color/white"
             android:contentDescription="@string/app_name"
             android:layout_marginStart="@dimen/dp_20"
+            app:layout_constraintEnd_toStartOf="@id/center"
             app:layout_constraintStart_toEndOf="@id/button"
             app:layout_constraintTop_toTopOf="@id/button"/>
 
@@ -162,6 +166,17 @@
             android:layout_marginStart="@dimen/dp_20"
             app:layout_constraintStart_toStartOf="@id/power"
             app:layout_constraintTop_toBottomOf="@id/power"
+            />
+
+        <View
+            android:id="@+id/dotText"
+            android:layout_width="@dimen/dp_3"
+            android:layout_height="@dimen/dp_3"
+            android:background="@color/gray"
+            android:layout_marginStart="@dimen/dp_3"
+            android:layout_marginTop="@dimen/dp_10"
+            app:layout_constraintStart_toEndOf="@id/textOn"
+            app:layout_constraintTop_toTopOf="@id/textOn"
             />
 
         <TextView

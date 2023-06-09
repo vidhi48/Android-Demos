@@ -10,6 +10,7 @@
 
     <color name="whiteApp">#EFEFEF</color>
     <color name="gray">#B7B7B7</color>
+    <color name="grayIcon">#9a9a9a</color>
     <color name="lightGray">#E4E4E4</color>
     <color name="green">#4FB56B</color>
     <color name="blue">#4462F0</color>

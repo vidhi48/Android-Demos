@@ -1,10 +1,15 @@
 package com.example.demo
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Context
+import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
+import android.view.View
+import android.view.View.OnFocusChangeListener
+import android.view.inputmethod.InputMethodManager
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import com.example.androidproject.R
-import com.example.androidproject.databinding.ActivityMusicScreenBinding
 import com.example.androidproject.databinding.ActivityTelevisionScreenBinding
 import com.example.demo.models.AppBarModel
 import com.example.demo.models.ButtonImageModel
@@ -19,10 +24,32 @@ class TelevisionScreen : AppCompatActivity() {
 
         binding = ActivityTelevisionScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupPowerButton()
         setupViews()
     }
 
+    private fun setupPowerButton() {
+        var isOn = false
+        binding.card.power.setOnClickListener {
+            isOn = if (isOn) {
+                binding.card.textOn.setTextColor(Color.GRAY)
+                binding.card.textOff.setTextColor(Color.BLACK)
+                false
+            } else {
+                binding.card.textOn.setTextColor(Color.BLACK)
+                binding.card.textOff.setTextColor(Color.GRAY)
+                true
+            }
+        }
+    }
+
     private fun setupViews() {
+
+        binding.appBar.appToolBar.setNavigationOnClickListener {
+            val intent = Intent(this , MainActivity::class.java)
+            startActivity(intent)
+        }
+
         val appBarData = AppBarModel("Smart Television", "Sony A9F")
         binding.actionbar = appBarData
 
@@ -36,8 +63,21 @@ class TelevisionScreen : AppCompatActivity() {
         val keyboardButton = ButtonImageModel(
             AppCompatResources.getDrawable(this, R.drawable.baseline_keyboard_24),
             AppCompatResources.getDrawable(this, R.drawable.baseline_navigate_next_24),
-            "Casting"
+            "Keyboard"
         )
         binding.keyboardBtn = keyboardButton
+
+        binding.card.button.apply {
+            setOnClickListener {
+                setupKeyboardButton(it)
+            }
+            isFocusable = true
+            isFocusableInTouchMode = true
+        }
+    }
+
+    private fun setupKeyboardButton(view: View) {
+        val keyboard = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        keyboard.showSoftInput(view, InputMethodManager.RESULT_SHOWN)
     }
 }

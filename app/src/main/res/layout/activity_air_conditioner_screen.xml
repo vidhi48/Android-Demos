@@ -76,16 +76,18 @@
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_48"
             android:layout_marginTop="@dimen/dp_280"
-            app:tabBackground="@drawable/tab_background_color"
-            android:backgroundTint="@color/lightGray"
+            app:tabIndicator="@drawable/tab_selected_background"
+            android:background="@drawable/tab_background"
+            app:tabIconTint="@color/tab_selector_color"
+            app:tabIndicatorHeight="@dimen/dp_48"
+            app:tabIndicatorColor="@color/blue"
             android:contentDescription="@string/app_name"
             app:layout_constraintEnd_toEndOf="@id/guideLine2"
             app:layout_constraintStart_toStartOf="@id/guideLine1"
-            app:layout_constraintTop_toBottomOf="@id/volt"
-            app:tabIndicatorHeight="@dimen/dp_0" />
+            app:layout_constraintTop_toBottomOf="@id/volt" />
 
         <include
             android:id="@+id/swing"
@@ -96,6 +98,7 @@
             android:layout_marginTop="@dimen/dp_20"
             app:buttons="@{swingBtn}"
             app:layout_constraintStart_toStartOf="@id/guideLine1"
+            app:layout_constraintStart_toEndOf="@id/timer"
             app:layout_constraintTop_toBottomOf="@id/tabLayout" />
 
         <include
@@ -103,9 +106,9 @@
             layout="@layout/buttons_air_conditioner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp_30"
             app:buttons="@{timerBtn}"
             app:layout_constraintStart_toEndOf="@id/swing"
+            app:layout_constraintEnd_toStartOf="@id/scene"
             app:layout_constraintTop_toTopOf="@id/swing" />
 
         <TextView
@@ -123,8 +126,6 @@
             android:id="@+id/scene"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp_20"
-            android:layout_marginEnd="@dimen/dp_10"
             android:background="@drawable/button_corner"
             android:backgroundTint="@color/green"
             android:drawableStart="@drawable/scene"
@@ -134,6 +135,7 @@
             android:paddingTop="@dimen/dp_2"
             android:paddingEnd="@dimen/dp_13"
             android:paddingBottom="@dimen/dp_2"
+            app:layout_constraintStart_toEndOf="@id/timer"
             app:layout_constraintEnd_toEndOf="@id/guideLine2"
             app:layout_constraintTop_toTopOf="@id/timer" />
 
@@ -166,6 +168,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_40"
             app:buttons="@{autoBtn}"
+            app:layout_constraintStart_toEndOf="@id/power"
             app:layout_constraintStart_toStartOf="@id/swing"
             app:layout_constraintTop_toBottomOf="@id/swing" />
 
@@ -173,7 +176,6 @@
             android:id="@+id/power"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp_5"
             android:background="@drawable/button_corner"
             android:backgroundTint="@color/black"
             android:contentDescription="@string/app_name"
@@ -183,7 +185,7 @@
             android:paddingBottom="@dimen/dp_13"
             android:src="@drawable/power"
             app:layout_constraintStart_toEndOf="@id/auto"
-            app:layout_constraintStart_toStartOf="@id/timer"
+            app:layout_constraintEnd_toStartOf="@id/setting"
             app:layout_constraintTop_toTopOf="@id/auto"
             app:tint="@color/white" />
 
@@ -191,11 +193,22 @@
             android:id="@+id/textOn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginStart="@dimen/dp_23"
             android:text="@string/onText"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@id/power"
             app:layout_constraintTop_toBottomOf="@id/power" />
+
+        <View
+            android:id="@+id/dotText"
+            android:layout_width="@dimen/dp_3"
+            android:layout_height="@dimen/dp_3"
+            android:background="@color/gray"
+            android:layout_marginStart="@dimen/dp_3"
+            android:layout_marginTop="@dimen/dp_10"
+            app:layout_constraintStart_toEndOf="@id/textOn"
+            app:layout_constraintTop_toTopOf="@id/textOn"
+            />
 
         <TextView
             android:id="@+id/textOff"
@@ -212,8 +225,8 @@
             layout="@layout/buttons_air_conditioner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/dp_10"
             app:buttons="@{settingBtn}"
+            app:layout_constraintStart_toEndOf="@id/power"
             app:layout_constraintEnd_toEndOf="@id/guideLine2"
             app:layout_constraintTop_toTopOf="@id/power" />
 

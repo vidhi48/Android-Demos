@@ -1,5 +1,7 @@
 package com.example.demo
 
+import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.content.res.AppCompatResources
@@ -19,6 +21,7 @@ class AirConditionerScreen : AppCompatActivity() {
         binding = ActivityAirConditionerScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupTabBar()
+        setupPowerButton()
         setupViews()
     }
 
@@ -33,7 +36,28 @@ class AirConditionerScreen : AppCompatActivity() {
         binding.tabLayout.tabGravity = TabLayout.GRAVITY_FILL
     }
 
+    private fun setupPowerButton() {
+        var isOn = false
+        binding.power.setOnClickListener{
+            isOn = if (isOn) {
+                binding.textOn.setTextColor(Color.GRAY)
+                binding.textOff.setTextColor(Color.BLACK)
+                false
+            } else {
+                binding.textOn.setTextColor(Color.BLACK)
+                binding.textOff.setTextColor(Color.GRAY)
+                true
+            }
+        }
+    }
+
     private fun setupViews() {
+
+        binding.appBar.appToolBar.setNavigationOnClickListener {
+            val intent = Intent(this , MainActivity::class.java)
+            startActivity(intent)
+        }
+
         val swingButton = ButtonModel(AppCompatResources.getDrawable(this, R.drawable.refresh), "Swing")
         binding.swingBtn = swingButton
 
@@ -43,7 +67,7 @@ class AirConditionerScreen : AppCompatActivity() {
         val autoButton = ButtonModel(AppCompatResources.getDrawable(this, R.drawable.light), "Auto")
         binding.autoBtn = autoButton
 
-        val settingButton = ButtonModel(AppCompatResources.getDrawable(this, R.drawable.baseline_settings_24), "Settings")
+        val settingButton = ButtonModel(AppCompatResources.getDrawable(this, R.drawable.settings), "Settings")
         binding.settingBtn = settingButton
     }
 }
