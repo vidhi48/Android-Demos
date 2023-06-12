@@ -39,14 +39,13 @@ class AirConditionerScreen : AppCompatActivity() {
     private fun setupPowerButton() {
         var isOn = false
         binding.power.setOnClickListener{
-            isOn = if (isOn) {
+            isOn = !isOn
+            if (isOn) {
                 binding.textOn.setTextColor(Color.GRAY)
                 binding.textOff.setTextColor(Color.BLACK)
-                false
             } else {
                 binding.textOn.setTextColor(Color.BLACK)
                 binding.textOff.setTextColor(Color.GRAY)
-                true
             }
         }
     }

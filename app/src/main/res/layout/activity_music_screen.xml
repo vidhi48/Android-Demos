@@ -70,12 +70,14 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/profileImg"
-            android:layout_width="@dimen/dp_270"
+            android:layout_width="0dp"
             android:layout_height="@dimen/dp_270"
             android:layout_marginTop="@dimen/dp_15"
             android:scaleType="fitXY"
             android:src="@drawable/profile"
+            app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="@id/guideLine1"
+            app:layout_constraintEnd_toStartOf="@id/progressBar"
             app:layout_constraintTop_toBottomOf="@id/spotifyBtn"
             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.profile"
             app:strokeColor="@color/lightGray"
@@ -86,9 +88,10 @@
             layout="@layout/volume_progress_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_25"
             app:layout_constraintEnd_toEndOf="@id/guideLine2"
-            app:layout_constraintTop_toTopOf="@id/profileImg"
-            />
+            app:layout_constraintStart_toEndOf="@id/profileImg"
+            app:layout_constraintTop_toTopOf="@id/profileImg" />
 
         <TextView
             android:id="@+id/musicTitle"
@@ -153,8 +156,10 @@
             layout="@layout/music_control_card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
             app:buttonImages="@{castingBtn}"
             app:layout_constraintStart_toStartOf="@id/guideLine1"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/startText"
             app:musicControls="@{musicControlCard}" />
 

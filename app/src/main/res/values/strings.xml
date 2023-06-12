@@ -12,8 +12,8 @@
     <string name="spotify">Spotify</string>
     <string name="musicTitle">Arpeggi</string>
     <string name="musicSubtitle">Kelly Lee Owens - Inner Song</string>
-    <string name="startRange">1:37</string>
-    <string name="endRange">-3:08</string>
+    <string name="startRange">0:00</string>
+    <string name="endRange">4:45</string>
     <string name="dot">.</string>
     <string name="onText">On</string>
     <string name="offText">Off</string>

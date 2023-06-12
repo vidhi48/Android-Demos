@@ -25,20 +25,33 @@ class TelevisionScreen : AppCompatActivity() {
         binding = ActivityTelevisionScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupPowerButton()
+        setupMusicButton()
         setupViews()
     }
 
     private fun setupPowerButton() {
         var isOn = false
-        binding.card.power.setOnClickListener {
-            isOn = if (isOn) {
+        binding.card.power.setOnClickListener{
+            isOn = !isOn
+            if (isOn) {
                 binding.card.textOn.setTextColor(Color.GRAY)
                 binding.card.textOff.setTextColor(Color.BLACK)
-                false
             } else {
                 binding.card.textOn.setTextColor(Color.BLACK)
                 binding.card.textOff.setTextColor(Color.GRAY)
-                true
+            }
+        }
+    }
+
+    private fun setupMusicButton() {
+        var isPlaying = false
+
+        binding.card.pause.setOnClickListener {
+            isPlaying = !isPlaying
+            if (isPlaying) {
+                binding.card.pause.setImageResource(R.drawable.play)
+            } else {
+                binding.card.pause.setImageResource(R.drawable.pause)
             }
         }
     }
@@ -55,7 +68,6 @@ class TelevisionScreen : AppCompatActivity() {
 
         val musicControl = MusicControlModel(
             AppCompatResources.getDrawable(this, R.drawable.rewind),
-            AppCompatResources.getDrawable(this, R.drawable.play),
             AppCompatResources.getDrawable(this, R.drawable.fastforward)
         )
         binding.musicControlCard = musicControl

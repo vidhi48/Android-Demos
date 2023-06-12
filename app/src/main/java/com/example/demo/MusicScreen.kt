@@ -27,16 +27,29 @@ class MusicScreen : AppCompatActivity() {
 
         setupSeekBar()
         setupPowerButton()
+        setupMusicButton()
         setupView()
     }
 
     private fun setupSeekBar() {
 
+        val songInMinutes = 4.45
+        val totalDurationsInSeconds = (songInMinutes * 60).toInt()
+        binding.musicSeek.max = totalDurationsInSeconds
+
         binding.musicSeek.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
             override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
 
-                binding.startText.text = p1.toString()
-                binding.endText.text = p1.toString()
+                val minutes = binding.musicSeek.progress / 60
+                val seconds = binding.musicSeek.progress % 60
+                val currentTime = String.format("%02d:%02d", minutes, seconds)
+                binding.startText.text = currentTime
+
+                val remainingProgress = totalDurationsInSeconds - binding.musicSeek.progress
+                val remainingMinutes = remainingProgress / 60
+                val remainingSeconds = remainingProgress % 60
+                val remainingTime = String.format("%02d:%02d", remainingMinutes, remainingSeconds)
+                binding.endText.text = remainingTime
             }
 
             override fun onStartTrackingTouch(p0: SeekBar?) {
@@ -53,14 +66,26 @@ class MusicScreen : AppCompatActivity() {
     private fun setupPowerButton() {
         var isOn = false
         binding.card.power.setOnClickListener{
-            isOn = if (isOn) {
+            isOn = !isOn
+            if (isOn) {
                 binding.card.textOn.setTextColor(Color.GRAY)
                 binding.card.textOff.setTextColor(Color.BLACK)
-                false
             } else {
                 binding.card.textOn.setTextColor(Color.BLACK)
                 binding.card.textOff.setTextColor(Color.GRAY)
-                true
+            }
+        }
+    }
+
+    private fun setupMusicButton() {
+        var isPlaying = false
+
+        binding.card.pause.setOnClickListener {
+            isPlaying = !isPlaying
+            if (isPlaying) {
+                binding.card.pause.setImageResource(R.drawable.play)
+            } else {
+                binding.card.pause.setImageResource(R.drawable.pause)
             }
         }
     }
@@ -77,7 +102,6 @@ class MusicScreen : AppCompatActivity() {
 
         val musicControl = MusicControlModel(
             AppCompatResources.getDrawable(this, drawable.back),
-            AppCompatResources.getDrawable(this, drawable.pause),
             AppCompatResources.getDrawable(this, drawable.next)
         )
         binding.musicControlCard = musicControl
