@@ -58,6 +58,8 @@
                     android:contentDescription="@string/app_name"
                     android:scaleType="fitXY"
                     android:src="@{musicControls.backward}"
+                    tools:src="@drawable/back"
+                    app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintEnd_toStartOf="@id/pause"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -73,6 +75,7 @@
                     android:contentDescription="@string/app_name"
                     android:scaleType="fitXY"
                     app:layout_constraintStart_toEndOf="@id/backward"
+                    app:layout_constraintEnd_toStartOf="@id/forward"
                     app:layout_constraintTop_toTopOf="@id/backward"
                     app:tint="@color/black" />
 
@@ -86,6 +89,7 @@
                     android:contentDescription="@string/app_name"
                     android:scaleType="fitXY"
                     android:src="@{musicControls.next}"
+                    tools:src="@drawable/next"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/pause"
                     app:layout_constraintTop_toTopOf="@id/backward"

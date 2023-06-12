@@ -33,4 +33,10 @@
     <string name="volt">1.2 kwh</string>
     <string name="timer">7 hours Off</string>
     <string name="scene">Scenes</string>
+    <string name="cooling">Cooling</string>
+    <string name="tempText">26.5</string>
+    <string name="temp">°C</string>
+    <string name="startTemp">16 °C</string>
+    <string name="endTemp">32 °C</string>
+
 </resources>

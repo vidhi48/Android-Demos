@@ -19,4 +19,10 @@
         <item name="titleTextAppearance">@style/title</item>
         <item name="subtitleTextAppearance">@style/subtitle</item>
     </style>
+
+    <style name="temp">
+        <item name="android:textSize">23sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
 </resources>

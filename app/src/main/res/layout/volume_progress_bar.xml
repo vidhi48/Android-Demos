@@ -32,28 +32,30 @@
 
             <View
                 android:id="@+id/progressVolume"
-                android:layout_width="@dimen/dp_50"
+                android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_150"
-                android:background="@drawable/progress_corner"
                 android:layout_marginTop="@dimen/dp_130"
                 android:layout_marginBottom="@dimen/dp_10"
-                app:layout_constraintTop_toTopOf="@id/progressText"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:background="@drawable/progress_corner"
                 app:layout_constraintBottom_toBottomOf="parent"
-                />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/progressText" />
 
             <ImageView
                 android:id="@+id/volume"
-                android:layout_width="@dimen/dp_25"
-                android:layout_height="@dimen/dp_25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/dp_10"
                 android:contentDescription="@string/app_name"
                 android:scaleType="fitXY"
                 android:src="@drawable/baseline_volume_up_24"
-                app:layout_constraintStart_toStartOf="@id/progressVolume"
-                app:layout_constraintEnd_toEndOf="@id/progressVolume"
                 app:layout_constraintBottom_toBottomOf="@id/progressVolume"
+                app:layout_constraintEnd_toEndOf="@id/progressVolume"
+                app:layout_constraintStart_toStartOf="@id/progressVolume"
                 app:tint="@color/black" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

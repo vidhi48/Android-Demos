@@ -4,11 +4,10 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
-import android.graphics.Path
-import android.graphics.Point
 import android.graphics.RectF
 import android.util.AttributeSet
 import android.view.View
+import com.example.androidproject.R
 
 class RemoteCustomView(context: Context?, attrs: AttributeSet) : View(context, attrs) {
 
@@ -24,12 +23,9 @@ class RemoteCustomView(context: Context?, attrs: AttributeSet) : View(context, a
     private val sliceOval = RectF()
     private val innerRadiusRatio = 0.5f
 
-    private val colors = intArrayOf(Color.LTGRAY, Color.LTGRAY, Color.LTGRAY, Color.LTGRAY)
+    private val colors = intArrayOf(context!!.getColor(R.color.lightGray), context.getColor(R.color.lightGray), context.getColor(R.color.lightGray), context.getColor(R.color.lightGray))
     private var centerX = 0
     private var centerY = 0
-
-    private val point = Point()
-    private val radius = width / 4f
 
     init {
         paint.strokeWidth = 2f
@@ -66,61 +62,6 @@ class RemoteCustomView(context: Context?, attrs: AttributeSet) : View(context, a
         paint.style = Paint.Style.FILL
         paint.color = Color.WHITE
         canvas.drawCircle(centerX.toFloat(), centerX.toFloat(), innerRadius, paint)
-
-        val sectionWidth = radius / 2
-        paint.color = Color.GRAY
-        paint.style = Paint.Style.FILL
-
-        point.x = centerX - 20
-        point.y = (centerY - sectionWidth - 210).toInt()
-        val topTriangle = triangleButton(point, 40, Direction.TOP)
-        canvas.drawPath(topTriangle, paint)
-
-        point.x = centerX - 20
-        point.y = (centerY + sectionWidth + 210).toInt()
-        val bottomTriangle = triangleButton(point, 40, Direction.BOTTOM)
-        canvas.drawPath(bottomTriangle, paint)
-
-        point.x = (centerX - sectionWidth - 210).toInt()
-        point.y = centerY - 20
-        val leftTriangle = triangleButton(point, 40, Direction.LEFT)
-        canvas.drawPath(leftTriangle, paint)
-
-        point.x = (centerX + sectionWidth + 210).toInt()
-        point.y = centerY - 20
-        val rightTriangle = triangleButton(point, 40, Direction.RIGHT)
-        canvas.drawPath(rightTriangle, paint)
     }
 
-    private fun triangleButton(p1: Point, width: Int, direction: Direction): Path {
-        var p2: Point? = null
-        var p3: Point? = null
-        when (direction) {
-            Direction.TOP -> {
-                p2 = Point(p1.x + width, p1.y)
-                p3 = Point(p1.x + width / 2, p1.y - width)
-            }
-            Direction.BOTTOM -> {
-                p2 = Point(p1.x + width, p1.y)
-                p3 = Point(p1.x + width / 2, p1.y + width)
-            }
-            Direction.LEFT -> {
-                p2 = Point(p1.x, p1.y + width)
-                p3 = Point(p1.x - width, p1.y + width / 2)
-            }
-            Direction.RIGHT -> {
-                p2 = Point(p1.x, p1.y + width)
-                p3 = Point(p1.x + width, p1.y + width / 2)
-            }
-        }
-        val path = Path()
-        path.moveTo(p1.x.toFloat(), p1.y.toFloat())
-        path.lineTo(p2.x.toFloat(), p2.y.toFloat())
-        path.lineTo(p3.x.toFloat(), p3.y.toFloat())
-        return path
-    }
-
-    enum class Direction {
-        TOP, BOTTOM, LEFT, RIGHT
-    }
 }

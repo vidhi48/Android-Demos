@@ -139,4 +139,58 @@
         app:layout_constraintTop_toBottomOf="@id/menuText"
         android:contentDescription="@string/app_name" />
 
+    <ImageButton
+        android:id="@+id/upButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/up_arrow"
+        android:backgroundTint="@color/lightGray"
+        android:layout_marginTop="@dimen/dp_10"
+        app:layout_constraintStart_toStartOf="@id/customView"
+        app:layout_constraintEnd_toEndOf="@id/customView"
+        app:layout_constraintTop_toTopOf="@id/customView"
+        android:contentDescription="@string/app_name"
+        app:tint="@color/grayIcon" />
+
+    <ImageButton
+        android:id="@+id/leftButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/left_arrow"
+        android:backgroundTint="@color/lightGray"
+        android:contentDescription="@string/app_name"
+        app:tint="@color/grayIcon"
+        android:layout_marginStart="@dimen/dp_10"
+        app:layout_constraintStart_toStartOf="@id/customView"
+        app:layout_constraintTop_toTopOf="@id/customView"
+        app:layout_constraintBottom_toBottomOf="@id/customView"/>
+
+    <ImageButton
+        android:id="@+id/rightButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_40"
+        android:src="@drawable/right_arrow"
+        android:scaleType="fitXY"
+        android:backgroundTint="@color/lightGray"
+        android:contentDescription="@string/app_name"
+        app:tint="@color/grayIcon"
+        android:layout_marginEnd="@dimen/dp_10"
+        app:layout_constraintEnd_toEndOf="@id/customView"
+        app:layout_constraintTop_toTopOf="@id/customView"
+        app:layout_constraintBottom_toBottomOf="@id/customView"/>
+
+    <ImageButton
+        android:id="@+id/downButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/down_arrow"
+        android:scaleType="fitXY"
+        android:backgroundTint="@color/lightGray"
+        android:contentDescription="@string/app_name"
+        app:tint="@color/grayIcon"
+        android:layout_marginBottom="@dimen/dp_10"
+        app:layout_constraintStart_toStartOf="@id/customView"
+        app:layout_constraintEnd_toEndOf="@id/customView"
+        app:layout_constraintBottom_toBottomOf="@id/customView"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.demo
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
@@ -26,6 +27,7 @@ class TelevisionScreen : AppCompatActivity() {
         setContentView(binding.root)
         setupPowerButton()
         setupMusicButton()
+        setupCustomViewButtons()
         setupViews()
     }
 
@@ -53,6 +55,38 @@ class TelevisionScreen : AppCompatActivity() {
             } else {
                 binding.card.pause.setImageResource(R.drawable.pause)
             }
+        }
+    }
+
+    @SuppressLint("ResourceAsColor")
+    private fun setupCustomViewButtons() {
+
+        binding.remoteCustom.upButton.setOnClickListener{
+            binding.remoteCustom.upButton.drawable.mutate().setTint(applicationContext.getColor(R.color.blue))
+            binding.remoteCustom.leftButton.drawable.mutate().setTint(applicationContext.getColor(R.color.grayIcon))
+            binding.remoteCustom.rightButton.drawable.mutate().setTint(applicationContext.getColor(R.color.grayIcon))
+            binding.remoteCustom.downButton.drawable.mutate().setTint(applicationContext.getColor(R.color.grayIcon))
+        }
+
+        binding.remoteCustom.downButton.setOnClickListener{
+            binding.remoteCustom.downButton.drawable.mutate().setTint(applicationContext.getColor(R.color.blue))
+            binding.remoteCustom.upButton.drawable.mutate().setTint(applicationContext.getColor(R.color.grayIcon))
+            binding.remoteCustom.leftButton.drawable.mutate().setTint(applicationContext.getColor(R.color.grayIcon))
+            binding.remoteCustom.rightButton.drawable.mutate().setTint(applicationContext.getColor(R.color.grayIcon))
+        }
+
+        binding.remoteCustom.leftButton.setOnClickListener{
+            binding.remoteCustom.leftButton.drawable.mutate().setTint(applicationContext.getColor(R.color.blue))
+            binding.remoteCustom.rightButton.drawable.mutate().setTint(applicationContext.getColor(R.color.grayIcon))
+            binding.remoteCustom.upButton.drawable.mutate().setTint(applicationContext.getColor(R.color.grayIcon))
+            binding.remoteCustom.downButton.drawable.mutate().setTint(applicationContext.getColor(R.color.grayIcon))
+        }
+
+        binding.remoteCustom.rightButton.setOnClickListener{
+            binding.remoteCustom.rightButton.drawable.mutate().setTint(applicationContext.getColor(R.color.blue))
+            binding.remoteCustom.leftButton.drawable.mutate().setTint(applicationContext.getColor(R.color.grayIcon))
+            binding.remoteCustom.upButton.drawable.mutate().setTint(applicationContext.getColor(R.color.grayIcon))
+            binding.remoteCustom.downButton.drawable.mutate().setTint(applicationContext.getColor(R.color.grayIcon))
         }
     }
 
