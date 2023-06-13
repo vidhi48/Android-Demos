@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -15,34 +16,38 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <ImageButton
             android:id="@+id/starBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_10"
             android:backgroundTint="@color/white"
-            android:contentDescription="@string/app_name"
             android:src="@drawable/baseline_star_24"
-            app:borderWidth="@dimen/dp_0"
+            android:background="@drawable/button_rounded"
+            android:paddingStart="@dimen/dp_20"
+            android:paddingEnd="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_20"
+            android:paddingBottom="@dimen/dp_20"
             app:tint="@color/yellow"
-            tools:ignore="MissingConstraints"
-            app:layout_constraintEnd_toStartOf="@id/musicControlCard"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/musicControlCard"
+            android:contentDescription="@string/app_name" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/musicControlCard"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/dp_50"
+            android:layout_height="wrap_content"
             android:backgroundTint="@color/lightGray"
             app:cardCornerRadius="@dimen/dp_20"
-            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
             app:layout_constraintStart_toEndOf="@id/starBtn"
-
-            tools:ignore="MissingConstraints">
+            app:layout_constraintEnd_toStartOf="@id/configureBtn"
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
@@ -50,9 +55,10 @@
 
                 <ImageButton
                     android:id="@+id/backward"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="@dimen/dp_25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginBottom="@dimen/dp_5"
                     android:layout_marginTop="@dimen/dp_5"
                     android:backgroundTint="@color/lightGray"
                     android:contentDescription="@string/app_name"
@@ -63,12 +69,13 @@
                     app:layout_constraintEnd_toStartOf="@id/pause"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:tint="@color/gray" />
 
                 <ImageButton
                     android:id="@+id/pause"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_20"
                     android:backgroundTint="@color/lightGray"
                     android:src="@drawable/pause"
@@ -81,10 +88,10 @@
 
                 <ImageButton
                     android:id="@+id/forward"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_20"
-                    android:layout_marginEnd="@dimen/dp_25"
+                    android:layout_marginEnd="@dimen/dp_20"
                     android:backgroundTint="@color/lightGray"
                     android:contentDescription="@string/app_name"
                     android:scaleType="fitXY"
@@ -99,17 +106,22 @@
 
         </androidx.cardview.widget.CardView>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <ImageButton
             android:id="@+id/configureBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
             android:contentDescription="@string/app_name"
             android:src="@drawable/playlist"
-            app:borderWidth="@dimen/dp_0"
-            android:layout_marginStart="@dimen/dp_15"
+            android:background="@drawable/button_rounded"
+            android:paddingStart="@dimen/dp_17"
+            android:paddingEnd="@dimen/dp_17"
+            android:paddingTop="@dimen/dp_17"
+            android:paddingBottom="@dimen/dp_17"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@id/musicControlCard"
-            app:layout_constraintTop_toTopOf="@id/musicControlCard" />
+            />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button"
@@ -123,12 +135,11 @@
             android:drawableTint="@color/white"
             android:paddingStart="@dimen/dp_15"
             android:paddingEnd="@dimen/dp_15"
-            tools:ignore="MissingConstraints"
+            android:layout_marginTop="@dimen/dp_40"
             android:layout_marginStart="@dimen/dp_25"
-            android:layout_marginTop="@dimen/dp_20"
             app:layout_constraintStart_toStartOf="@id/starBtn"
-            app:layout_constraintStart_toEndOf="@id/power"
-            app:layout_constraintTop_toBottomOf="@id/starBtn"/>
+            app:layout_constraintTop_toBottomOf="@id/starBtn"
+            app:layout_constraintEnd_toStartOf="@id/power"/>
 
         <TextView
             android:id="@+id/subtitleBtn"
@@ -156,10 +167,10 @@
             android:background="@drawable/button_corner"
             app:tint="@color/white"
             android:contentDescription="@string/app_name"
-            android:layout_marginStart="@dimen/dp_20"
-            app:layout_constraintEnd_toStartOf="@id/center"
             app:layout_constraintStart_toEndOf="@id/button"
-            app:layout_constraintTop_toTopOf="@id/button"/>
+            app:layout_constraintTop_toTopOf="@id/button"
+            app:layout_constraintEnd_toStartOf="@id/center"
+           />
 
         <TextView
             android:id="@+id/textOn"
@@ -207,11 +218,11 @@
             android:paddingBottom="@dimen/dp_13"
             android:background="@drawable/button_corner"
             app:tint="@color/black"
-            tools:ignore="MissingConstraints"
             android:contentDescription="@string/app_name"
-            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_25"
             app:layout_constraintStart_toEndOf="@id/power"
-            app:layout_constraintTop_toTopOf="@id/power"/>
+            app:layout_constraintTop_toTopOf="@id/power"
+            app:layout_constraintEnd_toEndOf="@id/configureBtn"/>
 
         <TextView
             android:id="@+id/title"

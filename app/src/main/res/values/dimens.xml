@@ -33,4 +33,8 @@
     <dimen name="dp_35">35dp</dimen>
     <dimen name="dp_48">48dp</dimen>
     <dimen name="dp_220">220dp</dimen>
+    <dimen name="dp_170">170dp</dimen>
+    <dimen name="dp_160">160dp</dimen>
+    <dimen name="dp_17">17dp</dimen>
+    <dimen name="dp_45">40dp</dimen>
 </resources>

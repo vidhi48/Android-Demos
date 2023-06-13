@@ -22,13 +22,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.demo.AirConditionerScreen"
+            android:name="com.example.demo.AirConditionerActivity"
             android:exported="true"/>
         <activity
-            android:name="com.example.demo.TelevisionScreen"
+            android:name="com.example.demo.TelevisionActivity"
             android:exported="true"/>
         <activity
-            android:name="com.example.demo.MusicScreen"
+            android:name="com.example.demo.MusicActivity"
             android:exported="true"/>
 
     </application>

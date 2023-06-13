@@ -44,6 +44,13 @@ class RemoteCustomView(context: Context?, attrs: AttributeSet) : View(context, a
         sliceOval.bottom = centerY + outerRadius
     }
 
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+
+        outerRadius = measuredWidth.coerceAtMost(measuredHeight).toFloat()
+        setMeasuredDimension(outerRadius.toInt(), outerRadius.toInt())
+    }
+
     public override fun onDraw(canvas: Canvas) {
 
         //slices
@@ -63,5 +70,4 @@ class RemoteCustomView(context: Context?, attrs: AttributeSet) : View(context, a
         paint.color = Color.WHITE
         canvas.drawCircle(centerX.toFloat(), centerX.toFloat(), innerRadius, paint)
     }
-
 }

@@ -19,9 +19,7 @@
             android:id="@+id/actionBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:outlineSpotShadowColor="@android:color/transparent"
-            tools:ignore="MissingConstraints"
-            tools:targetApi="p">
+            app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/appToolBar"

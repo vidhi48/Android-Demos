@@ -3,7 +3,6 @@ package com.example.demo
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.androidproject.R
 import com.example.androidproject.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -19,17 +18,17 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupViews() {
         binding.speakerScreen.setOnClickListener{
-            val intent = Intent(this , MusicScreen::class.java)
+            val intent = Intent(this , MusicActivity::class.java)
             startActivity(intent)
         }
 
         binding.tvScreen.setOnClickListener{
-            val intent = Intent(this, TelevisionScreen::class.java)
+            val intent = Intent(this, TelevisionActivity::class.java)
             startActivity(intent)
         }
 
         binding.acScreen.setOnClickListener{
-            val intent = Intent(this, AirConditionerScreen::class.java)
+            val intent = Intent(this, AirConditionerActivity::class.java)
             startActivity(intent)
         }
     }

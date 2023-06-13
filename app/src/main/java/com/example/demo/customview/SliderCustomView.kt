@@ -36,7 +36,7 @@ class SliderCustomView(context: Context, attrs: AttributeSet): View(context, att
 
         if (rectangle == null) {
             val size = min(width.toFloat() - margin, height.toFloat() - margin)
-            rectangle = RectF(margin + 10f, margin + 100f , size + 10f, size + 100f)
+            rectangle = RectF(margin + 20f, margin + 70f , size + 10f, size + 90f)
 
         }
 

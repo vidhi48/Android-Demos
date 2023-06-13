@@ -6,19 +6,19 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.content.res.AppCompatResources
 import com.example.androidproject.R
-import com.example.androidproject.databinding.ActivityAirConditionerScreenBinding
+import com.example.androidproject.databinding.ActivityAirConditionerBinding
 import com.example.demo.models.AppBarModel
 import com.example.demo.models.ButtonModel
 import com.google.android.material.tabs.TabLayout
 
-class AirConditionerScreen : AppCompatActivity() {
+class AirConditionerActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityAirConditionerScreenBinding
+    lateinit var binding: ActivityAirConditionerBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityAirConditionerScreenBinding.inflate(layoutInflater)
+        binding = ActivityAirConditionerBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupTabBar()
         setupPowerButton()
@@ -26,7 +26,7 @@ class AirConditionerScreen : AppCompatActivity() {
     }
 
     private fun setupTabBar() {
-        val appBarData = AppBarModel("Air Conditioner", "LG Dual Inverter")
+        val appBarData = AppBarModel(R.string.acAppBar, R.string.acAppSub)
         binding.actionBar = appBarData
 
         binding.tabLayout.addTab(binding.tabLayout.newTab().setIcon(R.drawable.sun))
@@ -57,16 +57,16 @@ class AirConditionerScreen : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val swingButton = ButtonModel(AppCompatResources.getDrawable(this, R.drawable.refresh), "Swing")
+        val swingButton = ButtonModel(AppCompatResources.getDrawable(this, R.drawable.refresh), R.string.swing)
         binding.swingBtn = swingButton
 
-        val timerButton = ButtonModel(AppCompatResources.getDrawable(this, R.drawable.stopwatch), "Timer")
+        val timerButton = ButtonModel(AppCompatResources.getDrawable(this, R.drawable.stopwatch), R.string.timerBtn)
         binding.timerBtn = timerButton
 
-        val autoButton = ButtonModel(AppCompatResources.getDrawable(this, R.drawable.light), "Auto")
+        val autoButton = ButtonModel(AppCompatResources.getDrawable(this, R.drawable.light), R.string.auto)
         binding.autoBtn = autoButton
 
-        val settingButton = ButtonModel(AppCompatResources.getDrawable(this, R.drawable.settings), "Settings")
+        val settingButton = ButtonModel(AppCompatResources.getDrawable(this, R.drawable.settings), R.string.setting)
         binding.settingBtn = settingButton
     }
 }

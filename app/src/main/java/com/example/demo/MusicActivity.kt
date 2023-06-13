@@ -6,23 +6,22 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.SeekBar
 import android.widget.SeekBar.OnSeekBarChangeListener
-import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources
 import com.example.androidproject.R
 import com.example.androidproject.R.*
-import com.example.androidproject.databinding.ActivityMusicScreenBinding
+import com.example.androidproject.databinding.ActivityMusicBinding
 import com.example.demo.models.AppBarModel
 import com.example.demo.models.ButtonImageModel
 import com.example.demo.models.MusicControlModel
 
-class MusicScreen : AppCompatActivity() {
+class MusicActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMusicScreenBinding
+    lateinit var binding: ActivityMusicBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityMusicScreenBinding.inflate(layoutInflater)
+        binding = ActivityMusicBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setupSeekBar()
@@ -83,9 +82,9 @@ class MusicScreen : AppCompatActivity() {
         binding.card.pause.setOnClickListener {
             isPlaying = !isPlaying
             if (isPlaying) {
-                binding.card.pause.setImageResource(R.drawable.play)
+                binding.card.pause.setImageResource(drawable.play)
             } else {
-                binding.card.pause.setImageResource(R.drawable.pause)
+                binding.card.pause.setImageResource(drawable.pause)
             }
         }
     }
@@ -97,7 +96,7 @@ class MusicScreen : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val appBarData = AppBarModel("Speaker", "Apple HomePod")
+        val appBarData = AppBarModel(string.musicApp, string.musicAppSub)
         binding.actionBar = appBarData
 
         val musicControl = MusicControlModel(
@@ -109,7 +108,7 @@ class MusicScreen : AppCompatActivity() {
         val castingButton = ButtonImageModel(
             AppCompatResources.getDrawable(this, drawable.baseline_cast_24),
             AppCompatResources.getDrawable(this, drawable.baseline_navigate_next_24),
-            "Casting"
+            string.casting
         )
         binding.castingBtn = castingButton
     }

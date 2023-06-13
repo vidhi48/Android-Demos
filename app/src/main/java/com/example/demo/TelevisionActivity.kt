@@ -1,32 +1,33 @@
 package com.example.demo
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
-import android.view.View.OnFocusChangeListener
 import android.view.inputmethod.InputMethodManager
+import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import com.example.androidproject.R
-import com.example.androidproject.databinding.ActivityTelevisionScreenBinding
+import com.example.androidproject.databinding.ActivityTelevisionBinding
 import com.example.demo.models.AppBarModel
 import com.example.demo.models.ButtonImageModel
 import com.example.demo.models.MusicControlModel
 
-class TelevisionScreen : AppCompatActivity() {
+class TelevisionActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityTelevisionScreenBinding
+    lateinit var binding: ActivityTelevisionBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityTelevisionScreenBinding.inflate(layoutInflater)
+        binding = ActivityTelevisionBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupPowerButton()
         setupMusicButton()
+        setupButtons()
         setupCustomViewButtons()
         setupViews()
     }
@@ -58,35 +59,53 @@ class TelevisionScreen : AppCompatActivity() {
         }
     }
 
-    @SuppressLint("ResourceAsColor")
-    private fun setupCustomViewButtons() {
+    private fun setupButtons() {
+        binding.back.setOnClickListener{
+            val intent = Intent(this , MainActivity::class.java)
+            startActivity(intent)
+        }
 
+        binding.home.setOnClickListener{
+            val intent = Intent(this , MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.exit.setOnClickListener{
+            val intent = Intent(this , MainActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun clickedButton(button: ImageButton) {
+
+        binding.remoteCustom.upButton.drawable.mutate()
+            .setTint(applicationContext.getColor(R.color.grayIcon))
+        binding.remoteCustom.leftButton.drawable.mutate()
+            .setTint(applicationContext.getColor(R.color.grayIcon))
+        binding.remoteCustom.rightButton.drawable.mutate()
+            .setTint(applicationContext.getColor(R.color.grayIcon))
+        binding.remoteCustom.downButton.drawable.mutate()
+            .setTint(applicationContext.getColor(R.color.grayIcon))
+
+        button.drawable.mutate().setTint(applicationContext.getColor(R.color.blue))
+
+    }
+
+    private fun setupCustomViewButtons() {
         binding.remoteCustom.upButton.setOnClickListener{
-            binding.remoteCustom.upButton.drawable.mutate().setTint(applicationContext.getColor(R.color.blue))
-            binding.remoteCustom.leftButton.drawable.mutate().setTint(applicationContext.getColor(R.color.grayIcon))
-            binding.remoteCustom.rightButton.drawable.mutate().setTint(applicationContext.getColor(R.color.grayIcon))
-            binding.remoteCustom.downButton.drawable.mutate().setTint(applicationContext.getColor(R.color.grayIcon))
+            clickedButton(binding.remoteCustom.upButton)
         }
 
         binding.remoteCustom.downButton.setOnClickListener{
-            binding.remoteCustom.downButton.drawable.mutate().setTint(applicationContext.getColor(R.color.blue))
-            binding.remoteCustom.upButton.drawable.mutate().setTint(applicationContext.getColor(R.color.grayIcon))
-            binding.remoteCustom.leftButton.drawable.mutate().setTint(applicationContext.getColor(R.color.grayIcon))
-            binding.remoteCustom.rightButton.drawable.mutate().setTint(applicationContext.getColor(R.color.grayIcon))
+            clickedButton(binding.remoteCustom.downButton)
         }
 
         binding.remoteCustom.leftButton.setOnClickListener{
-            binding.remoteCustom.leftButton.drawable.mutate().setTint(applicationContext.getColor(R.color.blue))
-            binding.remoteCustom.rightButton.drawable.mutate().setTint(applicationContext.getColor(R.color.grayIcon))
-            binding.remoteCustom.upButton.drawable.mutate().setTint(applicationContext.getColor(R.color.grayIcon))
-            binding.remoteCustom.downButton.drawable.mutate().setTint(applicationContext.getColor(R.color.grayIcon))
+            clickedButton(binding.remoteCustom.leftButton)
         }
 
         binding.remoteCustom.rightButton.setOnClickListener{
-            binding.remoteCustom.rightButton.drawable.mutate().setTint(applicationContext.getColor(R.color.blue))
-            binding.remoteCustom.leftButton.drawable.mutate().setTint(applicationContext.getColor(R.color.grayIcon))
-            binding.remoteCustom.upButton.drawable.mutate().setTint(applicationContext.getColor(R.color.grayIcon))
-            binding.remoteCustom.downButton.drawable.mutate().setTint(applicationContext.getColor(R.color.grayIcon))
+            clickedButton(binding.remoteCustom.rightButton)
         }
     }
 
@@ -97,7 +116,7 @@ class TelevisionScreen : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val appBarData = AppBarModel("Smart Television", "Sony A9F")
+        val appBarData = AppBarModel(R.string.tvAppBar, R.string.tvAppSub)
         binding.actionbar = appBarData
 
         val musicControl = MusicControlModel(
@@ -109,7 +128,7 @@ class TelevisionScreen : AppCompatActivity() {
         val keyboardButton = ButtonImageModel(
             AppCompatResources.getDrawable(this, R.drawable.baseline_keyboard_24),
             AppCompatResources.getDrawable(this, R.drawable.baseline_navigate_next_24),
-            "Keyboard"
+            R.string.keyboard
         )
         binding.keyboardBtn = keyboardButton
 
@@ -127,3 +146,5 @@ class TelevisionScreen : AppCompatActivity() {
         keyboard.showSoftInput(view, InputMethodManager.RESULT_SHOWN)
     }
 }
+
+
