@@ -21,7 +21,7 @@
     <string name="minutes">27 mins</string>
     <string name="settings">Settings</string>
     <string name="progressText">52%</string>
-    
+
     <string name="airplay">AirPlay</string>
     <string name="back">back</string>
     <string name="home">home</string>
@@ -33,4 +33,15 @@
     <string name="volt">1.2 kwh</string>
     <string name="timer">7 hours Off</string>
     <string name="scene">Scenes</string>
+
+
+
+    <string name="listTitle">Song List</string>
+    <string name="perfect">Perfect</string>
+    <string name="perfectSinger">Ed Sheeran</string>
+    <string name="perfectTime">4.25</string>
+
+    <string name="shape">Shape Of You</string>
+    <string name="shapeSinger">Ed Sheeran</string>
+    <string name="shapeTime">3.56</string>
 </resources>
