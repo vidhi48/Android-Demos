@@ -6,7 +6,6 @@ import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
@@ -34,7 +33,7 @@ class TelevisionActivity : AppCompatActivity() {
 
     private fun setupPowerButton() {
         var isOn = false
-        binding.card.power.setOnClickListener{
+        binding.card.power.setOnClickListener {
             isOn = !isOn
             if (isOn) {
                 binding.card.textOn.setTextColor(Color.GRAY)
@@ -60,18 +59,18 @@ class TelevisionActivity : AppCompatActivity() {
     }
 
     private fun setupButtons() {
-        binding.back.setOnClickListener{
-            val intent = Intent(this , MainActivity::class.java)
+        binding.back.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
-        binding.home.setOnClickListener{
-            val intent = Intent(this , MainActivity::class.java)
+        binding.home.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
-        binding.exit.setOnClickListener{
-            val intent = Intent(this , MainActivity::class.java)
+        binding.exit.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }
@@ -92,19 +91,19 @@ class TelevisionActivity : AppCompatActivity() {
     }
 
     private fun setupCustomViewButtons() {
-        binding.remoteCustom.upButton.setOnClickListener{
+        binding.remoteCustom.upButton.setOnClickListener {
             clickedButton(binding.remoteCustom.upButton)
         }
 
-        binding.remoteCustom.downButton.setOnClickListener{
+        binding.remoteCustom.downButton.setOnClickListener {
             clickedButton(binding.remoteCustom.downButton)
         }
 
-        binding.remoteCustom.leftButton.setOnClickListener{
+        binding.remoteCustom.leftButton.setOnClickListener {
             clickedButton(binding.remoteCustom.leftButton)
         }
 
-        binding.remoteCustom.rightButton.setOnClickListener{
+        binding.remoteCustom.rightButton.setOnClickListener {
             clickedButton(binding.remoteCustom.rightButton)
         }
     }
@@ -112,7 +111,7 @@ class TelevisionActivity : AppCompatActivity() {
     private fun setupViews() {
 
         binding.appBar.appToolBar.setNavigationOnClickListener {
-            val intent = Intent(this , MainActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 

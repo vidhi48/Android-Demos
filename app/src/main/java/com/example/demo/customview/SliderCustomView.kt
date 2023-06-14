@@ -17,7 +17,7 @@ class SliderCustomView(context: Context, attrs: AttributeSet): View(context, att
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
     private var margin: Float
     private var rectangle: RectF? = null
-    private val progress = 25f
+    private var progress = 25f
     private val progressStart = 135f
     private val progressSweep = 270f
     private var progressAngle = 200f

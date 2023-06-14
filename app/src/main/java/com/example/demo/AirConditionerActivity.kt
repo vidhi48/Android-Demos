@@ -4,9 +4,11 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.content.res.AppCompatResources
 import com.example.androidproject.R
 import com.example.androidproject.databinding.ActivityAirConditionerBinding
+import com.example.demo.customview.SliderCustomView
 import com.example.demo.models.AppBarModel
 import com.example.demo.models.ButtonModel
 import com.google.android.material.tabs.TabLayout
@@ -38,7 +40,7 @@ class AirConditionerActivity : AppCompatActivity() {
 
     private fun setupPowerButton() {
         var isOn = false
-        binding.power.setOnClickListener{
+        binding.power.setOnClickListener {
             isOn = !isOn
             if (isOn) {
                 binding.textOn.setTextColor(Color.GRAY)
@@ -53,20 +55,26 @@ class AirConditionerActivity : AppCompatActivity() {
     private fun setupViews() {
 
         binding.appBar.appToolBar.setNavigationOnClickListener {
-            val intent = Intent(this , MainActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
-        val swingButton = ButtonModel(AppCompatResources.getDrawable(this, R.drawable.refresh), R.string.swing)
+        val swingButton =
+            ButtonModel(AppCompatResources.getDrawable(this, R.drawable.refresh), R.string.swing)
         binding.swingBtn = swingButton
 
-        val timerButton = ButtonModel(AppCompatResources.getDrawable(this, R.drawable.stopwatch), R.string.timerBtn)
+        val timerButton = ButtonModel(
+            AppCompatResources.getDrawable(this, R.drawable.stopwatch),
+            R.string.timerBtn
+        )
         binding.timerBtn = timerButton
 
-        val autoButton = ButtonModel(AppCompatResources.getDrawable(this, R.drawable.light), R.string.auto)
+        val autoButton =
+            ButtonModel(AppCompatResources.getDrawable(this, R.drawable.light), R.string.auto)
         binding.autoBtn = autoButton
 
-        val settingButton = ButtonModel(AppCompatResources.getDrawable(this, R.drawable.settings), R.string.setting)
+        val settingButton =
+            ButtonModel(AppCompatResources.getDrawable(this, R.drawable.settings), R.string.setting)
         binding.settingBtn = settingButton
     }
 }

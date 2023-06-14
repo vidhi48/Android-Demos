@@ -64,7 +64,7 @@ class MusicActivity : AppCompatActivity() {
 
     private fun setupPowerButton() {
         var isOn = false
-        binding.card.power.setOnClickListener{
+        binding.card.power.setOnClickListener {
             isOn = !isOn
             if (isOn) {
                 binding.card.textOn.setTextColor(Color.GRAY)
@@ -92,7 +92,7 @@ class MusicActivity : AppCompatActivity() {
     private fun setupView() {
 
         binding.appBar.appToolBar.setNavigationOnClickListener {
-            val intent = Intent(this , MainActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
