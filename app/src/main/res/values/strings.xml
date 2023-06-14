@@ -35,13 +35,18 @@
     <string name="scene">Scenes</string>
 
 
-
-    <string name="listTitle">Song List</string>
+    <string name="listTitle">Language List</string>
+    <string name="songTitle">Song List</string>
     <string name="perfect">Perfect</string>
     <string name="perfectSinger">Ed Sheeran</string>
     <string name="perfectTime">4.25</string>
-
     <string name="shape">Shape Of You</string>
     <string name="shapeSinger">Ed Sheeran</string>
     <string name="shapeTime">3.56</string>
+    <string name="kesariya">Kesariya</string>
+    <string name="kesariyaSinger">Arijit Singh</string>
+    <string name="kesariyaTime">4.49</string>
+    <string name="hawayein">Hawayein</string>
+    <string name="hawayeinSinger">Arijit Singh</string>
+    <string name="hawayeinTime">4.49</string>
 </resources>

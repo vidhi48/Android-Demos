@@ -5,23 +5,38 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import com.example.androidproject.R
 import com.example.androidproject.databinding.ActivityListViewDemoBinding
-import com.example.androidproject.databinding.ActivityMusicScreenBinding
-import com.example.demo.models.SongListModel
+import com.example.demo.adapters.LanguageAdapter
 
 class ListViewDemo : AppCompatActivity() {
 
-    private lateinit var binding: ActivityListViewDemoBinding
+    lateinit var binding: ActivityListViewDemoBinding
+
+    private val songProfile =
+        listOf(
+            R.drawable.java_image,
+            R.drawable.kotlin_image,
+            R.drawable.python_image,
+            R.drawable.java_image,
+            R.drawable.kotlin_image,
+            R.drawable.python_image,
+            R.drawable.java_image,
+            R.drawable.kotlin_image,
+            R.drawable.python_image,
+            R.drawable.java_image,
+            R.drawable.kotlin_image,
+            R.drawable.python_image
+        )
+    private val language = listOf("Java", "Kotlin", "Python", "Java", "Kotlin", "Python", "Java", "Kotlin", "Python", "Java", "Kotlin", "Python")
+    private val ratings = listOf(4, 4, 5, 4, 4, 5, 4, 4, 5, 4, 4, 5)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_list_view_demo)
 
-        val songs = mutableListOf<SongListModel>(
-            SongListModel(R.drawable.perfect, R.string.perfect, R.string.perfectSinger, R.string.perfectTime),
-                                                                    SongListModel(R.drawable.shape_song,R.string.shape, R.string.shapeSinger, R.string.shapeTime )
-        )
+        binding = ActivityListViewDemoBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val songAdapter = ArrayAdapter<SongListModel>(this, R.layout.song_list_items, songs)
-        binding.songList.adapter = songAdapter
+        val listAdapter = LanguageAdapter(this, songProfile, language, ratings)
+        binding.languageList.adapter = listAdapter
+
     }
 }
