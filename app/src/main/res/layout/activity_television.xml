@@ -66,8 +66,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/back"
-            android:layout_width="@dimen/_60dp"
-            android:layout_height="@dimen/_60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_30"
             android:background="@drawable/button_rounded"
             android:backgroundTint="@color/white"
@@ -80,8 +80,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/home"
-            android:layout_width="@dimen/_60dp"
-            android:layout_height="@dimen/_60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="@drawable/button_rounded"
             android:backgroundTint="@color/white"
             android:text="@string/home"
@@ -92,8 +92,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/exit"
-            android:layout_width="@dimen/_60dp"
-            android:layout_height="@dimen/_60dp"
+            android:layout_width="wrap_content"
+            android:layout_heigh="wrap_content"
             android:background="@drawable/button_rounded"
             android:backgroundTint="@color/white"
             android:text="@string/exit"
