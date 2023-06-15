@@ -1,10 +1,10 @@
-package com.example.demo.adapters
+package com.example.demo.recyclerview.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidproject.databinding.ItemListSongBinding
-import com.example.demo.models.SongModel
+import com.example.demo.recyclerview.models.SongModel
 
 class SongAdapter(private val songList: List<SongModel>):
     RecyclerView.Adapter<SongAdapter.ViewHolder>() {

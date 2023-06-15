@@ -1,11 +1,11 @@
-package com.example.demo
+package com.example.demo.recyclerview.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import com.example.androidproject.R
 import com.example.androidproject.databinding.ActivityListViewDemoBinding
-import com.example.demo.adapters.LanguageAdapter
+import com.example.demo.recyclerview.adapters.LanguageAdapter
 
 class ListViewDemo : AppCompatActivity() {
 

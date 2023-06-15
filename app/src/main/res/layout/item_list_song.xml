@@ -6,7 +6,7 @@
 
         <variable
             name="songData"
-            type="com.example.demo.models.SongModel" />
+            type="com.example.demo.recyclerview.models.SongModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"

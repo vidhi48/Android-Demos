@@ -13,10 +13,10 @@
         android:theme="@style/Theme.AndroidProject"
         tools:targetApi="31">
         <activity
-            android:name="com.example.demo.ListViewDemo"
+            android:name="com.example.demo.recyclerview.activities.ListViewDemo"
             android:exported="false" />
         <activity
-            android:name="com.example.demo.RecyclerViewDemo"
+            android:name="com.example.demo.recyclerview.activities.RecyclerViewDemo"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
