@@ -59,4 +59,7 @@
     <string name="legaciesDesc">Legacies follows Hope Mikaelson, the daughter of Klaus Mikaelson and Hayley Marshall.</string>
     <string name="humanDesc">Human is an Indian 2022 medical thriller streaming television series released on 14 January 2022 on Disney+ Hotstar</string>
     <string name="moneyDesc">Set in Madrid, a mysterious man known as the "Professor" recruits a group of eight people, who choose city names as their aliases,</string>
+    <string name="expandable_recyclerview">Expandable RecyclerView</string>
+    <string name="language">Language</string>
+    <string name="description_text">Description text</string>
 </resources>
