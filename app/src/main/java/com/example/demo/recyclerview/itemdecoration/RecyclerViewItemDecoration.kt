@@ -20,7 +20,7 @@ class RecyclerViewItemDecoration(context: Context, resId: Int): RecyclerView.Ite
             if (i != parent.childCount - 1) {
                 val child = parent.getChildAt(i)
                 val params = child.layoutParams as RecyclerView.LayoutParams
-                val dividerTop = child.bottom
+                val dividerTop = child.bottom + 20
                 val dividerBottom = dividerTop + divider.intrinsicHeight
                 divider.setBounds(dividerLeft, dividerTop, dividerRight, dividerBottom)
                 divider.draw(c)

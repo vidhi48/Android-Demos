@@ -49,4 +49,14 @@
     <string name="hawayein">Hawayein</string>
     <string name="hawayeinSinger">Arijit Singh</string>
     <string name="hawayeinTime">4.49</string>
+    <string name="gridTitle">Grid Layout using RecyclerView</string>
+    <string name="legacies">Legacies</string>
+    <string name="stranger">Stranger Things</string>
+    <string name="money">Money Heist</string>
+    <string name="human">Human</string>
+    <string name="blind">The Blind</string>
+    <string name="staggered_grid_view">Staggered Grid View</string>
+    <string name="legaciesDesc">Legacies follows Hope Mikaelson, the daughter of Klaus Mikaelson and Hayley Marshall.</string>
+    <string name="humanDesc">Human is an Indian 2022 medical thriller streaming television series released on 14 January 2022 on Disney+ Hotstar</string>
+    <string name="moneyDesc">Set in Madrid, a mysterious man known as the "Professor" recruits a group of eight people, who choose city names as their aliases,</string>
 </resources>

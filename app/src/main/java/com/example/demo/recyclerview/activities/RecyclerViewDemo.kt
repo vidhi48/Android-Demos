@@ -22,26 +22,115 @@ class RecyclerViewDemo : AppCompatActivity() {
         setupRecyclerView()
     }
 
-    private fun setupRecyclerView()
+    private fun setupRecyclerView() {
         val songList = mutableListOf<SongModel>()
-        songList.add(SongModel(AppCompatResources.getDrawable(this, R.drawable.shape_song), R.string.shape, R.string.shapeSinger, R.string.shapeTime))
-        songList.add(SongModel(AppCompatResources.getDrawable(this, R.drawable.perfect), R.string.perfect, R.string.perfectSinger, R.string.perfectTime))
-        songList.add(SongModel(AppCompatResources.getDrawable(this, R.drawable.kesariya), R.string.kesariya, R.string.kesariyaSinger, R.string.kesariyaTime))
-        songList.add(SongModel(AppCompatResources.getDrawable(this, R.drawable.hawayein), R.string.hawayein, R.string.hawayeinSinger, R.string.hawayeinTime))
-        songList.add(SongModel(AppCompatResources.getDrawable(this, R.drawable.shape_song), R.string.shape, R.string.shapeSinger, R.string.shapeTime))
-        songList.add(SongModel(AppCompatResources.getDrawable(this, R.drawable.perfect), R.string.perfect, R.string.perfectSinger, R.string.perfectTime))
-        songList.add(SongModel(AppCompatResources.getDrawable(this, R.drawable.kesariya), R.string.kesariya, R.string.kesariyaSinger, R.string.kesariyaTime))
-        songList.add(SongModel(AppCompatResources.getDrawable(this, R.drawable.hawayein), R.string.hawayein, R.string.hawayeinSinger, R.string.hawayeinTime))
-        songList.add(SongModel(AppCompatResources.getDrawable(this, R.drawable.shape_song), R.string.shape, R.string.shapeSinger, R.string.shapeTime))
-        songList.add(SongModel(AppCompatResources.getDrawable(this, R.drawable.perfect), R.string.perfect, R.string.perfectSinger, R.string.perfectTime))
-        songList.add(SongModel(AppCompatResources.getDrawable(this, R.drawable.kesariya), R.string.kesariya, R.string.kesariyaSinger, R.string.kesariyaTime))
-        songList.add(SongModel(AppCompatResources.getDrawable(this, R.drawable.hawayein), R.string.hawayein, R.string.hawayeinSinger, R.string.hawayeinTime))
+        songList.add(
+            SongModel(
+                AppCompatResources.getDrawable(this, R.drawable.shape_song),
+                R.string.shape,
+                R.string.shapeSinger,
+                R.string.shapeTime
+            )
+        )
+        songList.add(
+            SongModel(
+                AppCompatResources.getDrawable(this, R.drawable.perfect),
+                R.string.perfect,
+                R.string.perfectSinger,
+                R.string.perfectTime
+            )
+        )
+        songList.add(
+            SongModel(
+                AppCompatResources.getDrawable(this, R.drawable.kesariya),
+                R.string.kesariya,
+                R.string.kesariyaSinger,
+                R.string.kesariyaTime
+            )
+        )
+        songList.add(
+            SongModel(
+                AppCompatResources.getDrawable(this, R.drawable.hawayein),
+                R.string.hawayein,
+                R.string.hawayeinSinger,
+                R.string.hawayeinTime
+            )
+        )
+        songList.add(
+            SongModel(
+                AppCompatResources.getDrawable(this, R.drawable.shape_song),
+                R.string.shape,
+                R.string.shapeSinger,
+                R.string.shapeTime
+            )
+        )
+        songList.add(
+            SongModel(
+                AppCompatResources.getDrawable(this, R.drawable.perfect),
+                R.string.perfect,
+                R.string.perfectSinger,
+                R.string.perfectTime
+            )
+        )
+        songList.add(
+            SongModel(
+                AppCompatResources.getDrawable(this, R.drawable.kesariya),
+                R.string.kesariya,
+                R.string.kesariyaSinger,
+                R.string.kesariyaTime
+            )
+        )
+        songList.add(
+            SongModel(
+                AppCompatResources.getDrawable(this, R.drawable.hawayein),
+                R.string.hawayein,
+                R.string.hawayeinSinger,
+                R.string.hawayeinTime
+            )
+        )
+        songList.add(
+            SongModel(
+                AppCompatResources.getDrawable(this, R.drawable.shape_song),
+                R.string.shape,
+                R.string.shapeSinger,
+                R.string.shapeTime
+            )
+        )
+        songList.add(
+            SongModel(
+                AppCompatResources.getDrawable(this, R.drawable.perfect),
+                R.string.perfect,
+                R.string.perfectSinger,
+                R.string.perfectTime
+            )
+        )
+        songList.add(
+            SongModel(
+                AppCompatResources.getDrawable(this, R.drawable.kesariya),
+                R.string.kesariya,
+                R.string.kesariyaSinger,
+                R.string.kesariyaTime
+            )
+        )
+        songList.add(
+            SongModel(
+                AppCompatResources.getDrawable(this, R.drawable.hawayein),
+                R.string.hawayein,
+                R.string.hawayeinSinger,
+                R.string.hawayeinTime
+            )
+        )
 
         val layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         binding.songRecycler.layoutManager = layoutManager
 
-        binding.songRecycler.addItemDecoration(RecyclerViewItemDecoration(this, R.drawable.item_divider_recyclerview))
-        val recyclerViewAdapter = SongAdapter(songList)
+        binding.songRecycler.addItemDecoration(
+            RecyclerViewItemDecoration(
+                this,
+                R.drawable.item_divider_recyclerview
+            )
+        )
+        val recyclerViewAdapter = SongAdapter(songList, this)
         binding.songRecycler.adapter = recyclerViewAdapter
     }
 }

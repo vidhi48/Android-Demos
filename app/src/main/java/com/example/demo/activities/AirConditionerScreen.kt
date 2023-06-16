@@ -1,4 +1,4 @@
-package com.example.demo
+package com.example.demo.activities
 
 import android.content.Intent
 import android.graphics.Color

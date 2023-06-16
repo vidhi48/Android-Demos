@@ -1,4 +1,4 @@
-package com.example.demo
+package com.example.demo.activities
 
 import android.content.Intent
 import android.graphics.Color
@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.SeekBar
 import android.widget.SeekBar.OnSeekBarChangeListener
-import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources
 import com.example.androidproject.R
 import com.example.androidproject.R.*
