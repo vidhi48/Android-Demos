@@ -33,7 +33,7 @@ class ExpandableAdapter(private val languageList: List<ExpandableModel>) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(expand: ExpandableModel) {
             binding.expandableData = expand
-            binding.expandView.visibility = if (expand.isExpand) View.VISIBLE else View.GONE
+            binding.viewGroup.visibility = if (expand.isExpand) View.VISIBLE else View.GONE
             binding.titleCard.setOnClickListener {
                 expand.isExpand = !expand.isExpand
                 notifyDataSetChanged()
