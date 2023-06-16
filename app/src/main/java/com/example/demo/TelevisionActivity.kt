@@ -77,14 +77,16 @@ class TelevisionActivity : AppCompatActivity() {
 
     private fun clickedButton(button: ImageButton) {
 
-        binding.remoteCustom.upButton.drawable.mutate()
-            .setTint(applicationContext.getColor(R.color.grayIcon))
-        binding.remoteCustom.leftButton.drawable.mutate()
-            .setTint(applicationContext.getColor(R.color.grayIcon))
-        binding.remoteCustom.rightButton.drawable.mutate()
-            .setTint(applicationContext.getColor(R.color.grayIcon))
-        binding.remoteCustom.downButton.drawable.mutate()
-            .setTint(applicationContext.getColor(R.color.grayIcon))
+        binding.apply {
+            remoteCustom.upButton.drawable.mutate()
+                .setTint(applicationContext.getColor(R.color.grayIcon))
+            remoteCustom.leftButton.drawable.mutate()
+                .setTint(applicationContext.getColor(R.color.grayIcon))
+            remoteCustom.rightButton.drawable.mutate()
+                .setTint(applicationContext.getColor(R.color.grayIcon))
+            remoteCustom.downButton.drawable.mutate()
+                .setTint(applicationContext.getColor(R.color.grayIcon))
+        }
 
         button.drawable.mutate().setTint(applicationContext.getColor(R.color.blue))
 

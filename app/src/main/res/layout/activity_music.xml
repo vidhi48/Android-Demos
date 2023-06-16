@@ -33,133 +33,149 @@
             android:layout_height="wrap_content"
             app:appBar="@{actionBar}" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideLine1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.05" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideLine2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.95" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/spotifyBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_15"
-            android:background="@drawable/button_corner"
-            android:backgroundTint="@color/green"
-            android:drawableStart="@drawable/spotify_black"
-            android:drawableEnd="@drawable/baseline_navigate_next_24"
-            android:drawablePadding="@dimen/dp_10"
-            android:drawableTint="@color/white"
-            android:paddingStart="@dimen/dp_10"
-            android:paddingEnd="@dimen/dp_10"
-            android:text="@string/spotify"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/appBar" />
-
-        <ImageView
-            android:id="@+id/profileImg"
-            android:layout_width="@dimen/dp_0"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:layout_marginTop="@dimen/dp_20"
-            android:contentDescription="@string/app_name"
-            android:src="@drawable/profile"
-            app:layout_constraintEnd_toStartOf="@id/progressBar"
-            app:layout_constraintStart_toStartOf="@id/guideLine1"
-            app:layout_constraintTop_toBottomOf="@id/spotifyBtn" />
-
-        <include
-            android:id="@+id/progressBar"
-            layout="@layout/volume_progress_bar"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginStart="@dimen/dp_25"
-            android:layout_marginBottom="@dimen/dp_20"
-            app:layout_constraintBottom_toTopOf="@id/musicSeek"
-            app:layout_constraintEnd_toEndOf="@id/guideLine2"
-            app:layout_constraintStart_toEndOf="@id/profileImg"
-            app:layout_constraintTop_toTopOf="@id/profileImg" />
-
-        <TextView
-            android:id="@+id/musicTitle"
-            style="@style/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_20"
-            android:layout_marginEnd="@dimen/dp_25"
-            android:text="@string/musicTitle"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="@id/guideLine1"
-            app:layout_constraintTop_toBottomOf="@id/profileImg" />
-
-        <TextView
-            android:id="@+id/musicSub"
-            style="@style/subtitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_3"
-            android:layout_marginEnd="@dimen/dp_25"
-            android:text="@string/musicSubtitle"
-            android:textColor="@color/gray"
-            app:layout_constraintStart_toStartOf="@id/guideLine1"
-            app:layout_constraintTop_toBottomOf="@id/musicTitle" />
-
-        <androidx.appcompat.widget.AppCompatSeekBar
-            android:id="@+id/musicSeek"
-            android:layout_width="@dimen/dp_0"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_25"
-            android:progressTint="@color/blue"
-            android:thumb="@drawable/seekbar"
-            android:thumbTint="@color/blue"
-            app:layout_constraintEnd_toEndOf="@id/guideLine2"
-            app:layout_constraintStart_toStartOf="@id/guideLine1"
-            app:layout_constraintTop_toBottomOf="@id/musicSub" />
-
-        <TextView
-            android:id="@+id/startText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/startRange"
-            android:textColor="@color/black"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/musicSeek"
-            app:layout_constraintTop_toBottomOf="@id/musicSeek" />
-
-        <TextView
-            android:id="@+id/endText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/endRange"
-            android:textColor="@color/black"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@id/musicSeek"
-            app:layout_constraintTop_toBottomOf="@id/musicSeek" />
-
-        <include
-            android:id="@+id/card"
-            layout="@layout/music_control_card"
+        <ScrollView
+            android:id="@+id/verticalScroll"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_20"
-            app:buttonImages="@{castingBtn}"
-            app:layout_constraintEnd_toEndOf="@id/guideLine2"
-            app:layout_constraintStart_toStartOf="@+id/guideLine1"
-            app:layout_constraintTop_toBottomOf="@id/startText"
-            app:musicControls="@{musicControlCard}" />
+            android:layout_height="@dimen/dp_0"
+            android:fillViewport="true"
+            android:layout_marginBottom="@dimen/dp_25"
+            app:layout_constraintTop_toBottomOf="@id/appBar"
+            app:layout_constraintBottom_toTopOf="@id/line">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideLine1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.05" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideLine2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.95" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/spotifyBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:background="@drawable/button_corner"
+                    android:backgroundTint="@color/green"
+                    android:drawableStart="@drawable/spotify_black"
+                    android:drawableEnd="@drawable/baseline_navigate_next_24"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableTint="@color/white"
+                    android:paddingStart="@dimen/dp_10"
+                    android:paddingEnd="@dimen/dp_10"
+                    android:text="@string/spotify"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/profileImg"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/profile"
+                    app:layout_constraintEnd_toStartOf="@id/progressBar"
+                    app:layout_constraintStart_toStartOf="@id/guideLine1"
+                    app:layout_constraintTop_toBottomOf="@id/spotifyBtn" />
+
+                <include
+                    android:id="@+id/progressBar"
+                    layout="@layout/volume_progress_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/dp_25"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    app:layout_constraintBottom_toTopOf="@id/musicSeek"
+                    app:layout_constraintEnd_toEndOf="@id/guideLine2"
+                    app:layout_constraintStart_toEndOf="@id/profileImg"
+                    app:layout_constraintTop_toTopOf="@id/profileImg" />
+
+                <TextView
+                    android:id="@+id/musicTitle"
+                    style="@style/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_25"
+                    android:text="@string/musicTitle"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@id/guideLine1"
+                    app:layout_constraintTop_toBottomOf="@id/profileImg" />
+
+                <TextView
+                    android:id="@+id/musicSub"
+                    style="@style/subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:layout_marginEnd="@dimen/dp_25"
+                    android:text="@string/musicSubtitle"
+                    android:textColor="@color/gray"
+                    app:layout_constraintStart_toStartOf="@id/guideLine1"
+                    app:layout_constraintTop_toBottomOf="@id/musicTitle" />
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/musicSeek"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_25"
+                    android:progressTint="@color/blue"
+                    android:thumb="@drawable/seekbar"
+                    android:thumbTint="@color/blue"
+                    app:layout_constraintEnd_toEndOf="@id/guideLine2"
+                    app:layout_constraintStart_toStartOf="@id/guideLine1"
+                    app:layout_constraintTop_toBottomOf="@id/musicSub" />
+
+                <TextView
+                    android:id="@+id/startText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/startRange"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/musicSeek"
+                    app:layout_constraintTop_toBottomOf="@id/musicSeek" />
+
+                <TextView
+                    android:id="@+id/endText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/endRange"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/musicSeek"
+                    app:layout_constraintTop_toBottomOf="@id/musicSeek" />
+
+                <include
+                    android:id="@+id/card"
+                    layout="@layout/music_control_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    app:buttonImages="@{castingBtn}"
+                    app:layout_constraintEnd_toEndOf="@id/guideLine2"
+                    app:layout_constraintStart_toStartOf="@+id/guideLine1"
+                    app:layout_constraintTop_toBottomOf="@id/startText"
+                    app:musicControls="@{musicControlCard}" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
 
         <View
             android:id="@+id/line"
@@ -169,8 +185,7 @@
             android:layout_marginBottom="@dimen/dp_20"
             android:background="@color/lightGray"
             app:layout_constraintBottom_toTopOf="@id/lock"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/card" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:id="@+id/lock"
