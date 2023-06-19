@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidproject.databinding.ItemListExpandableBinding
 import com.example.demo.recyclerview.models.ExpandableModel
-import kotlin.math.exp
 
 class ExpandableAdapter(private val languageList: List<ExpandableModel>) :
     RecyclerView.Adapter<ExpandableAdapter.ViewHolder>() {

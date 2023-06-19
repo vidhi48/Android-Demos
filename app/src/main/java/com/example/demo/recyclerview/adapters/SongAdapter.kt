@@ -1,46 +1,87 @@
 package com.example.demo.recyclerview.adapters
 
-import android.content.Context
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidproject.R
 import com.example.androidproject.databinding.ItemListSongBinding
-import com.example.demo.recyclerview.models.SongModel
+import com.example.androidproject.databinding.ItemLoadingBinding
+import com.example.demo.recyclerview.models.Song
 
-class SongAdapter(private val songList: List<SongModel>, private val context: Context) :
-    RecyclerView.Adapter<SongAdapter.ViewHolder>() {
+class SongAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = ItemListSongBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return ViewHolder(view)
+    enum class ViewType {
+        SONG,
+        LOADING
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val items = songList[position]
-        holder.itemView.animation = AnimationUtils.loadAnimation(holder.itemView.context, R.anim.anim)
-        holder.bind(items)
-    }
+    private val songs: MutableList<Song> = mutableListOf()
+    private var isLoading = false
 
-    override fun getItemCount(): Int {
-        return songList.size
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+        return when (ViewType.values()[viewType]) {
+            ViewType.SONG -> ViewHolder(
+                ItemListSongBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            )
 
-    inner class ViewHolder(private val binding: ItemListSongBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-
-        fun bind(songs: SongModel) {
-            binding.songData = songs
-            binding.root.setOnClickListener {
-                Toast.makeText(
-                    context,
-                    "Song ${binding.songTitle.text} clicked.",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
+            ViewType.LOADING -> LoadingViewHolder(
+                ItemLoadingBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            )
         }
+    }
+
+    fun showLoading() {
+        isLoading = true
+        notifyItemInserted(songs.count())
+    }
+
+    fun hideLoading() {
+        isLoading = false
+        notifyItemRemoved(songs.count())
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun addList(list: List<Song>) {
+        songs.addAll(list)
+        notifyDataSetChanged()
+    }
+
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        when (holder) {
+            is ViewHolder -> holder.bind(songs[position])
+            is LoadingViewHolder -> holder.bind(isLoading)
+        }
+    }
+
+    override fun getItemCount(): Int = if (isLoading) {
+        songs.count() + 1
+    } else {
+        songs.count()
+    }
+
+    override fun getItemViewType(position: Int): Int {
+        return if (isLoading && position == songs.count()) ViewType.LOADING.ordinal else ViewType.SONG.ordinal
+    }
+
+    class ViewHolder(private val binding: ItemListSongBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(songs: Song) {
+            binding.songData = songs
+        }
+    }
+
+    class LoadingViewHolder(private val binding: ItemLoadingBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(isLoading: Boolean) {
+            binding.isLoading = isLoading
+        }
+    }
+
+    fun submitSong(list: List<Song>) {
+        songs.clear()
+        songs.addAll(list)
+        notifyDataSetChanged()
     }
 }

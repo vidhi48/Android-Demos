@@ -62,4 +62,18 @@
     <string name="expandable_recyclerview">Expandable RecyclerView</string>
     <string name="language">Language</string>
     <string name="description_text">Description text</string>
+    <string name="expandable_listview">Expandable ListView</string>
+    <string name="multi_view_recyclerview">Multiple Views RecyclerView</string>
+
+    <string name="pathaan">Pathaan</string>
+    <string name="pathaanDesc">Pathaan is a 2023 Indian Hindi-language action thriller film directed by Siddharth Anand and written by Shridhar Raghavan and Abbas Tyrewala, from a story by Anand.</string>
+    <string name="pathaanDate">25–04–2023</string>
+    <string name="pathaanRatings">3.0</string>
+
+    <string name="custody">Custody</string>
+    <string name="custodyDesc">Custody is a 2023 Indian action thriller film written and directed by Venkat Prabhu in his Telugu directorial debut, while it was produced by Srinivasa Chitturi under Srinivasaa Silver Screen </string>
+    <string name="custodyDate">13–02–2023</string>
+    <string name="custodyRatings">4.5</string>
+    <string name="release_date">Release Date:</string>
+    <string name="ratings">Ratings:</string>
 </resources>

@@ -6,6 +6,7 @@ import android.widget.ArrayAdapter
 import com.example.androidproject.R
 import com.example.androidproject.databinding.ActivityListViewDemoBinding
 import com.example.demo.recyclerview.adapters.LanguageAdapter
+import com.example.demo.recyclerview.adapters.ReusableListViewAdapter
 
 class ListViewDemo : AppCompatActivity() {
 
@@ -35,7 +36,7 @@ class ListViewDemo : AppCompatActivity() {
         binding = ActivityListViewDemoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val listAdapter = LanguageAdapter(this, songProfile, language, ratings)
+        val listAdapter = ReusableListViewAdapter(this, songProfile, language, ratings)
         binding.languageList.adapter = listAdapter
 
     }
