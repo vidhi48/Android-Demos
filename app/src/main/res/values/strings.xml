@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">AndroidProject</string>
+    <string name="activity_1">Activity 1</string>
+    <string name="go_to_activity2">Go to Activity2</string>
+    <string name="fragment">Fragment</string>
+    <string name="go_to_second_activity">Go to Second Activity</string>
+    <string name="google">Google</string>
+    <string name="intent_demo">Intent Demo</string>
+    <string name="enter_data">Enter data</string>
+    <string name="simform_solutions">Simform Solutions</string>
+    <string name="dial_phone">Dial Phone</string>
 </resources>

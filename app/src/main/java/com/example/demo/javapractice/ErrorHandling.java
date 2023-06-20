@@ -1,4 +1,4 @@
-package com.example.Demo.java_practice;
+package com.example.demo.java_practice;
 
 public class ErrorHandling {
     public int[] arr = new int[10];

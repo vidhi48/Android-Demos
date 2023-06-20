@@ -1,4 +1,4 @@
-package com.example.Demo.java_practice;
+package com.example.demo.java_practice;
 
 interface DemoInterface {
     void displayName();
