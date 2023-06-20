@@ -3,9 +3,7 @@ package com.example.demo.recyclerview.adapters
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.RecyclerView
-import com.example.androidproject.R
 import com.example.androidproject.databinding.ItemListSongBinding
 import com.example.androidproject.databinding.ItemLoadingBinding
 import com.example.demo.recyclerview.models.Song

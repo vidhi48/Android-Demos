@@ -19,7 +19,7 @@ abstract class PaginationRecyclerView(private val layoutManager: LinearLayoutMan
     }
 
     companion object {
-        const val PAGE_SIZE = 3
+        const val PAGE_SIZE = 2
     }
 
     protected abstract fun loadMoreItems()

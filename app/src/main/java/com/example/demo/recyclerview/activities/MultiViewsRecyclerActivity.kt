@@ -1,6 +1,5 @@
 package com.example.demo.recyclerview.activities
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.content.res.AppCompatResources
@@ -8,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.androidproject.R
 import com.example.androidproject.databinding.ActivityMultiViewsRecyclerBinding
 import com.example.demo.recyclerview.adapters.MoviesAdapter
-import com.example.demo.recyclerview.itemdecoration.RecyclerViewItemDecoration
+import com.example.demo.recyclerview.itemdecoration.CustomItemDecorationDemo
 import com.example.demo.recyclerview.models.DataModel
 
 class MultiViewsRecyclerActivity : AppCompatActivity() {
@@ -42,6 +41,8 @@ class MultiViewsRecyclerActivity : AppCompatActivity() {
 
        val layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
        binding.viewsRecycler.layoutManager = layoutManager
+
+        binding.viewsRecycler.addItemDecoration(CustomItemDecorationDemo())
 
        val movieAdapter = MoviesAdapter(items)
        binding.viewsRecycler.adapter = movieAdapter

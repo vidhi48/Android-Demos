@@ -135,6 +135,7 @@ class RecyclerViewDemo : AppCompatActivity() {
                 R.drawable.item_divider_recyclerview
             )
         )
+
         binding.songRecycler.adapter = songAdapter
 
         binding.songRecycler.addOnScrollListener(object : PaginationRecyclerView(layoutManager) {
@@ -144,7 +145,7 @@ class RecyclerViewDemo : AppCompatActivity() {
                 loading = true
                 songAdapter.showLoading()
 
-                Handler(Looper.getMainLooper()).postDelayed(Runnable {
+                Handler(Looper.getMainLooper()).postDelayed({
                     songAdapter.addList(songList)
                     loading = false
                     songAdapter.hideLoading()
