@@ -1,4 +1,4 @@
-package com.example.demo.activities
+package com.example.demo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

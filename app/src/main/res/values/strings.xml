@@ -9,4 +9,16 @@
     <string name="enter_data">Enter data</string>
     <string name="simform_solutions">Simform Solutions</string>
     <string name="dial_phone">Dial Phone</string>
+    <string name="fragment1">Fragment 1</string>
+    <string name="fragment_2">Fragment 2</string>
+    <string name="next">Next</string>
+    <string name="pass_data">Pass Data</string>
+    <string name="open_gmail">Open Gmail</string>
+    <string name="intent_filter_demo">Intent Filter Demo</string>
+    <string name="choose_image">Choose Image</string>
+    <string name="pending_intent_demo">Pending Intent Demo</string>
+    <string name="send_notification">Send Notification</string>
+    <string name="send_alert">Send Alert</string>
+    <string name="channel_name">Channel</string>
+    <string name="channel_description">Channel Description\n</string>
 </resources>

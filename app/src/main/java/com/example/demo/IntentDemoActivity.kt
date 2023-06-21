@@ -5,7 +5,6 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.androidproject.databinding.ActivityIntentDemoBinding
-import com.example.demo.activities.LifeCycleActivity
 
 class IntentDemoActivity : AppCompatActivity() {
 

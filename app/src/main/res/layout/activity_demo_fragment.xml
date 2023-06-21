@@ -4,13 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.demo.DemoActivity">
+    tools:context="com.example.demo.DemoFragmentActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/fragmentOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment1"
+        android:background="@color/green"
+        android:padding="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_60"
+        android:layout_marginTop="@dimen/dp_25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/fragmentTwo"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/fragmentTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_2"
+        android:padding="@dimen/dp_20"
+        android:background="@color/green"
+        android:layout_marginStart="@dimen/dp_25"
+        app:layout_constraintStart_toEndOf="@id/fragmentOne"
+        app:layout_constraintTop_toTopOf="@id/fragmentOne"
+        />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragments"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:name="com.example.demo.LifeCycleFragment"
-        tools:layout="@layout/fragment_life_cycle" />
+        android:layout_height="@dimen/dp_0"
+        tools:layout="@layout/fragment_life_cycle"
+        android:layout_marginTop="@dimen/dp_25"
+        app:layout_constraintTop_toBottomOf="@id/fragmentOne"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
