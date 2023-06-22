@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.demo.IntentActivity">
+
+    <ScrollView
+        android:id="@+id/verticalScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sendNotification"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_50"
+                android:layout_marginEnd="@dimen/dp_50"
+                android:background="@color/blue"
+                android:padding="@dimen/dp_20"
+                android:text="@string/send_notification"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sendMessage"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_25"
+                android:background="@color/blue"
+                android:padding="@dimen/dp_20"
+                android:text="@string/send_message"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@id/sendNotification"
+                app:layout_constraintStart_toStartOf="@id/sendNotification"
+                app:layout_constraintTop_toBottomOf="@id/sendNotification" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/openGmail"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_25"
+                android:background="@color/blue"
+                android:padding="@dimen/dp_20"
+                android:text="@string/open_gmail"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@id/sendMessage"
+                app:layout_constraintStart_toStartOf="@id/sendMessage"
+                app:layout_constraintTop_toBottomOf="@id/sendMessage" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/openCamera"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:text="@string/open_camera"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:padding="@dimen/dp_20"
+                android:background="@color/blue"
+                android:layout_marginTop="@dimen/dp_25"
+                app:layout_constraintStart_toStartOf="@id/openGmail"
+                app:layout_constraintEnd_toEndOf="@id/openGmail"
+                app:layout_constraintTop_toBottomOf="@id/openGmail"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/selectImage"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_25"
+                android:background="@color/blue"
+                android:padding="@dimen/dp_20"
+                android:text="@string/choose_image"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@id/openCamera"
+                app:layout_constraintStart_toStartOf="@id/openCamera"
+                app:layout_constraintTop_toBottomOf="@id/openCamera" />
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/selectImage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
