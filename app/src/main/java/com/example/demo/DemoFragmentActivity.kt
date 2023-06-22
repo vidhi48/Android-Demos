@@ -31,7 +31,7 @@ class DemoFragmentActivity : AppCompatActivity() {
 
         binding.fragmentTwo.setOnClickListener {
             supportFragmentManager.commit {
-                replace(R.id.fragments, SecondFragment::class.java, null)
+                replace(R.id.fragments, SecondDemoFragment::class.java, null)
             }
         }
     }

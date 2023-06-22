@@ -6,28 +6,24 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.navArgs
-import com.example.androidproject.databinding.FragmentSecondBinding
-import com.example.demo.SecondFragmentArgs
-import com.example.demo.SecondFragmentDirections
+import com.example.androidproject.databinding.FragmentFirstBinding
+import com.example.demo.models.User
+import com.example.demo.FirstFragmentDirections
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [SecondFragment.newInstance] factory method to
+ * Use the [FirstFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class SecondFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+class FirstFragment : Fragment() {
+
+    private lateinit var binding: FragmentFirstBinding
+
     private var param1: String? = null
     private var param2: String? = null
-
-    private lateinit var binding: FragmentSecondBinding
-    private val data: SecondFragmentArgs by navArgs()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,21 +37,19 @@ class SecondFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentSecondBinding.inflate(layoutInflater)
+        binding = FragmentFirstBinding.inflate(layoutInflater)
         setupViews()
         return binding.root
     }
 
     private fun setupViews() {
-        val userDetails = data.user
-        binding.apply {
-            name.text = userDetails.name
-            email.text = userDetails.email
-            password.text = userDetails.password
-        }
-
-        binding.back.setOnClickListener {
-            val action = SecondFragmentDirections.actionNavFragment2ToNavFragment1()
+        binding.passData.setOnClickListener {
+            val user = User(
+                binding.name.text.toString(),
+                binding.email.text.toString(),
+                binding.password.text.toString()
+            )
+            val action = FirstFragmentDirections.actionNavFragment1ToNavFragment2(user)
             findNavController().navigate(action)
         }
     }
@@ -67,12 +61,12 @@ class SecondFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment SecondFragment.
+         * @return A new instance of fragment FirstFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            SecondFragment().apply {
+            FirstFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
