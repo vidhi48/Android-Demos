@@ -13,8 +13,8 @@
         android:icon="@drawable/baseline_settings_24"/>
 
     <item
-        android:id="@+id/logout"
-        android:title="@string/logout"
-        android:icon="@drawable/baseline_people_24"/>
+        android:id="@+id/songs"
+        android:title="@string/songs"
+        android:icon="@drawable/songs"/>
 
 </menu>

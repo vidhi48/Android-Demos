@@ -3,30 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.demo.FirstNavigationFragment">
-
-    <TextView
-        android:id="@+id/signUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sign_up"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="@dimen/dp_50"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+    tools:context="com.example.demo.navigation.FirstNavigationFragment">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/firstName"
         android:layout_width="@dimen/dp_0"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_100"
+        android:layout_marginTop="@dimen/dp_150"
         android:layout_marginStart="@dimen/dp_50"
         android:layout_marginEnd="@dimen/dp_50"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/signUp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         >
 
@@ -93,5 +80,16 @@
         app:layout_constraintTop_toBottomOf="@id/passText"
         />
 
+    <TextView
+        android:id="@+id/passedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/dp_50"
+        app:layout_constraintStart_toStartOf="@id/passData"
+        app:layout_constraintEnd_toEndOf="@id/passData"
+        app:layout_constraintTop_toBottomOf="@id/passData"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

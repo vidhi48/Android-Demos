@@ -1,4 +1,4 @@
-package com.example.demo
+package com.example.demo.navigation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

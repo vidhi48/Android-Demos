@@ -38,4 +38,22 @@
     <string name="sign_up">Sign Up</string>
     <string name="go_to_fragment_3">Go to Fragment 3</string>
     <string name="pass_data_to_fragment_1">Pass Data to fragment 1</string>
+    <string name="navigation_drawer_open">Navigation open</string>
+    <string name="navigation_drawer_close">Navigation close</string>
+    <string name="sandra_adams">Sandra Adams</string>
+    <string name="sandra_488_gmail_com">sandra_488@gmail.com</string>
+    <string name="navigation_drawer">Navigation Drawer</string>
+    <string name="share">share</string>
+    <string name="search">search</string>
+    <string name="songName">Song</string>
+
+    <string name="perfectSinger">Ed Sheeran</string>
+    <string name="perfectTime">4.25</string>
+    <string name="shapeSinger">Ed Sheeran</string>
+    <string name="shapeTime">3.56</string>
+    <string name="kesariyaSinger">Arijit Singh</string>
+    <string name="kesariyaTime">4.49</string>
+    <string name="hawayeinSinger">Arijit Singh</string>
+    <string name="hawayeinTime">4.49</string>
+    <string name="songs">Songs</string>
 </resources>
