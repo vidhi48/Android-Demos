@@ -3,36 +3,34 @@ package com.example.demo.navigation
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.content.res.AppCompatResources
-import androidx.fragment.app.activityViewModels
+import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.androidproject.R
 import com.example.androidproject.databinding.FragmentThirdNavigationBinding
-import com.example.demo.adapters.SongAdapter
-import com.example.demo.models.SharedViewModel
+import com.example.demo.navigation.adapters.SongAdapter
 import com.example.demo.models.Song
 
 class ThirdNavigationFragment : Fragment() {
 
     private lateinit var binding: FragmentThirdNavigationBinding
-    private val viewModel: SharedViewModel by activityViewModels()
+    private var songList = mutableListOf<Song>()
+    private lateinit var adapter: SongAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentThirdNavigationBinding.inflate(layoutInflater)
-        binding.passData.setOnClickListener {
-            viewModel.sendData(binding.data.text.toString())
-        }
         setupRecyclerView()
         return binding.root
     }
 
     private fun setupRecyclerView() {
-        var songList = mutableListOf<Song>()
         songList.add(
             Song(
                 AppCompatResources.getDrawable(requireContext(), R.drawable.shape_song),
@@ -130,10 +128,41 @@ class ThirdNavigationFragment : Fragment() {
             )
         )
 
-        val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        val layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         binding.searchRv.layoutManager = layoutManager
 
         val adapter = SongAdapter(songList)
         binding.searchRv.adapter = adapter
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.action_bar_items, menu)
+        val searchItem = menu.findItem(R.id.search)
+        val searchView = searchItem.actionView as SearchView
+
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String): Boolean {
+                filterData(newText)
+                return false
+            }
+        })
+
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    private fun filterData(query: String) {
+        val filteredList = mutableListOf<Song>()
+
+        songList.forEach { item ->
+            if (item.songTitle.contains(query, ignoreCase = true)) {
+                filteredList.add(item)
+            }
+        }
+        adapter.filterList(filteredList)
     }
 }

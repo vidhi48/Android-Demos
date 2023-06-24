@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,12 +16,25 @@
         android:theme="@style/Theme.AndroidProject"
         tools:targetApi="31">
         <activity
+            android:name="com.example.demo.WebViewDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.demo.NestedScrollActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name="com.example.demo.searchview.SearchViewActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
             android:name="com.example.demo.navigation.NavigationDemoActivity"
             android:exported="false" />
         <activity
             android:name="com.example.demo.navigation.NavigationDrawerActivity"
-            android:exported="true"
-            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden">
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,7 +52,6 @@
                 <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
-
         <activity
             android:name="com.example.demo.IntentDemoActivity"
             android:exported="false" />

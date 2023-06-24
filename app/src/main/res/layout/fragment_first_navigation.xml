@@ -1,29 +1,27 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.demo.navigation.FirstNavigationFragment">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/firstName"
         android:layout_width="@dimen/dp_0"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_150"
         android:layout_marginStart="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_150"
         android:layout_marginEnd="@dimen/dp_50"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/enter_name"
-            android:inputType="text"
-            />
+            android:inputType="text" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -32,18 +30,16 @@
         android:layout_width="@dimen/dp_0"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_50"
-        app:layout_constraintStart_toStartOf="@id/firstName"
-        app:layout_constraintTop_toBottomOf="@id/firstName"
         app:layout_constraintEnd_toEndOf="@id/firstName"
-        >
+        app:layout_constraintStart_toStartOf="@id/firstName"
+        app:layout_constraintTop_toBottomOf="@id/firstName">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/enter_email"
-            android:inputType="textEmailAddress"
-            />
+            android:inputType="textEmailAddress" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -52,18 +48,16 @@
         android:layout_width="@dimen/dp_0"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_50"
-        app:layout_constraintStart_toStartOf="@id/emailText"
-        app:layout_constraintTop_toBottomOf="@id/emailText"
         app:layout_constraintEnd_toEndOf="@id/emailText"
-        >
+        app:layout_constraintStart_toStartOf="@id/emailText"
+        app:layout_constraintTop_toBottomOf="@id/emailText">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/enter_password"
-            android:inputType="textPassword"
-            />
+            android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -75,21 +69,8 @@
         android:background="@color/purple"
         android:text="@string/pass_data"
         android:textAllCaps="false"
-        app:layout_constraintStart_toStartOf="@id/passText"
         app:layout_constraintEnd_toEndOf="@id/passText"
-        app:layout_constraintTop_toBottomOf="@id/passText"
-        />
-
-    <TextView
-        android:id="@+id/passedText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:textColor="@color/black"
-        android:layout_marginTop="@dimen/dp_50"
-        app:layout_constraintStart_toStartOf="@id/passData"
-        app:layout_constraintEnd_toEndOf="@id/passData"
-        app:layout_constraintTop_toBottomOf="@id/passData"
-        />
+        app:layout_constraintStart_toStartOf="@id/passText"
+        app:layout_constraintTop_toBottomOf="@id/passText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

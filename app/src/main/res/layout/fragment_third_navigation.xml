@@ -6,42 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.demo.navigation.ThirdNavigationFragment">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/dataText"
-        android:layout_width="@dimen/dp_0"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_100"
-        android:layout_marginStart="@dimen/dp_50"
-        android:layout_marginEnd="@dimen/dp_50"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/data"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/enter_data"
-            android:inputType="text"
-            />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/passData"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_50"
-        android:background="@color/purple"
-        android:text="@string/pass_data_to_fragment_1"
-        android:textAllCaps="false"
-        android:padding="@dimen/dp_20"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dataText"
-        />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/searchRv"
         android:layout_width="match_parent"
@@ -50,7 +14,7 @@
         android:layout_marginStart="@dimen/dp_10"
         android:layout_marginEnd="@dimen/dp_10"
         android:layout_marginBottom="@dimen/dp_20"
-        app:layout_constraintTop_toBottomOf="@id/passData"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
