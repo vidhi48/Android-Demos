@@ -56,19 +56,16 @@ class NavigationDrawerActivity : AppCompatActivity(),
         when (item.itemId) {
             R.id.signUp -> {
                 supportActionBar?.title = item.title
-                menuItem?.isVisible = false
                 changeFragment(FirstNavigationFragment())
             }
 
             R.id.settings -> {
                 supportActionBar?.title = item.title
-                menuItem?.isVisible = false
                 changeFragment(SecondNavigationFragment())
             }
 
             R.id.songs -> {
                 supportActionBar?.title = item.title
-                menuItem?.isVisible = true
                 changeFragment(ThirdNavigationFragment())
             }
         }

@@ -27,6 +27,7 @@ class ThirdNavigationFragment : Fragment() {
     ): View? {
         binding = FragmentThirdNavigationBinding.inflate(layoutInflater)
         setupRecyclerView()
+        setHasOptionsMenu(true)
         return binding.root
     }
 
@@ -132,13 +133,14 @@ class ThirdNavigationFragment : Fragment() {
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         binding.searchRv.layoutManager = layoutManager
 
-        val adapter = SongAdapter(songList)
+        adapter = SongAdapter(songList)
         binding.searchRv.adapter = adapter
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.action_bar_items, menu)
         val searchItem = menu.findItem(R.id.search)
+        searchItem.isVisible = true
         val searchView = searchItem.actionView as SearchView
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
@@ -148,11 +150,9 @@ class ThirdNavigationFragment : Fragment() {
 
             override fun onQueryTextChange(newText: String): Boolean {
                 filterData(newText)
-                return false
+                return true
             }
         })
-
-        super.onCreateOptionsMenu(menu, inflater)
     }
 
     private fun filterData(query: String) {

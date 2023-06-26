@@ -14,4 +14,9 @@
     <color name="blue"> #1C699B </color>
     <color name="water">#CBE4F9</color>
     <color name="purple">#D6CDEA</color>
+    <color name="whatsApp">#128C7E</color>
+    <color name="whatsAppDark">#075E54</color>
+    <color name="chatBack">#EBE5DE</color>
+    <color name="gray">#E5E4E2</color>
+    <color name="grayChat">#A9A9A9</color>
 </resources>

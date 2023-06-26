@@ -1,0 +1,75 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.demo.whatsapp.CallsFragment">
+
+    <ImageButton
+        android:id="@+id/link"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:src="@drawable/link"
+        android:scaleType="fitXY"
+        android:background="@drawable/rounded_image"
+        app:tint="@color/white"
+        android:paddingTop="@dimen/dp_20"
+        android:paddingStart="@dimen/dp_20"
+        android:paddingEnd="@dimen/dp_20"
+        android:paddingBottom="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginStart="@dimen/dp_15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/createLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_call_link"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginStart="@dimen/dp_10"
+        app:layout_constraintStart_toEndOf="@id/link"
+        app:layout_constraintTop_toTopOf="@id/link"
+        />
+
+    <TextView
+        android:id="@+id/linkSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/link_whatsapp_call"
+        android:textColor="@color/grayChat"
+        app:layout_constraintStart_toStartOf="@id/createLink"
+        app:layout_constraintTop_toBottomOf="@id/createLink"
+        />
+
+    <TextView
+        android:id="@+id/recent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recent"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintStart_toStartOf="@id/link"
+        app:layout_constraintTop_toBottomOf="@id/link"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/callsRv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginEnd="@dimen/dp_15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_20"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
