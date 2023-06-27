@@ -20,6 +20,7 @@
             android:exported="false" />
         <activity
             android:name="com.example.demo.whatsapp.WhatsAppActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,17 +33,23 @@
             android:exported="false" />
         <activity
             android:name="com.example.demo.NestedScrollActivity"
-            android:exported="true"></activity>
+            android:exported="true">
+
+        </activity>
         <activity
             android:name="com.example.demo.searchview.SearchViewActivity"
-            android:exported="true"></activity>
+            android:exported="true">
+
+        </activity>
         <activity
             android:name="com.example.demo.navigation.NavigationDemoActivity"
             android:exported="false" />
         <activity
             android:name="com.example.demo.navigation.NavigationDrawerActivity"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
-            android:exported="true"></activity>
+            android:exported="true">
+
+        </activity>
         <activity
             android:name="com.example.demo.IntentActivity"
             android:exported="true">

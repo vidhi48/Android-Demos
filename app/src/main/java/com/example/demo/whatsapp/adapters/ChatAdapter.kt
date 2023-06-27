@@ -1,5 +1,6 @@
 package com.example.demo.whatsapp.adapters
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -34,5 +35,11 @@ class ChatAdapter(private var chatList: List<Chat>):
 
     override fun getItemCount(): Int {
         return chatList.size
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun filterList(filterList: List<Chat>) {
+        chatList = filterList
+        notifyDataSetChanged()
     }
 }

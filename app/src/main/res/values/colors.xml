@@ -19,4 +19,5 @@
     <color name="chatBack">#EBE5DE</color>
     <color name="gray">#E5E4E2</color>
     <color name="grayChat">#A9A9A9</color>
+    <color name="messageLeft">#dcf8c6</color>
 </resources>
