@@ -7,7 +7,7 @@ import com.example.androidproject.databinding.ItemReceiveMessageTextBinding
 import com.example.androidproject.databinding.ItemSendMessageTextBinding
 import com.example.demo.whatsapp.models.ChatModel
 
-class WhatsAppChatAdapter(private var chatList: ArrayList<ChatModel>):
+class WhatsAppChatAdapter(private var chatList: MutableList<ChatModel>):
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     class SendMessage(private val binding: ItemSendMessageTextBinding) :
@@ -48,11 +48,6 @@ class WhatsAppChatAdapter(private var chatList: ArrayList<ChatModel>):
         }
     }
 
-    fun addMessage(message: ChatModel) {
-        chatList.add(message)
-        notifyItemInserted(chatList.count())
-    }
-
     override fun getItemCount(): Int {
         return chatList.size
     }
@@ -69,6 +64,12 @@ class WhatsAppChatAdapter(private var chatList: ArrayList<ChatModel>):
            MessageType.SEND -> MessageType.SEND.ordinal
            MessageType.RECEIVE -> MessageType.RECEIVE.ordinal
        }
+    }
+
+    fun submitList(list: List<ChatModel>) {
+        chatList.clear()
+        chatList.addAll(list)
+        notifyDataSetChanged()
     }
 
     enum class MessageType {

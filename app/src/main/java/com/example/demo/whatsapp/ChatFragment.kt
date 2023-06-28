@@ -26,68 +26,121 @@ class ChatFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentChatBinding.inflate(layoutInflater)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         setupRecyclerView()
         setHasOptionsMenu(true)
-        return binding.root
     }
 
     private fun setupRecyclerView() {
         chatList.add(
             Chat(
-            AppCompatResources.getDrawable(requireContext(), R.drawable.profile_image),"Sandra Adams", "hello", "11.00 am")
+                AppCompatResources.getDrawable(requireContext(), R.drawable.profile_image),
+                "Sandra Adams",
+                "hello",
+                "11.00 am"
+            )
         )
 
         chatList.add(
             Chat(
-                AppCompatResources.getDrawable(requireContext(), R.drawable.profile_chat2),"Arijit", "How are you?", "06.00 am")
+                AppCompatResources.getDrawable(requireContext(), R.drawable.profile_chat2),
+                "Arijit",
+                "How are you?",
+                "06.00 am"
+            )
         )
 
         chatList.add(
             Chat(
-                AppCompatResources.getDrawable(requireContext(), R.drawable.profile_chat3),"Sandra", "did you finish assigned task ?", "08.12 pm")
+                AppCompatResources.getDrawable(requireContext(), R.drawable.profile_chat3),
+                "Sandra",
+                "did you finish assigned task ?",
+                "08.12 pm"
+            )
         )
         chatList.add(
             Chat(
-                AppCompatResources.getDrawable(requireContext(), R.drawable.profile_chat4),"Klaus", "okay", "12/06/2023")
+                AppCompatResources.getDrawable(requireContext(), R.drawable.profile_chat4),
+                "Klaus",
+                "okay",
+                "12/06/2023"
+            )
         )
         chatList.add(
             Chat(
-                AppCompatResources.getDrawable(requireContext(), R.drawable.profile_image),"Michel", "hello", "11.00 am")
+                AppCompatResources.getDrawable(requireContext(), R.drawable.profile_image),
+                "Michel",
+                "hello",
+                "11.00 am"
+            )
         )
 
         chatList.add(
             Chat(
-                AppCompatResources.getDrawable(requireContext(), R.drawable.profile_chat2),"Heta", "How are you?", "06.00 am")
+                AppCompatResources.getDrawable(requireContext(), R.drawable.profile_chat2),
+                "Heta",
+                "How are you?",
+                "06.00 am"
+            )
         )
 
         chatList.add(
             Chat(
-                AppCompatResources.getDrawable(requireContext(), R.drawable.profile_chat3),"Salena", "did you finish assigned task ?", "08.12 pm")
+                AppCompatResources.getDrawable(requireContext(), R.drawable.profile_chat3),
+                "Salena",
+                "did you finish assigned task ?",
+                "08.12 pm"
+            )
         )
         chatList.add(
             Chat(
-                AppCompatResources.getDrawable(requireContext(), R.drawable.profile_chat4),"Justin", "okay", "12/06/2023")
+                AppCompatResources.getDrawable(requireContext(), R.drawable.profile_chat4),
+                "Justin",
+                "okay",
+                "12/06/2023"
+            )
         )
         chatList.add(
             Chat(
-                AppCompatResources.getDrawable(requireContext(), R.drawable.profile_image),"Navin", "hello", "11.00 am")
+                AppCompatResources.getDrawable(requireContext(), R.drawable.profile_image),
+                "Navin",
+                "hello",
+                "11.00 am"
+            )
         )
 
         chatList.add(
             Chat(
-                AppCompatResources.getDrawable(requireContext(), R.drawable.profile_chat2),"Kevin", "How are you?", "06.00 am")
+                AppCompatResources.getDrawable(requireContext(), R.drawable.profile_chat2),
+                "Kevin",
+                "How are you?",
+                "06.00 am"
+            )
         )
 
         chatList.add(
             Chat(
-                AppCompatResources.getDrawable(requireContext(), R.drawable.profile_chat3),"Taylor", "did you finish assigned task ?", "08.12 pm")
+                AppCompatResources.getDrawable(requireContext(), R.drawable.profile_chat3),
+                "Taylor",
+                "did you finish assigned task ?",
+                "08.12 pm"
+            )
         )
         chatList.add(
             Chat(
-                AppCompatResources.getDrawable(requireContext(), R.drawable.profile_chat4),"Vidhi", "okay", "12/06/2023")
+                AppCompatResources.getDrawable(requireContext(), R.drawable.profile_chat4),
+                "Vidhi",
+                "okay",
+                "12/06/2023"
+            )
         )
 
-        val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        val layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         binding.chartRecycler.layoutManager = layoutManager
 
         adapter = ChatAdapter(chatList)
@@ -105,7 +158,9 @@ class ChatFragment : Fragment() {
             }
 
             override fun onQueryTextChange(newText: String): Boolean {
-                filterData(newText)
+                if (newText.length >= 3) {
+                    filterData(newText)
+                }
                 return true
             }
         })

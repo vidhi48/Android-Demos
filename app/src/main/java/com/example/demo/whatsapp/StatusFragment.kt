@@ -21,8 +21,12 @@ class StatusFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentStatusBinding.inflate(layoutInflater)
-        setupRecyclerView()
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupRecyclerView()
     }
 
     private fun setupRecyclerView() {

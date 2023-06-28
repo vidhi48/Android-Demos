@@ -10,7 +10,8 @@ import com.example.androidproject.databinding.FragmentBottomSheetBinding
 import com.example.demo.whatsapp.models.BottomSheet
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-class BottomSheetFragment(whatsappChatFragment: WhatsappChatFragment) : BottomSheetDialogFragment() {
+class BottomSheetFragment(whatsappChatFragment: WhatsappChatFragment) :
+    BottomSheetDialogFragment() {
 
     private lateinit var binding: FragmentBottomSheetBinding
 
@@ -19,33 +20,77 @@ class BottomSheetFragment(whatsappChatFragment: WhatsappChatFragment) : BottomSh
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentBottomSheetBinding.inflate(layoutInflater)
-        setupBottomSheet()
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupBottomSheet()
+    }
+
     private fun setupBottomSheet() {
-        val documentButton = BottomSheet(AppCompatResources.getDrawable(requireContext(), R.drawable.baseline_contact_page_24), "Document")
+        val documentButton = BottomSheet(
+            AppCompatResources.getDrawable(
+                requireContext(),
+                R.drawable.baseline_contact_page_24
+            ), "Document"
+        )
         binding.document = documentButton
 
-        val cameraButton = BottomSheet(AppCompatResources.getDrawable(requireContext(), R.drawable.baseline_camera_alt_24), "Camera")
+        val cameraButton = BottomSheet(
+            AppCompatResources.getDrawable(
+                requireContext(),
+                R.drawable.baseline_camera_alt_24
+            ), "Camera"
+        )
         binding.camera = cameraButton
 
-        val galleryButton = BottomSheet(AppCompatResources.getDrawable(requireContext(), R.drawable.baseline_image_search_24), "Gallery")
+        val galleryButton = BottomSheet(
+            AppCompatResources.getDrawable(
+                requireContext(),
+                R.drawable.baseline_image_search_24
+            ), "Gallery"
+        )
         binding.gallery = galleryButton
 
-        val audioButton = BottomSheet(AppCompatResources.getDrawable(requireContext(), R.drawable.baseline_headphones_24), "Audio")
+        val audioButton = BottomSheet(
+            AppCompatResources.getDrawable(
+                requireContext(),
+                R.drawable.baseline_headphones_24
+            ), "Audio"
+        )
         binding.audio = audioButton
 
-        val locationButton = BottomSheet(AppCompatResources.getDrawable(requireContext(), R.drawable.baseline_location_on_24), "Location")
+        val locationButton = BottomSheet(
+            AppCompatResources.getDrawable(
+                requireContext(),
+                R.drawable.baseline_location_on_24
+            ), "Location"
+        )
         binding.location = locationButton
 
-        val paymentButton = BottomSheet(AppCompatResources.getDrawable(requireContext(), R.drawable.baseline_currency_rupee_24), "Payment")
+        val paymentButton = BottomSheet(
+            AppCompatResources.getDrawable(
+                requireContext(),
+                R.drawable.baseline_currency_rupee_24
+            ), "Payment"
+        )
         binding.payment = paymentButton
 
-        val contactButton = BottomSheet(AppCompatResources.getDrawable(requireContext(), R.drawable.baseline_person_24), "Contact")
+        val contactButton = BottomSheet(
+            AppCompatResources.getDrawable(
+                requireContext(),
+                R.drawable.baseline_person_24
+            ), "Contact"
+        )
         binding.contact = contactButton
 
-        val pollButton = BottomSheet(AppCompatResources.getDrawable(requireContext(), R.drawable.baseline_graphic_eq_24), "Poll")
+        val pollButton = BottomSheet(
+            AppCompatResources.getDrawable(
+                requireContext(),
+                R.drawable.baseline_graphic_eq_24
+            ), "Poll"
+        )
         binding.poll = pollButton
     }
 }

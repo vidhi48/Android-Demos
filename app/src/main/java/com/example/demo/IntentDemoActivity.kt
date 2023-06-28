@@ -20,7 +20,6 @@ class IntentDemoActivity : AppCompatActivity() {
 
     private fun setupButtons() {
         binding.explicitIntent.setOnClickListener{
-
             val passData = binding.passData.text.toString()
             val intent = Intent(this, LifeCycleActivity::class.java)
             intent.putExtra("data", passData)

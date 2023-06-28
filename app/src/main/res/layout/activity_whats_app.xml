@@ -44,7 +44,7 @@
         android:backgroundTint="@color/whatsApp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/baseline_message_24"
-        android:tint="@color/white"
+        app:tint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

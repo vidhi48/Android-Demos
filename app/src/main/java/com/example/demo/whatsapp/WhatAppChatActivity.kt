@@ -15,9 +15,10 @@ class WhatAppChatActivity : AppCompatActivity() {
 
         binding = ActivityWhatAppChatBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        supportFragmentManager.commit {
-            add(R.id.fragmentChat, WhatsappChatFragment(), null)
+        if (savedInstanceState == null) {
+            supportFragmentManager.commit {
+                add(R.id.fragmentChat, WhatsappChatFragment::class.java, null)
+            }
         }
     }
 }

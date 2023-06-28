@@ -36,13 +36,14 @@ class WhatsAppActivity : AppCompatActivity() {
                 startActivity(intent)
                 true
             }
+
             else -> super.onOptionsItemSelected(item)
         }
     }
 
     private fun setupTabBar() = with(binding) {
 
-        val tabList = listOf<Any>("Community","Chats","Status", "Calls")
+        val tabList = listOf<Any>("Community", "Chats", "Status", "Calls")
         tabLayout.apply {
             addTab(this.newTab())
             addTab(this.newTab())
@@ -54,9 +55,10 @@ class WhatsAppActivity : AppCompatActivity() {
         viewPager.adapter = adapter
         viewPager.currentItem = 1
 
-        TabLayoutMediator(tabLayout, viewPager){ tab, position ->
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             if (position == 0) {
-                tab.icon = AppCompatResources.getDrawable(this@WhatsAppActivity, R.drawable.community)
+                tab.icon =
+                    AppCompatResources.getDrawable(this@WhatsAppActivity, R.drawable.community)
             } else {
                 tab.text = tabList[position].toString()
             }

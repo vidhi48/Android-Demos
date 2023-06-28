@@ -114,4 +114,5 @@
     <string name="recent">Recent</string>
     <string name="extraText">\t\tEasily organise your related groups and send\nannouncements. Now, your communities, like\nneighbourhoods or schools, cam have their own\nspace.
     </string>
+    <string name="current_date">Today</string>
 </resources>
