@@ -1,5 +1,6 @@
 package com.example.demo.whatsapp.adapters
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -7,7 +8,7 @@ import com.example.androidproject.databinding.ItemReceiveMessageTextBinding
 import com.example.androidproject.databinding.ItemSendMessageTextBinding
 import com.example.demo.whatsapp.models.ChatModel
 
-class WhatsAppChatAdapter(private var chatList: MutableList<ChatModel>):
+class WhatsAppChatAdapter(private var chatList: MutableList<ChatModel>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     class SendMessage(private val binding: ItemSendMessageTextBinding) :
@@ -34,7 +35,6 @@ class WhatsAppChatAdapter(private var chatList: MutableList<ChatModel>):
                         false
                     )
                 SendMessage(sendBinding)
-
             }
 
             MessageType.RECEIVE -> {
@@ -60,12 +60,13 @@ class WhatsAppChatAdapter(private var chatList: MutableList<ChatModel>):
     }
 
     override fun getItemViewType(position: Int): Int {
-       return when (chatList[position].messageType) {
-           MessageType.SEND -> MessageType.SEND.ordinal
-           MessageType.RECEIVE -> MessageType.RECEIVE.ordinal
-       }
+        return when (chatList[position].messageType) {
+            MessageType.SEND -> MessageType.SEND.ordinal
+            MessageType.RECEIVE -> MessageType.RECEIVE.ordinal
+        }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun submitList(list: List<ChatModel>) {
         chatList.clear()
         chatList.addAll(list)

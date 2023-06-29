@@ -1,6 +1,9 @@
 package com.example.demo.whatsapp
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,14 +31,14 @@ class BottomSheetFragment(whatsappChatFragment: WhatsappChatFragment) :
         setupBottomSheet()
     }
 
-    private fun setupBottomSheet() {
+    private fun setupBottomSheet() = with(binding) {
         val documentButton = BottomSheet(
             AppCompatResources.getDrawable(
                 requireContext(),
                 R.drawable.baseline_contact_page_24
             ), "Document"
         )
-        binding.document = documentButton
+        document = documentButton
 
         val cameraButton = BottomSheet(
             AppCompatResources.getDrawable(
@@ -43,7 +46,7 @@ class BottomSheetFragment(whatsappChatFragment: WhatsappChatFragment) :
                 R.drawable.baseline_camera_alt_24
             ), "Camera"
         )
-        binding.camera = cameraButton
+        camera = cameraButton
 
         val galleryButton = BottomSheet(
             AppCompatResources.getDrawable(
@@ -51,7 +54,7 @@ class BottomSheetFragment(whatsappChatFragment: WhatsappChatFragment) :
                 R.drawable.baseline_image_search_24
             ), "Gallery"
         )
-        binding.gallery = galleryButton
+        gallery = galleryButton
 
         val audioButton = BottomSheet(
             AppCompatResources.getDrawable(
@@ -59,7 +62,7 @@ class BottomSheetFragment(whatsappChatFragment: WhatsappChatFragment) :
                 R.drawable.baseline_headphones_24
             ), "Audio"
         )
-        binding.audio = audioButton
+        audio = audioButton
 
         val locationButton = BottomSheet(
             AppCompatResources.getDrawable(
@@ -67,7 +70,7 @@ class BottomSheetFragment(whatsappChatFragment: WhatsappChatFragment) :
                 R.drawable.baseline_location_on_24
             ), "Location"
         )
-        binding.location = locationButton
+        location = locationButton
 
         val paymentButton = BottomSheet(
             AppCompatResources.getDrawable(
@@ -75,7 +78,7 @@ class BottomSheetFragment(whatsappChatFragment: WhatsappChatFragment) :
                 R.drawable.baseline_currency_rupee_24
             ), "Payment"
         )
-        binding.payment = paymentButton
+        payment = paymentButton
 
         val contactButton = BottomSheet(
             AppCompatResources.getDrawable(
@@ -83,7 +86,7 @@ class BottomSheetFragment(whatsappChatFragment: WhatsappChatFragment) :
                 R.drawable.baseline_person_24
             ), "Contact"
         )
-        binding.contact = contactButton
+        contact = contactButton
 
         val pollButton = BottomSheet(
             AppCompatResources.getDrawable(
@@ -91,6 +94,28 @@ class BottomSheetFragment(whatsappChatFragment: WhatsappChatFragment) :
                 R.drawable.baseline_graphic_eq_24
             ), "Poll"
         )
-        binding.poll = pollButton
+        poll = pollButton
+
+        cameraBtn.button.setOnClickListener {
+            val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            startActivity(intent)
+        }
+
+        audioBtn.button.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://open.spotify.com/"))
+            startActivity(intent)
+        }
+
+        locationBtn.button.setOnClickListener {
+            val location = Uri.parse("geo:23.028602304078483, 72.4994533962854")
+            val intent = Intent(Intent.ACTION_VIEW, location)
+            startActivity(intent)
+        }
+
+        contactBtn.button.setOnClickListener {
+            val phoneNumber = Uri.parse("tel:9532544328")
+            val intent = Intent(Intent.ACTION_VIEW, phoneNumber)
+            startActivity(intent)
+        }
     }
 }

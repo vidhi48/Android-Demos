@@ -71,7 +71,7 @@ class WhatsappChatFragment : Fragment() {
         binding.send.setOnClickListener {
             val messageContent = binding.message.text.toString().trim()
             if (messageContent.isNotEmpty()) {
-                viewModel.sentMessage(binding.message.text.toString())
+                viewModel.sentMessage(binding.message.text.toString().trim())
                 binding.message.text.clear()
                 autoResponse()
             }
