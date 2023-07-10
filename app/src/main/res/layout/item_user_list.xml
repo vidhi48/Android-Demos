@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.example.demo.webservices.models.Data" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/images"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_100"
+            android:src="@{user.avatar}"
+            android:layout_marginStart="@dimen/dp_15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/dp_15"
+            tools:src="@drawable/profile"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/firstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_25"
+            app:layout_constraintStart_toEndOf="@id/images"
+            app:layout_constraintTop_toTopOf="@id/images"
+            tools:text="firstName"
+            android:text="@{user.firstName}"/>
+
+        <TextView
+            android:id="@+id/lastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/firstName"
+            app:layout_constraintTop_toBottomOf="@id/firstName"
+            tools:text="lastName"
+            android:text="@{user.lastName}"/>
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/lastName"
+            app:layout_constraintTop_toBottomOf="@id/lastName"
+            tools:text="email"
+            android:text="@{user.email}"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
