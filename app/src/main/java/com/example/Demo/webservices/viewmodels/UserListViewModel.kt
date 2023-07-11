@@ -14,7 +14,6 @@ import retrofit2.Response
 class UserListViewModel: ViewModel() {
     private var _userLiveData = MutableLiveData<List<Data>>()
     var userLiveData: LiveData<List<Data>> = _userLiveData
-
     fun getUser() {
         RetrofitInstance.getUserApi.getUsers("2").enqueue(object : Callback<User?> {
             override fun onResponse(call: Call<User?>, response: Response<User?>) {

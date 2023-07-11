@@ -14,7 +14,6 @@ import retrofit2.Response
 class RegisterUserViewModel: ViewModel() {
     private val _registerResponse: MutableLiveData<UserResponse?> = MutableLiveData(null)
     var registerResponse: LiveData<UserResponse?> = _registerResponse
-
     fun registerUser(username: String, email: String, password: String) {
         RetrofitInstance.registerApi.registerUser(UserRequest(username, email, password)).enqueue(object :
             Callback<UserResponse?> {

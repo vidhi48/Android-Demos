@@ -15,16 +15,19 @@
         android:theme="@style/Theme.AndroidProject"
         tools:targetApi="31">
         <activity
-            android:name="com.example.demo.webservices.activities.DisplayUserActivity"
+            android:name="com.example.demo.webservices.activities.RegisterUserOkHttpActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.demo.webservices.activities.UpdateUserActivity"
+            android:name="com.example.demo.webservices.activities.DisplayUsersActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.demo.webservices.activities.RegisterUserActivity"
             android:exported="false" />
         <activity
             android:name="com.example.demo.webservices.activities.UserListActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.demo.webservices.activities.RegisterUserActivity"
+            android:name="com.example.demo.webservices.activities.DisplayUserOkHttpActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
