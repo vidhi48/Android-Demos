@@ -3,6 +3,7 @@ package com.example.demo.webservices.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.viewModels
 import com.example.androidproject.databinding.ActivityRegisterUserOkHttpBinding
@@ -31,9 +32,9 @@ class RegisterUserOkHttpActivity : AppCompatActivity() {
         viewModel.response.observe(this) {
             Toast.makeText(this, "User Added Successfully", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, DisplayUserOkHttpActivity::class.java)
+            intent.putExtra("id", viewModel.data.toString())
             startActivity(intent)
         }
-
     }
 
     private fun addUser() {

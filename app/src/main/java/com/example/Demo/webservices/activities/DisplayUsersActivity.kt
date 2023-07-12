@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.example.androidproject.databinding.ActivityDisplayUsersBinding
+import kotlinx.coroutines.DelicateCoroutinesApi
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -22,15 +25,16 @@ class DisplayUsersActivity : AppCompatActivity() {
         setupUI()
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     private fun setupUI() {
        binding.loginBtn.setOnClickListener {
-           Thread(Runnable {
-               try {
-                   sendPostRequest("eve.holt@reqres.in", "cityslicka")
-               } catch (ex: Exception) {
-                   Log.d("user", "Error")
-               }
-           }).start()
+          GlobalScope.launch {
+              try {
+                  sendPostRequest("eve.holt@reqres.in", "cityslicka")
+              } catch (ex: Exception) {
+                  Log.d("user", "Error")
+              }
+          }
        }
     }
 
@@ -45,7 +49,7 @@ class DisplayUsersActivity : AppCompatActivity() {
             val data = OutputStreamWriter(outputStream)
             data.write(jsonObj.toString())
             data.flush()
-            println("Url: $url, response: $responseCode")
+            println("Url: $url, StatusCode: $responseCode")
             BufferedReader(InputStreamReader(inputStream)).use {
                 val response = StringBuffer()
                 var inputLine = it.readLine()

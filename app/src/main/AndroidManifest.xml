@@ -2,9 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name="com.example.demo.webservices.BaseApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -24,10 +26,13 @@
             android:name="com.example.demo.webservices.activities.RegisterUserActivity"
             android:exported="false" />
         <activity
+            android:name="com.example.demo.webservices.activities.DisplayUserOkHttpActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.demo.webservices.activities.UserListActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.demo.webservices.activities.DisplayUserOkHttpActivity"
+            android:name="com.example.demo.webservices.activities.ImageUploadActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

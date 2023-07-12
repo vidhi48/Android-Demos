@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.demo.webservices.interceptor.APIInterceptor
 import com.example.demo.webservices.models.UserResponse
 import okhttp3.Call
 import okhttp3.Callback
@@ -19,7 +20,7 @@ class DisplayUserOkHttpViewModel: ViewModel() {
     var users: LiveData<List<UserResponse>> = _users
 
     fun getUser() {
-        val client = OkHttpClient()
+        val client = OkHttpClient().newBuilder().addInterceptor(APIInterceptor()).build()
         val request = Request.Builder()
             .url("https://64a3a5b5c3b509573b565cfc.mockapi.io/UserUpdate")
             .build()

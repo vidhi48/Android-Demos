@@ -25,7 +25,7 @@ class RegisterUserOkHttpViewModel : ViewModel() {
 
     private var _response = MutableLiveData<UserResponse>()
     var response: LiveData<UserResponse> = _response
-    var data: UserResponse? = null
+    lateinit var data: UserResponse
 
     fun validate(username: String, email: String, password: String) {
         if (username.isEmpty()) {
@@ -66,8 +66,8 @@ class RegisterUserOkHttpViewModel : ViewModel() {
                         jsonData.getString("password"),
                     )
                 }
-                data = users
                 _response.postValue(users)
+                data = users
             }
         })
     }
