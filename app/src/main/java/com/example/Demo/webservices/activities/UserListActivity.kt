@@ -24,7 +24,6 @@ class UserListActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this)[UserListViewModel::class.java]
         viewModel.getUser()
         val userAdapter = UserListAdapter()
-
         viewModel.userLiveData.observe(this) {
             viewModel.userLiveData.value?.let { userAdapter.addItem(it) }
             binding.recyclerView.adapter = userAdapter

@@ -20,6 +20,7 @@ class RegisterUserOkHttpActivity : AppCompatActivity() {
         setContentView(binding.root)
         setupUI()
     }
+
     private fun setupUI() {
         viewModel.validationError.observe(this) {
             Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
@@ -31,13 +32,18 @@ class RegisterUserOkHttpActivity : AppCompatActivity() {
 
         viewModel.response.observe(this) {
             Toast.makeText(this, "User Added Successfully", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, DisplayUserOkHttpActivity::class.java)
-            intent.putExtra("id", viewModel.data.toString())
+            val intent = Intent(this, UpdateUserOkHttpActivity::class.java)
+            intent.putExtra("id", viewModel.data.id.toString())
+            Log.d("data", viewModel.data.toString())
             startActivity(intent)
         }
     }
 
     private fun addUser() {
-        viewModel.validate(binding.name.text.toString(),binding.email.text.toString(), binding.password.text.toString())
+        viewModel.validate(
+            binding.name.text.toString(),
+            binding.email.text.toString(),
+            binding.password.text.toString()
+        )
     }
 }

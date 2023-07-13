@@ -27,15 +27,15 @@ class DisplayUsersActivity : AppCompatActivity() {
 
     @OptIn(DelicateCoroutinesApi::class)
     private fun setupUI() {
-       binding.loginBtn.setOnClickListener {
-          GlobalScope.launch {
-              try {
-                  sendPostRequest("eve.holt@reqres.in", "cityslicka")
-              } catch (ex: Exception) {
-                  Log.d("user", "Error")
-              }
-          }
-       }
+        binding.loginBtn.setOnClickListener {
+            GlobalScope.launch {
+                try {
+                    sendPostRequest("eve.holt@reqres.in", "cityslicka")
+                } catch (ex: Exception) {
+                    Log.d("user", "Error")
+                }
+            }
+        }
     }
 
     private fun sendPostRequest(email: String, password: String) {

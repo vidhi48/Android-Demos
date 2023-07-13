@@ -11,7 +11,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class UserListViewModel: ViewModel() {
+class UserListViewModel : ViewModel() {
     private var _userLiveData = MutableLiveData<List<Data>>()
     var userLiveData: LiveData<List<Data>> = _userLiveData
     fun getUser() {

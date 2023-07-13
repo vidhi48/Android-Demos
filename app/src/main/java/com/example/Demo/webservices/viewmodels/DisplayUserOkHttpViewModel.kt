@@ -14,7 +14,7 @@ import okhttp3.Response
 import org.json.JSONArray
 import java.io.IOException
 
-class DisplayUserOkHttpViewModel: ViewModel() {
+class DisplayUserOkHttpViewModel : ViewModel() {
 
     private val _users = MutableLiveData<List<UserResponse>>()
     var users: LiveData<List<UserResponse>> = _users
@@ -34,7 +34,7 @@ class DisplayUserOkHttpViewModel: ViewModel() {
                 val usersList = ArrayList<UserResponse>()
                 val jsonData = response.body?.string()
                 val jsonArray = JSONArray(jsonData)
-                for(i in 0 until jsonArray.length()) {
+                for (i in 0 until jsonArray.length()) {
                     usersList.add(
                         UserResponse(
                             jsonArray.getJSONObject(i).getString("id"),

@@ -10,7 +10,7 @@ data class UserRequest(
 
 data class UserResponse(
     @SerializedName("id") var id: String? = null,
-    @SerializedName("username") var username : String? = null,
+    @SerializedName("username") var username: String? = null,
     @SerializedName("email") var email: String? = null,
     @SerializedName("password") var password: String? = null
 )

@@ -2,6 +2,7 @@ package com.example.demo.webservices.di
 
 import com.example.demo.webservices.interfaces.UserInterface
 import com.example.demo.webservices.repository.ImageUploadRepository
+import com.example.demo.webservices.repository.NewsRepository
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -18,6 +19,7 @@ import javax.inject.Singleton
 object APIModule {
 
     private const val IMAGE_URL = "https://api.imgbb.com/1/"
+    private const val NEWS = "https://newsapi.org/v2/"
 
     @Provides
     @Singleton
@@ -43,4 +45,24 @@ object APIModule {
     @Named("UploadImage")
     fun providesUploadImageRepository(@Named("ImageUploadService") imageService: UserInterface): ImageUploadRepository =
         ImageUploadRepository(imageService)
+
+    @Provides
+    @Singleton
+    @Named("NEWS")
+    fun provideFetchNews(gson: Gson): Retrofit =
+        Retrofit.Builder()
+            .baseUrl(NEWS)
+            .addConverterFactory(GsonConverterFactory.create(gson))
+            .build()
+
+    @Provides
+    @Singleton
+    @Named("NewsService")
+    fun provideNewService(@Named("NEWS") retrofit: Retrofit): UserInterface =
+        retrofit.create(UserInterface::class.java)
+
+    @Provides
+    @Singleton
+    fun provideNewRepository(@Named("NewsService") newsInterface: UserInterface): NewsRepository =
+        NewsRepository(newsInterface)
 }

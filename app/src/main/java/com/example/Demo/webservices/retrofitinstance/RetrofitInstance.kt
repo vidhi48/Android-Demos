@@ -1,7 +1,6 @@
 package com.example.demo.webservices.retrofitinstance
 
 import com.example.demo.webservices.interceptor.APIInterceptor
-import com.example.demo.webservices.interceptor.RetryInterceptor
 import com.example.demo.webservices.interfaces.UserInterface
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -9,11 +8,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitInstance {
     val getUserApi: UserInterface by lazy {
-        val interceptorClient = OkHttpClient().newBuilder().addInterceptor(RetryInterceptor()).build()
         Retrofit.Builder()
             .baseUrl("https://reqres.in/")
             .addConverterFactory(GsonConverterFactory.create())
-            .client(interceptorClient)
             .build()
             .create(UserInterface::class.java)
     }

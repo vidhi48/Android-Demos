@@ -18,4 +18,12 @@
     <string name="emailTx">Email:</string>
     <string name="passwordTxt">Password:</string>
     <string name="login">Login</string>
+    <string name="web_service">Web Service</string>
+    <string name="display_user_using_retrofit">Display User using Retrofit</string>
+    <string name="register_user_using_retrofit">Register user using retrofit</string>
+    <string name="api_calling_without_third_party_library">API calling without third party library</string>
+    <string name="api_calling_using_okhttp">API calling using OkHttp</string>
+    <string name="image_uploading">Image Uploading</string>
+    <string name="api_calling_using_retrofit">API calling using Retrofit</string>
+    <string name="news_api">News API</string>
 </resources>

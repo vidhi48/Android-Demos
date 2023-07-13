@@ -20,20 +20,26 @@ class RegisterUserActivity : AppCompatActivity() {
         setContentView(binding.root)
         setupUI()
     }
+
     private fun setupUI() {
         viewModel.registerResponse.observe(this) {
             it?.let(this::showAlertDialog)
         }
         binding.loginBtn.setOnClickListener {
-            viewModel.registerUser(binding.name.text.toString(), binding.email.text.toString(), binding.password.text.toString())
+            viewModel.registerUser(
+                binding.name.text.toString(),
+                binding.email.text.toString(),
+                binding.password.text.toString()
+            )
         }
     }
+
     private fun showAlertDialog(registerResponse: UserResponse?) {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Register Successfully")
         builder.setMessage("Welcome " + registerResponse?.username)
         builder.setNegativeButton("OK") { _, _ ->
-           val intent = Intent(this, UserListActivity::class.java)
+            val intent = Intent(this, UserListActivity::class.java)
             startActivity(intent)
         }
         val alertDialog: AlertDialog = builder.create()
