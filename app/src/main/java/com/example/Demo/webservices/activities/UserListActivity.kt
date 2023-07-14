@@ -14,7 +14,6 @@ class UserListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityUserListBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupUI()

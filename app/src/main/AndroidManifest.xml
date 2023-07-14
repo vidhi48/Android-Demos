@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 
     <application
         android:name="com.example.demo.webservices.BaseApplication"
@@ -17,16 +18,7 @@
         android:theme="@style/Theme.AndroidProject"
         tools:targetApi="31">
         <activity
-            android:name="com.example.demo.webservices.activities.ImageUploadOkHttpActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.demo.UpdateUserActivity"
-            android:exported="false" />
-        <activity
             android:name="com.example.demo.webservices.activities.UpdateUserOkHttpActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.demo.webservices.activities.NewsArticleActivity"
             android:exported="false" />
         <activity
             android:name="com.example.demo.webservices.activities.NewsActivity"
@@ -41,10 +33,10 @@
             android:name="com.example.demo.webservices.activities.RegisterUserActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.demo.webservices.activities.DisplayUserOkHttpActivity"
+            android:name="com.example.demo.webservices.activities.UserListActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.demo.webservices.activities.UserListActivity"
+            android:name="com.example.demo.webservices.activities.DisplayUserOkHttpActivity"
             android:exported="false" />
         <activity
             android:name="com.example.demo.webservices.activities.RegisterUserOkHttpActivity"

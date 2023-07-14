@@ -21,7 +21,7 @@ class DisplayUserOkHttpActivity : AppCompatActivity() {
 
     private fun setupUI() {
         val adapter = DisplayUserOkHttpAdapter()
-        viewModel.getUser()
+        viewModel.getUser(this)
         viewModel.users.observe(this) {
             adapter.addUser(it)
             binding.userRv.adapter = adapter
