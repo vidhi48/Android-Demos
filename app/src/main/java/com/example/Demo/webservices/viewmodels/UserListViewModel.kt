@@ -17,7 +17,6 @@ class UserListViewModel : ViewModel() {
     fun getUser() {
         RetrofitInstance.getUserApi.getUsers("2").enqueue(object : Callback<User?> {
             override fun onResponse(call: Call<User?>, response: Response<User?>) {
-                val a = response.body()?.data
                 _userLiveData.value = response.body()?.data
             }
 
