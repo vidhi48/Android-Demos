@@ -3,7 +3,6 @@ package com.example.demo
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.androidproject.R
 import com.example.androidproject.databinding.ActivityMainBinding
 import com.example.demo.webservices.activities.DisplayUsersActivity
 import com.example.demo.webservices.activities.ImageUploadActivity

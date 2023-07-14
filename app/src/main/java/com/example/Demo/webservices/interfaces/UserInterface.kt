@@ -20,6 +20,9 @@ interface UserInterface {
     @GET("/api/users")
     fun getUsers(@Query("page") page: String): Call<User>
 
+    @GET("top-headlines?country=in&apiKey=67962f7b55de4aa7b22b2307d8c4d73d&pageSize=80")
+    suspend fun getNews(): Response<News>
+
     @POST("/UserUpdate")
     fun registerUser(@Body user: UserRequest): Call<UserResponse>
 
@@ -29,7 +32,4 @@ interface UserInterface {
         @Query("key") key: String,
         @Part image: MultipartBody.Part
     ): ImageResponse
-
-    @GET("top-headlines?country=in&apiKey=67962f7b55de4aa7b22b2307d8c4d73d&pageSize=80")
-    suspend fun getNews(): Response<News>
 }
