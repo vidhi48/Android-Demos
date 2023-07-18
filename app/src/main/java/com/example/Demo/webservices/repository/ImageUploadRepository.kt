@@ -1,10 +1,10 @@
 package com.example.demo.webservices.repository
 
 import androidx.lifecycle.MutableLiveData
-import com.example.demo.webservices.interfaces.UserInterface
+import com.example.demo.webservices.interfaces.UserService
 import okhttp3.MultipartBody
 
-class ImageUploadRepository(private val uploadImageService: UserInterface) {
+class ImageUploadRepository(private val uploadImageService: UserService) {
 
     private val _imageResponse = MutableLiveData<Boolean?>()
     val imageResponse = _imageResponse

@@ -1,6 +1,6 @@
 package com.example.demo.webservices.di
 
-import com.example.demo.webservices.interfaces.UserInterface
+import com.example.demo.webservices.interfaces.UserService
 import com.example.demo.webservices.repository.ImageUploadRepository
 import com.example.demo.webservices.repository.NewsRepository
 import com.google.gson.Gson
@@ -37,13 +37,13 @@ object APIModule {
     @Provides
     @Singleton
     @Named("ImageUploadService")
-    fun provideImageUploadService(@Named("IMAGE_UPLOAD") retrofit: Retrofit): UserInterface =
-        retrofit.create(UserInterface::class.java)
+    fun provideImageUploadService(@Named("IMAGE_UPLOAD") retrofit: Retrofit): UserService =
+        retrofit.create(UserService::class.java)
 
     @Provides
     @Singleton
     @Named("UploadImage")
-    fun providesUploadImageRepository(@Named("ImageUploadService") imageService: UserInterface): ImageUploadRepository =
+    fun providesUploadImageRepository(@Named("ImageUploadService") imageService: UserService): ImageUploadRepository =
         ImageUploadRepository(imageService)
 
     @Provides
@@ -58,11 +58,11 @@ object APIModule {
     @Provides
     @Singleton
     @Named("NewsService")
-    fun provideNewService(@Named("NEWS") retrofit: Retrofit): UserInterface =
-        retrofit.create(UserInterface::class.java)
+    fun provideNewService(@Named("NEWS") retrofit: Retrofit): UserService =
+        retrofit.create(UserService::class.java)
 
     @Provides
     @Singleton
-    fun provideNewRepository(@Named("NewsService") newsInterface: UserInterface): NewsRepository =
+    fun provideNewRepository(@Named("NewsService") newsInterface: UserService): NewsRepository =
         NewsRepository(newsInterface)
 }

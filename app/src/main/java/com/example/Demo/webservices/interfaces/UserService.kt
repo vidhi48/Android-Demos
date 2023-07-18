@@ -15,7 +15,7 @@ import retrofit2.http.POST
 import retrofit2.http.Part
 import retrofit2.http.Query
 
-interface UserInterface {
+interface UserService {
 
     @GET("/api/users")
     fun getUsers(@Query("page") page: String): Call<User>
@@ -23,7 +23,7 @@ interface UserInterface {
     @GET("top-headlines?country=in&apiKey=67962f7b55de4aa7b22b2307d8c4d73d&pageSize=80")
     suspend fun getNews(): Response<News>
 
-    @POST("/UserUpdate")
+    @POST("UserUpdate")
     fun registerUser(@Body user: UserRequest): Call<UserResponse>
 
     @Multipart

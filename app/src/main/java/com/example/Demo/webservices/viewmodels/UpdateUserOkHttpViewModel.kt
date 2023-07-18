@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.demo.webservices.interceptor.RetryInterceptor
 import com.example.demo.webservices.models.UserResponse
 import com.google.gson.Gson
 import kotlinx.coroutines.launch
@@ -32,6 +33,10 @@ class UpdateUserOkHttpViewModel : ViewModel() {
 
     fun getUser(id: String) {
         val client = OkHttpClient()
+            .newBuilder()
+            .addInterceptor(RetryInterceptor())
+            .build()
+
         val request =
             Request.Builder().url("https://64a3a5b5c3b509573b565cfc.mockapi.io/UserUpdate/$id")
                 .build()
