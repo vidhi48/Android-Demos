@@ -1,5 +1,6 @@
 package com.example.demo.whatsapp
 
+import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -7,6 +8,7 @@ import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.content.res.AppCompatResources
 import com.example.androidproject.R
 import com.example.androidproject.databinding.FragmentBottomSheetBinding
@@ -32,6 +34,14 @@ class BottomSheetFragment(whatsappChatFragment: WhatsappChatFragment) :
     }
 
     private fun setupBottomSheet() = with(binding) {
+
+        val image = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            if (it.resultCode == Activity.RESULT_OK) {
+                val data = it.data
+                val imgUri = data?.data
+            }
+        }
+
         val documentButton = BottomSheet(
             AppCompatResources.getDrawable(
                 requireContext(),
@@ -98,6 +108,11 @@ class BottomSheetFragment(whatsappChatFragment: WhatsappChatFragment) :
 
         cameraBtn.button.setOnClickListener {
             val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            startActivity(intent)
+        }
+
+        galleryBtn.button.setOnClickListener {
+            val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
             startActivity(intent)
         }
 
