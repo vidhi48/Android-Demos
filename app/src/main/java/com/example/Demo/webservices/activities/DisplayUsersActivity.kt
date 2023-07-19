@@ -29,6 +29,7 @@ class DisplayUsersActivity : AppCompatActivity() {
     private fun setupUI() {
         binding.loginBtn.setOnClickListener {
             GlobalScope.launch {
+                println("Thread: " + Thread.currentThread().name)
                 try {
                     sendPostRequest("eve.holt@reqres.in", "cityslicka")
                 } catch (ex: Exception) {
