@@ -58,7 +58,7 @@ class SliderCustomView(context: Context, attrs: AttributeSet): View(context, att
         val y = centerY + radius * kotlin.math.sin(angle)
 
         paint.style = Style.FILL
-        canvas.drawCircle(x.toFloat() , y.toFloat(),30f,paint)
+        canvas.drawCircle(x.toFloat() , y.toFloat(),30f, paint)
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {

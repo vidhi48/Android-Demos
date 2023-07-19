@@ -44,10 +44,10 @@
             android:id="@+id/verticalScroll"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_0"
-            android:layout_marginBottom="@dimen/dp_15"
             android:fillViewport="true"
-            app:layout_constraintBottom_toTopOf="@id/line"
-            app:layout_constraintTop_toBottomOf="@id/appBar">
+            android:layout_marginBottom="@dimen/dp_25"
+            app:layout_constraintTop_toBottomOf="@id/appBar"
+            app:layout_constraintBottom_toTopOf="@id/line">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -252,7 +252,7 @@
                     app:buttons="@{settingBtn}"
                     app:layout_constraintEnd_toEndOf="@id/guideLine2"
                     app:layout_constraintStart_toEndOf="@id/power"
-                    app:layout_constraintTop_toTopOf="@id/power" />
+                    app:layout_constraintTop_toTopOf="@id/power"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
