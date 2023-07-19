@@ -165,7 +165,7 @@
                 <include
                     android:id="@+id/card"
                     layout="@layout/music_control_card"
-                    android:layout_width="match_parent"
+                    android:layout_width="@dimen/dp_0"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp_20"
                     app:buttonImages="@{castingBtn}"
