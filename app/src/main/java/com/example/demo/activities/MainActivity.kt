@@ -4,6 +4,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.androidproject.databinding.ActivityMainBinding
+import com.example.demo.recyclerview.activities.BottomNavigationActivity
+import com.example.demo.recyclerview.activities.ExpandableListViewActivity
+import com.example.demo.recyclerview.activities.ExpandableRecyclerActivity
+import com.example.demo.recyclerview.activities.GridRecyclerViewActivity
+import com.example.demo.recyclerview.activities.ListViewDemo
+import com.example.demo.recyclerview.activities.MultiViewsRecyclerActivity
+import com.example.demo.recyclerview.activities.RecyclerViewDemo
+import com.example.demo.recyclerview.activities.StaggeredGridViewActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,19 +24,44 @@ class MainActivity : AppCompatActivity() {
         setupViews()
     }
 
-    private fun setupViews() {
-        binding.speakerScreen.setOnClickListener{
-            val intent = Intent(this , MusicScreen::class.java)
+    private fun setupViews() = with(binding){
+        list.setOnClickListener{
+            val intent = Intent(this@MainActivity, ListViewDemo::class.java)
             startActivity(intent)
         }
 
-        binding.tvScreen.setOnClickListener{
-            val intent = Intent(this, TelevisionScreen::class.java)
+        expandList.setOnClickListener{
+            val intent = Intent(this@MainActivity, ExpandableListViewActivity::class.java)
             startActivity(intent)
         }
 
-        binding.acScreen.setOnClickListener{
-            val intent = Intent(this, AirConditionerScreen::class.java)
+        recycle.setOnClickListener{
+            val intent = Intent(this@MainActivity, RecyclerViewDemo::class.java)
+            startActivity(intent)
+        }
+
+        expandRecycle.setOnClickListener{
+            val intent = Intent(this@MainActivity, ExpandableRecyclerActivity::class.java)
+            startActivity(intent)
+        }
+
+        gridRv.setOnClickListener{
+            val intent = Intent(this@MainActivity, GridRecyclerViewActivity::class.java)
+            startActivity(intent)
+        }
+
+        stagRv.setOnClickListener{
+            val intent = Intent(this@MainActivity, StaggeredGridViewActivity::class.java)
+            startActivity(intent)
+        }
+
+        multiRv.setOnClickListener{
+            val intent = Intent(this@MainActivity, MultiViewsRecyclerActivity::class.java)
+            startActivity(intent)
+        }
+
+        bottomNav.setOnClickListener{
+            val intent = Intent(this@MainActivity, BottomNavigationActivity::class.java)
             startActivity(intent)
         }
     }

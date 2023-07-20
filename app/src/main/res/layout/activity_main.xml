@@ -7,36 +7,115 @@
     tools:context="com.example.demo.activities.MainActivity">
 
     <Button
-        android:id="@+id/speakerScreen"
-        android:layout_width="wrap_content"
+        android:id="@+id/list"
+        android:layout_width="@dimen/dp_0"
         android:layout_height="wrap_content"
-        android:text="@string/speakerScreen"
-        android:layout_marginTop="@dimen/dp_30"
+        android:text="@string/listview"
+        android:textAllCaps="false"
+        android:layout_marginTop="@dimen/dp_100"
+        android:layout_marginStart="@dimen/dp_50"
+        android:layout_marginEnd="@dimen/dp_50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
 
     <Button
-        android:id="@+id/tvScreen"
-        android:layout_width="wrap_content"
+        android:id="@+id/expandList"
+        android:layout_width="@dimen/dp_0"
         android:layout_height="wrap_content"
-        android:text="@string/tvScreen"
+        android:text="@string/expandable_listview"
         android:layout_marginTop="@dimen/dp_30"
+        android:textAllCaps="false"
+        android:layout_marginStart="@dimen/dp_50"
+        android:layout_marginEnd="@dimen/dp_50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/speakerScreen"
+        app:layout_constraintTop_toBottomOf="@id/list"
         />
 
     <Button
-        android:id="@+id/acScreen"
-        android:layout_width="wrap_content"
+        android:id="@+id/recycle"
+        android:layout_width="@dimen/dp_0"
         android:layout_height="wrap_content"
-        android:text="@string/acScreen"
+        android:text="@string/recyclerview"
+        android:textAllCaps="false"
         android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_50"
+        android:layout_marginEnd="@dimen/dp_50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvScreen"
+        app:layout_constraintTop_toBottomOf="@id/expandList"
+        />
+
+    <Button
+        android:id="@+id/expandRecycle"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:text="@string/expandable_recyclerview"
+        android:textAllCaps="false"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_50"
+        android:layout_marginEnd="@dimen/dp_50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recycle"
+        />
+
+    <Button
+        android:id="@+id/gridRv"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:text="@string/grid_recyclerview"
+        android:textAllCaps="false"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_50"
+        android:layout_marginEnd="@dimen/dp_50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/expandRecycle"
+        />
+
+    <Button
+        android:id="@+id/stagRv"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:text="@string/staggered_recyclerview"
+        android:textAllCaps="false"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_50"
+        android:layout_marginEnd="@dimen/dp_50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gridRv"
+        />
+
+    <Button
+        android:id="@+id/multiRv"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:text="@string/multiview_recyclerview"
+        android:textAllCaps="false"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_50"
+        android:layout_marginEnd="@dimen/dp_50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stagRv"
+        />
+
+    <Button
+        android:id="@+id/bottomNav"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:text="@string/bottom_navigation"
+        android:textAllCaps="false"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_50"
+        android:layout_marginEnd="@dimen/dp_50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/multiRv"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

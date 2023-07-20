@@ -79,4 +79,10 @@
     <string name="history">History</string>
     <string name="homeMenu">Home</string>
     <string name="profile">Profile</string>
+    <string name="bottom_navigation">Bottom Navigation</string>
+    <string name="listview">ListView</string>
+    <string name="recyclerview">RecyclerView</string>
+    <string name="grid_recyclerview">Grid RecyclerView</string>
+    <string name="staggered_recyclerview">Staggered RecyclerView</string>
+    <string name="multiview_recyclerview">MultiView RecyclerView</string>
 </resources>
