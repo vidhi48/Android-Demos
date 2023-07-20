@@ -25,9 +25,8 @@ class SliderCustomView(context: Context, attrs: AttributeSet): View(context, att
     init {
         paint.color = Color.BLUE
         paint.style = Style.STROKE
-        paint.strokeWidth = 15f
+        paint.strokeWidth = 20f
         margin = 20f
-
         progressAngle = (progress * progressSweep) / 100
     }
 
@@ -58,7 +57,7 @@ class SliderCustomView(context: Context, attrs: AttributeSet): View(context, att
         val y = centerY + radius * kotlin.math.sin(angle)
 
         paint.style = Style.FILL
-        canvas.drawCircle(x.toFloat() , y.toFloat(),30f, paint)
+        canvas.drawCircle(x.toFloat() + 10 , y.toFloat(),30f, paint)
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
