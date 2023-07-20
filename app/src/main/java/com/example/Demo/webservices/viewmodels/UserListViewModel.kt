@@ -1,8 +1,6 @@
 package com.example.demo.webservices.viewmodels
 
-import android.content.Context
 import android.util.Log
-import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
