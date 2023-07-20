@@ -21,7 +21,7 @@ class UserListActivity : AppCompatActivity() {
 
     private fun setupUI() {
         viewModel = ViewModelProvider(this)[UserListViewModel::class.java]
-        viewModel.getUser(this)
+        viewModel.getUser()
         val userAdapter = UserListAdapter()
         viewModel.userLiveData.observe(this) {
             viewModel.userLiveData.value?.let { userAdapter.addItem(it) }
