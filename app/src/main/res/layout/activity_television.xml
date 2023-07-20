@@ -32,108 +32,92 @@
             android:layout_height="wrap_content"
             app:appBar="@{actionbar}" />
 
-            <ScrollView
-                android:id="@+id/scroll"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_0"
-                android:fillViewport="true"
-                app:layout_constraintTop_toBottomOf="@id/appBar"
-                app:layout_constraintBottom_toTopOf="@id/lineGroup"
-                >
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/airPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@drawable/button_corner"
+            android:backgroundTint="@color/white"
+            android:drawableStart="@drawable/airplay"
+            android:drawableEnd="@drawable/baseline_navigate_next_24"
+            android:drawablePadding="@dimen/dp_10"
+            android:drawableTint="@color/black"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_10"
+            android:text="@string/airplay"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appBar" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/airPlay"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_15"
-                    android:background="@drawable/button_corner"
-                    android:backgroundTint="@color/white"
-                    android:drawableStart="@drawable/airplay"
-                    android:drawableEnd="@drawable/baseline_navigate_next_24"
-                    android:drawablePadding="@dimen/dp_10"
-                    android:drawableTint="@color/black"
-                    android:paddingStart="@dimen/dp_10"
-                    android:paddingEnd="@dimen/dp_10"
-                    android:text="@string/airplay"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+        <include
+            android:id="@+id/remoteCustom"
+            layout="@layout/remote_custom_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/airPlay" />
 
-                <include
-                    android:id="@+id/remoteCustom"
-                    layout="@layout/remote_custom_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_10"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/airPlay" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/button_rounded"
+            android:backgroundTint="@color/white"
+            android:text="@string/back"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toStartOf="@id/home"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/remoteCustom" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/back"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_30"
-                    android:background="@drawable/button_rounded"
-                    android:backgroundTint="@color/white"
-                    android:text="@string/back"
-                    android:textAllCaps="true"
-                    app:layout_constraintEnd_toStartOf="@id/home"
-                    app:layout_constraintHorizontal_chainStyle="spread"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/remoteCustom" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_rounded"
+            android:backgroundTint="@color/white"
+            android:text="@string/home"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toStartOf="@id/exit"
+            app:layout_constraintStart_toEndOf="@id/back"
+            app:layout_constraintTop_toTopOf="@id/back" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/home"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/button_rounded"
-                    android:backgroundTint="@color/white"
-                    android:text="@string/home"
-                    android:textAllCaps="true"
-                    app:layout_constraintEnd_toStartOf="@id/exit"
-                    app:layout_constraintStart_toEndOf="@id/back"
-                    app:layout_constraintTop_toTopOf="@id/back" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_rounded"
+            android:backgroundTint="@color/white"
+            android:text="@string/exit"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/home"
+            app:layout_constraintTop_toTopOf="@id/home" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/exit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/button_rounded"
-                    android:backgroundTint="@color/white"
-                    android:text="@string/exit"
-                    android:textAllCaps="true"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/home"
-                    app:layout_constraintTop_toTopOf="@id/home" />
-
-                <include
-                    android:id="@+id/card"
-                    layout="@layout/music_control_card"
-                    android:layout_width="@dimen/dp_0"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_25"
-                    app:buttonImages="@{keyboardBtn}"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/back"
-                    app:musicControls="@{musicControlCard}"/>
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </ScrollView>
+        <include
+            android:id="@+id/card"
+            layout="@layout/music_control_card"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_25"
+            app:buttonImages="@{keyboardBtn}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/back"
+            app:musicControls="@{musicControlCard}" />
 
         <View
             android:id="@+id/lineGroup"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_2"
-            android:layout_marginTop="@dimen/dp_15"
             android:layout_marginBottom="@dimen/dp_20"
             android:background="@color/lightGray"
             app:layout_constraintBottom_toTopOf="@id/lock"
@@ -143,7 +127,7 @@
             android:id="@+id/lock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp_25"
             android:contentDescription="@string/app_name"
             android:src="@drawable/baseline_lock_open_24"
             app:layout_constraintBottom_toBottomOf="parent"
