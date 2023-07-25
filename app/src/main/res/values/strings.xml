@@ -115,4 +115,8 @@
     <string name="extraText">\t\tEasily organise your related groups and send\nannouncements. Now, your communities, like\nneighbourhoods or schools, cam have their own\nspace.
     </string>
     <string name="current_date">Today</string>
+    <string name="reply">REPLY</string>
+    <string name="archive">ARCHIVE</string>
+    <string name="messageTitle">Justin</string>
+    <string name="messageContent">Hello! wassup?</string>
 </resources>
