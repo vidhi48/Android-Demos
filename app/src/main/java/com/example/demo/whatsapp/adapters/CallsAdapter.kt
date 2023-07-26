@@ -1,5 +1,7 @@
 package com.example.demo.whatsapp.adapters
 
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -13,6 +15,11 @@ class CallsAdapter(private var callList: List<Calls>):
         RecyclerView.ViewHolder(binding.root) {
         fun bind(calls: Calls) {
             binding.callData = calls
+            binding.phone.setOnClickListener {
+                val phoneNumber = Uri.parse("tel:9532544328")
+                val intent = Intent(Intent.ACTION_VIEW, phoneNumber)
+                binding.root.context.startActivity(intent)
+            }
         }
     }
 

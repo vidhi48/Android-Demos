@@ -12,11 +12,9 @@ import com.example.androidproject.databinding.FragmentCallsBinding
 import com.example.demo.whatsapp.adapters.CallsAdapter
 import com.example.demo.whatsapp.models.Calls
 
-
 class CallsFragment : Fragment() {
 
     private lateinit var binding: FragmentCallsBinding
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

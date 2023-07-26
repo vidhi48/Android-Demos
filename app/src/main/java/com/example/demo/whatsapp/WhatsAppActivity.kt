@@ -15,7 +15,6 @@ import com.google.android.material.tabs.TabLayoutMediator
 class WhatsAppActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityWhatsAppBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityWhatsAppBinding.inflate(layoutInflater)
@@ -36,13 +35,11 @@ class WhatsAppActivity : AppCompatActivity() {
                 startActivity(intent)
                 true
             }
-
             else -> super.onOptionsItemSelected(item)
         }
     }
 
     private fun setupTabBar() = with(binding) {
-
         val tabList = listOf<Any>("Community", "Chats", "Status", "Calls")
         tabLayout.apply {
             addTab(this.newTab())

@@ -87,14 +87,14 @@ class WhatsappChatFragment : Fragment() {
                 viewModel.sentMessage(binding.message.text.toString().trim())
                 binding.message.text.clear()
                 autoResponse()
+                sendNotification()
             }
-            sendNotification()
         }
     }
 
     private fun autoResponse() {
         Handler(Looper.getMainLooper()).postDelayed({
-            viewModel.receiveMessage("Hello")
+            viewModel.receiveMessage("Hello! wassup?")
         }, 1000)
     }
 
@@ -120,7 +120,7 @@ class WhatsappChatFragment : Fragment() {
         val bitmap = BitmapFactory.decodeResource(context?.resources, R.drawable.profile_chat4)
         val notificationBuilder = NotificationCompat.Builder(requireContext(), channelId)
             .setSmallIcon(R.drawable.baseline_message_24)
-            .setContentTitle(getString(R.string.messageTitle))
+            .setContentTitle(getString(R.string.sandra_adams))
             .setContentText(getString(R.string.messageContent))
             .setLargeIcon(bitmap)
             .addAction(R.drawable.baseline_reply_24, getString(R.string.reply),null)
